@@ -1,0 +1,57 @@
+const menuToggle = document.querySelector('[data-menu-toggle]');
+const nav = document.querySelector('[data-nav]');
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('is-open');
+    document.body.classList.toggle('menu-open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  nav.addEventListener('click', (event) => {
+    if (event.target.matches('a')) {
+      nav.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+const currentYear = document.querySelector('[data-year]');
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
+
+const quoteForm = document.querySelector('[data-quote-form]');
+if (quoteForm) {
+  quoteForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const form = new FormData(quoteForm);
+    const lines = [
+      'Hola CEITSA, requiero cotización de un variador de velocidad.',
+      '',
+      `Nombre: ${form.get('nombre') || ''}`,
+      `Empresa: ${form.get('empresa') || ''}`,
+      `Teléfono: ${form.get('telefono') || ''}`,
+      `Correo: ${form.get('correo') || ''}`,
+      `Ciudad: ${form.get('ciudad') || ''}`,
+      `Serie o modelo: ${form.get('modelo') || ''}`,
+      `Voltaje: ${form.get('voltaje') || ''}`,
+      `Potencia HP: ${form.get('hp') || ''}`,
+      `Protocolo: ${form.get('protocolo') || ''}`,
+      `Cantidad: ${form.get('cantidad') || ''}`,
+      `Aplicación / especificaciones: ${form.get('especificaciones') || ''}`
+    ];
+    const message = encodeURIComponent(lines.join('\n'));
+    window.open(`https://wa.me/5217294907147?text=${message}`, '_blank', 'noopener,noreferrer');
+  });
+}
+
+const promoButtons = document.querySelectorAll('[data-promo-whatsapp]');
+promoButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const promo = button.getAttribute('data-promo-whatsapp');
+    const message = encodeURIComponent(`Hola CEITSA, quiero información sobre la promoción: ${promo}`);
+    window.open(`https://wa.me/5217294907147?text=${message}`, '_blank', 'noopener,noreferrer');
+  });
+});
