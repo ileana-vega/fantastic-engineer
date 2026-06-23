@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Interactivo Accesible - CEITSA</title>
+    <style>
+        /* Contenedor Global */
+        .banner-responsive-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            min-height: 200px;
+            margin: 0 auto;
+            overflow: hidden;
+            background-color: #000000;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+
+        .banner-responsive-wrapper picture {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .banner-responsive-wrapper picture img {
+            display: block;
+            width: 100%;
+            height: auto;
+            min-height: 150px;
+            pointer-events: none;
+            transition: filter 0.5s ease-in-out;
+        }
+
+        /* --- TEXTO INDICADOR INTERACTIVO --- */
+        .instruction-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            text-align: center;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #ffffff; 
+            text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.9), 0px 0px 15px rgba(0, 0, 0, 0.6);
+            pointer-events: none; 
+            z-index: 50;
+            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+            animation: pulseHint 2s infinite ease-in-out; 
+        }
+
+        @keyframes pulseHint {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1.0; } 
+        }
+
+        #switch-state-input {
+            display: none;
+        }
+
+        /* --- INTERRUPTOR ACCESIBLE DE ALTO CONTRASTE --- */
+        .accessible-switch {
+            position: absolute;
+            cursor: pointer;
+            z-index: 100;
+            -webkit-tap-highlight-color: transparent;
+            background: #222222;
+            border: 3px solid #ffffff;
+            box-shadow: 0px 4px 10px rgba(0,0,0,0.9);
+            transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .accessible-switch::after {
+            content: "OFF";
+            position: absolute;
+            font-family: 'Arial', sans-serif;
+            font-weight: bold;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #ff3b30; 
+            border-radius: 50%;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+        }
+
+        /* --- CONFIGURACIONES POR FORMATO --- */
+
+        /* 1. MODO ESCRITORIO / HORIZONTAL (Computadora) */
+        @media (min-width: 769px) {
+            .pastilla-desktop {
+                top: 53.3%; /* Altura exacta de 288px */
+                right: 4.8%;
+                width: 90px;  
+                height: 45px;
+                border-radius: 30px;
+                display: block;
+            }
+            .pastilla-desktop::after {
+                font-size: 11px;
+                top: 3px;
+                left: 3px;
+                width: 50%;
+                height: calc(100% - 6px);
+                transition: left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .pastilla-mobile {
+                display: none !important;
+            }
+            .instruction-text {
+                font-size: 16pt;
+            }
+            #switch-state-input ~ picture img {
+                filter: brightness(0.25) contrast(1.15) saturate(0.7);
+            }
+            #switch-state-input:checked ~ picture img {
+                filter: brightness(1.25) contrast(1.05) saturate(1.1);
+            }
+            /* Lógica de encendido Horizontal */
+            #switch-state-input:checked ~ .pastilla-desktop {
+                background: #111111;
+                border-color: #4cd964;
+                box-shadow: 0px 0px 15px rgba(76, 217, 100, 0.6);
+            }
+            #switch-state-input:checked ~ .pastilla-desktop::after {
+                content: "ON";
+                left: calc(50% - 3px);
+                background: #4cd964;
+            }
+        }
+
+        /* 2. MODO MÓVIL / VERTICAL (Celulares) */
+        @media (max-width: 768px) {
+            .pastilla-mobile {
+                /* AJUSTES SOLICITADOS: Coordenada top: 31% y tamaño mini de 32px x 64px */
+                top: 31%; 
+                left: 6%;
+                right: auto;
+                width: 32px; 
+                height: 64px;
+                border-radius: 16px;
+                border-width: 2px;
+                display: block;
+            }
+            .pastilla-mobile::after {
+                font-size: 8px; 
+                top: 2px;
+                left: 2px;
+                width: calc(100% - 4px);
+                height: 50%;
+                transition: top 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            }
+            .pastilla-desktop {
+                display: none !important;
+            }
+            .instruction-text {
+                font-size: 11pt;
+                letter-spacing: 1px;
+            }
+            #switch-state-input ~ picture img {
+                filter: brightness(0.3) contrast(1.1) saturate(0.75);
+            }
+            #switch-state-input:checked ~ picture img {
+                filter: brightness(1.2) contrast(1.05) saturate(1.15);
+            }
+            /* Lógica de encendido Vertical */
+            #switch-state-input:checked ~ .pastilla-mobile {
+                background: #111111;
+                border-color: #4cd964;
+                box-shadow: 0px 0px 12px rgba(76, 217, 100, 0.6);
+            }
+            #switch-state-input:checked ~ .pastilla-mobile::after {
+                content: "ON";
+                top: calc(50% - 2px);
+                background: #4cd964;
+            }
+        }
+
+        /* --- COMPORTAMIENTO COMÚN AL ENCENDER --- */
+        #switch-state-input:checked ~ .instruction-text {
+            opacity: 0 !important;
+            animation: none !important;
+            transform: translate(-50%, -30%); 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="banner-responsive-wrapper">
+        <input type="checkbox" id="switch-state-input">
+
+        <div class="instruction-text">Toca el interruptor para encender la luz</div>
+
+        <label for="switch-state-input" class="accessible-switch pastilla-desktop"></label>
+
+        <label for="switch-state-input" class="accessible-switch pastilla-mobile"></label>
+
+        <picture>
+            <source media="(max-width: 768px)" srcset="https://i.postimg.cc/sfpJVDFY/Vertical-Reina.png">
+            <img src="https://i.postimg.cc/GpWkC6qJ/Horizontal-Reina.png" alt="Banner Especial CEITSA">
+        </picture>
+    </div>
+
+</body>
+</html>
