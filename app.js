@@ -1,29 +1,21 @@
 (function () {
-  const pageName = () => window.location.pathname.split("/").pop() || "index.html";
+  const current = window.location.pathname.split("/").pop() || "index.html";
   const activeByPage = {
     "demostracion.html": "demostracion.html",
     "capacitacion.html": "capacitacion.html",
-    "contacto.html": "contacto.html",
-    "envios.html": "envios.html",
-    "index.html": "index.html",
+    "variadores.html": "productos.html",
     "productos.html": "productos.html",
+    "tienda.html": "tienda.html",
+    "contacto.html": "contacto.html",
     "servicios.html": "servicios.html",
-    "tienda.html": "tienda.html"
+    "index.html": "index.html"
   };
-
-  function updateActiveMenu() {
-    const current = pageName();
-    const currentHash = window.location.hash;
-    const activeHref = currentHash ? `${current}${currentHash}` : activeByPage[current];
-
-    document.querySelectorAll(".menu a").forEach((link) => {
-      const href = link.getAttribute("href");
-      link.classList.toggle("active", href === activeHref || (!currentHash && href === activeByPage[current]));
-    });
-  }
-
-  updateActiveMenu();
-  window.addEventListener("hashchange", updateActiveMenu);
+  document.querySelectorAll(".menu a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href === activeByPage[current]) {
+      link.classList.add("active");
+    }
+  });
 
   const toggle = document.querySelector(".menu-toggle");
   const menu = document.querySelector(".menu");
@@ -43,8 +35,8 @@
       data.forEach((value, key) => {
         lines.push(`${key}: ${value}`);
       });
-      const message = encodeURIComponent(`${subject}\n\n${lines.join("\n")}`);
-      window.location.href = `https://wa.me/5217294907147?text=${message}`;
+      const body = encodeURIComponent(lines.join("\n"));
+      window.location.href = `mailto:atencion_ventas@ceitsa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     });
   });
 })();
