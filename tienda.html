@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Envios | CEITSA</title>
+  <title>Tienda en linea | CEITSA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -19,15 +19,27 @@
   </header>
   <main>
     <section class="page-hero">
-      <p class="eyebrow">Envios</p>
-      <h1>Cobertura nacional para componentes, refacciones y proyectos.</h1>
-      <p>Preparamos cada pedido segun disponibilidad, urgencia, fragilidad del equipo y condiciones del destino.</p>
+      <p class="eyebrow">Tienda en linea</p>
+      <h1>Una ruta rapida para pedir precio, existencia y alternativas.</h1>
+      <p>Esta pagina replica la intencion de compra del sitio de referencia, enfocada en el flujo comercial de CEITSA.</p>
     </section>
-    <section class="info-grid">
-      <article><h2>Preparacion</h2><p>Verificacion de modelo, cantidad, accesorios y empaque adecuado para producto electrico/electronico.</p></article>
-      <article><h2>Recoleccion</h2><p>Coordinacion con paqueteria, fletera o recoleccion del cliente segun el tipo de pedido.</p></article>
-      <article><h2>Seguimiento</h2><p>Confirmacion de guia, documentacion y actualizacion para compras, mantenimiento o integracion.</p></article>
-      <article><h2>Proyectos</h2><p>Entregas parciales, materiales por etapa y comunicacion con obra o planta cuando aplica.</p></article>
+    <section class="shop-layout">
+      <div class="quote-panel">
+        <h2>Solicitud express</h2>
+        <form class="quote-form" data-mail-subject="Solicitud de cotizacion CEITSA">
+          <label>Nombre<input name="nombre" autocomplete="name" required></label>
+          <label>Empresa<input name="empresa" autocomplete="organization"></label>
+          <label>Correo<input type="email" name="correo" autocomplete="email" required></label>
+          <label>Producto o aplicacion<textarea name="mensaje" rows="5" required placeholder="Modelo, potencia, voltaje, cantidad o descripcion de la maquina"></textarea></label>
+          <button class="btn primary" type="submit">Preparar correo</button>
+        </form>
+      </div>
+      <div class="shop-categories">
+        <a href="productos.html#variadores"><strong>Variadores</strong><span>Motor, bombeo, HVAC y maquinaria</span></a>
+        <a href="productos.html#plc"><strong>PLC</strong><span>Controladores, modulos y comunicacion</span></a>
+        <a href="productos.html#hmi"><strong>HMI</strong><span>Paneles tactiles y monitoreo</span></a>
+        <a href="productos.html#servos"><strong>Servos</strong><span>Movimiento, ejes y posicionamiento</span></a>
+      </div>
     </section>
   </main>
   <footer class="site-footer">
