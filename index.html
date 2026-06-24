@@ -1,220 +1,143 @@
-<!doctype html>
-<html lang="es-MX">
+﻿<!doctype html>
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>CEITSA | Automatización y Control Industrial para la automatización -- </title>
-  <meta name="description" content="Sitio comercial de CEITSA para explorar soluciones industriales, variadores de velocidad y promociones especiales.">
+  <title>CEITSA | Automatizacion, control y material electrico</title>
+  <meta name="description" content="Soluciones CEITSA para automatizacion industrial, control electrico, variadores, PLC, HMI, capacitacion y soporte tecnico.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#contenido">Saltar al contenido</a>
-
-  <div class="topbar">
-    <div class="container topbar__inner">
-      <span>Automatización y Control Industrial l para la automatización -- </span>
-      <div class="topbar__links">
-        <a href="tel:+527294907147">+52 729 490 7147</a>
-        <a href="mailto:info@ceitsa.com">info@ceitsa.com</a>
-      </div>
-    </div>
-  </div>
-
-  <header class="header">
-    <div class="container header__inner">
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegacion principal">
       <a class="brand" href="index.html" aria-label="CEITSA inicio">
-        <img src="assets/logo-ceitsa.svg" alt="CEITSA Electromecatrónica">
+        <img src="assets/ceitsa-logo-menu.png" alt="CEITSA Electromecatronica">
       </a>
-      <nav class="nav" data-nav aria-label="Navegación principal">
-        <a href="index.html" aria-current="page">Inicio</a>
-        <a href="variadores.html">Variadores</a>
-        <a href="dia-ingeniero.html">Día del Ingeniero</a>
-        <a href="#familias">Catálogo</a>
-        <a href="#contacto">Contacto</a>
-      </nav>
-      <div class="header__actions">
-        <a class="btn btn--primary" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Hablar con asesor</a>
-        <button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-label="Abrir menú">
-          <span></span><span></span><span></span>
-        </button>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+      <div class="menu" id="main-menu">
+        <a href="index.html">Inicio</a>
+        <a href="https://ceitsa.com.mx/search">Tienda</a>
+        <a href="https://ceitsa.com.mx/catalogo">Catálogo</a>
+        <a href="index.html#nosotros">Nosotros</a>
+        <a href="servicios.html">Soluciones</a>
+        <a href="capacitacion.html">Documentos</a>
+        <a href="https://wa.me/5217294907147" target="_blank" rel="noopener">Contacto</a>
       </div>
-    </div>
+    </nav>
   </header>
 
-  <main id="contenido">
+  <main>
     <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="eyebrow">CEITSA Electromecatrónica</p>
-          <h1>Soluciones industriales con soporte técnico real.</h1>
-          <p>Explora productos, promociones y soluciones para automatización, control eléctrico, neumática, conectividad industrial y refaccionamiento.</p>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="variadores.html">Ver variadores Delta</a>
-            <a class="btn btn--secondary" href="dia-ingeniero.html">Promociones Día del Ingeniero</a>
-          </div>
+      <div class="hero-copy">
+        <p class="eyebrow">Distribucion industrial y soporte tecnico</p>
+        <h1>Automatizacion y control para procesos que no pueden detenerse.</h1>
+        <p>CEITSA integra suministro, asesoria y puesta en marcha para variadores, PLC, HMI, control electrico, seguridad industrial y refacciones de planta.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="https://ceitsa.com.mx/catalogo">Ver productos</a>
+          <a class="btn secondary" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Cotizar proyecto</a>
         </div>
-        <div class="hero__panel">
-          <article class="hero-card" aria-label="Resumen de soluciones CEITSA">
-            <div class="hero-card__image">
-              <img src="assets/vfd-illustration.svg" alt="Ilustración de equipo de automatización industrial">
-            </div>
-            <div class="hero-card__rows">
-              <div class="mini-row"><span>Refaccionamiento</span><strong>Stock y asesoría</strong></div>
-              <div class="mini-row"><span>Automatización</span><strong>PLC · HMI · VFD</strong></div>
-              <div class="mini-row"><span>Soporte</span><strong>Configuración y puesta en marcha</strong></div>
-            </div>
-          </article>
-        </div>
+      </div>
+      <div class="hero-media" aria-label="Gabinete de control industrial">
+        <img src="assets/ceitsa-automation-hero.png" alt="Gabinete de automatizacion industrial con variadores, PLC y pantalla HMI">
       </div>
     </section>
 
-    <section class="stats-strip" aria-label="Indicadores CEITSA">
-      <div class="container stats-grid">
-        <div class="stat-card"><strong>+35</strong><span>años generando soluciones</span></div>
-        <div class="stat-card"><strong>+700k</strong><span>productos disponibles</span></div>
-        <div class="stat-card"><strong>+1,100</strong><span>proyectos exitosos</span></div>
-      </div>
+    <section class="metric-band" aria-label="Fortalezas CEITSA">
+      <div><strong>+35</strong><span>anos de experiencia</span></div>
+      <div><strong>700k+</strong><span>productos industriales</span></div>
+      <div><strong>24h</strong><span>respuesta a cotizaciones</span></div>
+      <div><strong>MX</strong><span>cobertura nacional</span></div>
     </section>
 
     <section class="section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-kicker">Explora</span>
-          <h2>Menú principal del sitio</h2>
-          <p>Landing page base para dirigir al visitante a páginas comerciales, campañas especiales y familias de producto.</p>
-        </div>
-        <div class="cards-grid">
-          <article class="card">
-            <div class="card__icon">VFD</div>
-            <h3>Variadores de velocidad</h3>
-            <p>Página comercial para variadores Delta con secciones por serie, rangos de potencia, beneficios y formulario de cotización por WhatsApp.</p>
-            <a class="card__link" href="variadores.html">Abrir página →</a>
-          </article>
-          <article class="card">
-            <div class="card__icon">⚙</div>
-            <h3>Día del Ingeniero</h3>
-            <p>Landing page editable con banner principal y tarjetas para promociones vigentes de equipo eléctrico, neumático y automatización.</p>
-            <a class="card__link" href="dia-ingeniero.html">Ver campaña →</a>
-          </article>
-          <article class="card">
-            <div class="card__icon">↗</div>
-            <h3>Contacto técnico</h3>
-            <p>Dirige a tus clientes a WhatsApp para validar selección, disponibilidad, equivalencias, accesorios y tiempos de entrega.</p>
-            <a class="card__link" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Contactar →</a>
-          </article>
-        </div>
+      <div class="section-heading">
+        <p class="eyebrow">Familias principales</p>
+        <h2>Productos para control, potencia y automatizacion</h2>
+        <a href="https://ceitsa.com.mx/catalogo">Catalogo completo</a>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <span class="icon-chip">VFD</span>
+          <h3>Variadores de frecuencia</h3>
+          <p>Control de velocidad, ahorro de energia, bombas, ventiladores, transportadores y maquinaria.</p>
+          <a href="https://ceitsa.com.mx/catalogo">Ver familia</a>
+        </article>
+        <article class="product-card">
+          <span class="icon-chip">PLC</span>
+          <h3>PLC y controladores</h3>
+          <p>Automatizacion discreta y de proceso con modulos de entrada/salida, comunicaciones y expansion.</p>
+          <a href="https://ceitsa.com.mx/catalogo">Ver familia</a>
+        </article>
+        <article class="product-card">
+          <span class="icon-chip">HMI</span>
+          <h3>Pantallas HMI</h3>
+          <p>Interfaces de operador para monitoreo, recetas, alarmas, historicos y operacion segura.</p>
+          <a href="https://ceitsa.com.mx/catalogo">Ver familia</a>
+        </article>
+        <article class="product-card">
+          <span class="icon-chip">SERVO</span>
+          <h3>Servos y movimiento</h3>
+          <p>Control preciso para ejes, posicionamiento, empaque, corte, etiquetado y sincronizacion.</p>
+          <a href="https://ceitsa.com.mx/catalogo">Ver familia</a>
+        </article>
       </div>
     </section>
 
-    <section class="section section--soft" id="familias">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <span class="section-kicker">Catálogo</span>
-          <h2>Familias destacadas</h2>
-          <p>Bloques preparados para crecer hacia páginas internas de producto o enlaces a la tienda en línea.</p>
-        </div>
-        <div class="family-grid">
-          <a class="family-pill" href="variadores.html">Variadores de velocidad <span>→</span></a>
-          <a class="family-pill" href="#contacto">PLC y HMI <span>→</span></a>
-          <a class="family-pill" href="#contacto">Fuentes de alimentación <span>→</span></a>
-          <a class="family-pill" href="#contacto">Interruptores termomagnéticos <span>→</span></a>
-          <a class="family-pill" href="#contacto">Sensores industriales <span>→</span></a>
-          <a class="family-pill" href="#contacto">Conectividad <span>→</span></a>
-          <a class="family-pill" href="#contacto">Neumática SMC <span>→</span></a>
-          <a class="family-pill" href="#contacto">Tableros de control <span>→</span></a>
-        </div>
+    <section class="split-section" id="nosotros">
+      <div>
+        <p class="eyebrow">Aplicado a CEITSA</p>
+        <h2>Del componente correcto a una solucion lista para producir</h2>
+        <p>Tomamos el recorrido comercial del sitio de referencia y lo convertimos en una experiencia CEITSA: seleccion de producto, tienda/cotizacion, demostraciones tecnicas, cursos, envios y contacto directo.</p>
+      </div>
+      <div class="service-list">
+        <a href="demostracion.html"><strong>Demostracion tecnica</strong><span>Revision de necesidad, propuesta de equipo y prueba guiada.</span></a>
+        <a href="capacitacion.html"><strong>Cursos de capacitacion</strong><span>Variadores, PLC, HMI, seguridad y mantenimiento electrico.</span></a>
+        <a href="envios.html"><strong>Envios nacionales</strong><span>Preparacion de paquetes, recoleccion y seguimiento por proyecto.</span></a>
       </div>
     </section>
 
-    <section class="section section--dark">
-      <div class="container split">
-        <div class="section-header">
-          <span class="section-kicker">Acompañamiento</span>
-          <h2>Venta de equipo con respaldo de ingeniería.</h2>
-          <p>El objetivo del sitio es conectar venta en línea, asesoría técnica y proyectos de automatización en una experiencia clara para el cliente industrial.</p>
-          <div class="section-actions">
-            <a class="btn btn--primary" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Solicitar asesoría</a>
-            <a class="btn btn--secondary" href="variadores.html">Cotizar VFD</a>
-          </div>
-        </div>
-        <div class="feature-list">
-          <article class="feature-item">
-            <div class="feature-icon">01</div>
-            <div><h3>Refaccionamiento</h3><p>Apoyo para mantener la operación en marcha con selección de partes y alternativas disponibles.</p></div>
-          </article>
-          <article class="feature-item">
-            <div class="feature-icon">02</div>
-            <div><h3>Integración</h3><p>Soluciones con PLC, HMI, variadores, instrumentación, neumática y tableros.</p></div>
-          </article>
-          <article class="feature-item">
-            <div class="feature-icon">03</div>
-            <div><h3>Soporte técnico</h3><p>Asesoría en configuración, parametrización, equivalencias y aplicaciones industriales.</p></div>
-          </article>
-        </div>
+    <section class="section compact">
+      <div class="section-heading">
+        <p class="eyebrow">Sectores</p>
+        <h2>Soluciones para planta, integradores y mantenimiento</h2>
+      </div>
+      <div class="sector-row">
+        <span>Alimentos y bebidas</span>
+        <span>Empaque</span>
+        <span>Tratamiento de agua</span>
+        <span>HVAC</span>
+        <span>Metal-mecanica</span>
+        <span>Manufactura general</span>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="section-header section-header--center">
-          <span class="section-kicker">Marcas</span>
-          <h2>Marcas líderes para automatización y control</h2>
-        </div>
-        <div class="brand-grid">
-          <div class="brand-pill">Delta <span>VFD · PLC · HMI</span></div>
-          <div class="brand-pill">SMC <span>Neumática</span></div>
-          <div class="brand-pill">Turck <span>Sensores</span></div>
-          <div class="brand-pill">Chint <span>Protección</span></div>
-        </div>
+    <section class="cta-band">
+      <div>
+        <p class="eyebrow">Cotizacion CEITSA</p>
+        <h2>Comparte tu aplicacion y armamos la propuesta tecnica.</h2>
       </div>
-    </section>
-
-    <section class="section" id="contacto">
-      <div class="container">
-        <div class="cta-band">
-          <h2>¿Necesitas seleccionar un equipo?</h2>
-          <p>Comparte aplicación, voltaje, potencia, protocolo, disponibilidad requerida y fotos de placa del equipo para recibir asesoría.</p>
-          <div class="section-actions">
-            <a class="btn btn--primary" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Enviar mensaje por WhatsApp</a>
-            <a class="btn btn--secondary" href="mailto:atencion_ventas@ceitsa.com">Enviar correo</a>
-          </div>
-        </div>
-      </div>
+      <a class="btn light" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Enviar solicitud</a>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__grid">
-      <div>
-        <h3>CEITSA Electromecatrónica</h3>
-        <p>Automatización y Control Industrial. Venta de equipo, asesoría técnica, integración y soporte.</p>
-      </div>
-      <div>
-        <h4>Navegación</h4>
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="variadores.html">Variadores</a></li>
-          <li><a href="dia-ingeniero.html">Día del Ingeniero</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Contacto</h4>
-        <ul>
-          <li>Paseo Tollocan Ote. #209, Metepec, Méx.</li>
-          <li><a href="tel:+527294907147">+52 729 490 7147</a></li>
-          <li><a href="mailto:atencion_ventas@ceitsa.com">atencion_ventas@ceitsa.com</a></li>
-        </ul>
-      </div>
+    <div>
+      <strong>CEITSA Electromecatronica</strong>
+      <p>Material electrico, automatizacion, control y soporte industrial.</p>
     </div>
-    <div class="container footer__bottom">
-      <span>© <span data-year></span> CEITSA Electromecatrónica</span>
-      <span>Sitio estático para GitHub Codespaces</span>
+    <div class="footer-links">
+      <a href="https://ceitsa.com.mx/catalogo">Productos</a>
+      <a href="capacitacion.html">Capacitacion</a>
+      <a href="https://wa.me/5217294907147" target="_blank" rel="noopener">Contacto</a>
     </div>
   </footer>
-
-  <script src="js/main.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
+
+
+
+
