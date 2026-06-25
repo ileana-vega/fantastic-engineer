@@ -114,10 +114,10 @@
     <section class="section" id="matriz-seleccion">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Matriz de selección</p>
+          <p class="eyebrow">Matriz de seleccion</p>
           <h2>Compara cada familia por enfoque, control, funciones y aplicacion</h2>
         </div>
-        <a href="#criterios">Herramienta de especificación</a>
+        <a href="#selector-modelo">Criterios de especificacion</a>
       </div>
 
       <div class="vfd-table-wrap">
@@ -175,7 +175,7 @@
     <section class="drive-selector" id="selector-modelo">
 <div class="drive-selector__wrap">
 <header class="drive-selector__head">
-<p class="drive-selector__eyebrow">Selector de variador Delta</p>
+<p class="drive-selector__eyebrow">Selector de producto Delta</p>
 <h2>Encuentra el variador adecuado</h2>
 <p class="drive-selector__intro">Comienza por cualquier atributo: familia, voltaje, fases, potencia, gabinete o filtro EMC. Los botones activos pueden volver a pulsarse para deseleccionarlos.</p>
 </header>
@@ -198,7 +198,7 @@
 
 <div class="selector-actions">
 <button class="action-btn action-btn--ghost" id="resetBtn" type="button">Limpiar selección</button>
-<a class="action-btn action-btn--primary" id="quoteBtn" href="#cotizar" aria-disabled="true">Solicitar cotización</a>
+<a class="action-btn action-btn--primary" id="quoteBtn" href="https://wa.me/5217294907147" target="_blank" rel="noopener" aria-disabled="false">Solicitar cotización</a>
 </div>
 </form>
 
@@ -220,44 +220,97 @@
 </div>
 </section>
 
+    <section class="vfd-family-grid" aria-label="Series de variadores Delta">
+      <article class="vfd-family-card">
+        <span class="icon-chip">EL</span>
+        <h2>VFD-EL / Micro EL</h2>
+        <p>Serie compacta para aplicaciones estandar donde se requiere control confiable de velocidad y torque constante sin complejidad excesiva.</p>
+        <ul>
+          <li>Rango reportado: 1 a 5 HP.</li>
+          <li>Auto aceleracion y desaceleracion.</li>
+          <li>Integracion por Modbus RS-485.</li>
+          <li>Buena opcion para pequenas maquinas, transportadores ligeros y reemplazos compactos.</li>
+        </ul>
+      </article>
+
+      <article class="vfd-family-card">
+        <span class="icon-chip">MS300</span>
+        <h2>VFD MS300</h2>
+        <p>Variador compacto para uso general, especialmente util cuando se busca ahorro de espacio, parametrizacion sencilla y funciones basicas de automatizacion integradas.</p>
+        <ul>
+          <li>Potencia: 1/4 a 30 HP.</li>
+          <li>Tension: 110, 220 y 440 VAC.</li>
+          <li>PLC integrado, USB, keypad removible y filtro EMC.</li>
+          <li>Soporta motor de induccion y motor de iman permanente.</li>
+          <li>Instalacion side-by-side para gabinetes compactos.</li>
+        </ul>
+      </article>
+
+      <article class="vfd-family-card">
+        <span class="icon-chip">C2000</span>
+        <h2>VFD C2000</h2>
+        <p>Plataforma vectorial modular para aplicaciones que necesitan desempeno dinamico, control de torque, frenado o integracion de red industrial.</p>
+        <ul>
+          <li>Potencia indicada: 1 a 475 HP segun configuracion de la familia.</li>
+          <li>Tension: 220, 440, 575 y 690 VAC.</li>
+          <li>Control de velocidad, par y posicion.</li>
+          <li>Control en cuatro cuadrantes de par.</li>
+          <li>Protocolos: EtherNet/IP, PROFIBUS DP, DeviceNet y Modbus TCP/IP.</li>
+        </ul>
+      </article>
+
+      <article class="vfd-family-card">
+        <span class="icon-chip">C2000+</span>
+        <h2>C2000 Plus</h2>
+        <p>Opcion para procesos severos donde importan la capacidad de sobrecarga, la estabilidad de torque y la flexibilidad de control con o sin retroalimentacion.</p>
+        <ul>
+          <li>Modelos 460 V reportados hasta 560 kW.</li>
+          <li>Control para motores sincronicos y asincronicos.</li>
+          <li>Control con sensor o sin sensor.</li>
+          <li>PLC incorporado y multiples protocolos.</li>
+          <li>Aplicaciones tipicas: alimentos, quimica, metalurgia y plasticos.</li>
+        </ul>
+      </article>
+    </section>
+
     <section class="section compact">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Modelos y accesorios</p>
-          <h2>Modelos disponibles para cada familia de producto</h2>
+          <p class="eyebrow">Modelos y accesorios citados</p>
+          <h2>Referencias utiles para identificar familias en una solicitud</h2>
         </div>
       </div>
 
       <div class="vfd-details-grid">
-        <details class="vfd-detail" open>
+        <details class="vfd-detail" open style="order:1">
           <summary>Modelos VFD-EL-W</summary>
           <ul class="vfd-model-code-list" data-model-source="elw">
             <li>VFD002EL21W-1</li><li>VFD004EL21W-1</li><li>VFD004EL43W-1</li><li>VFD007EL21W-1</li><li>VFD007EL43W-1</li><li>VFD015EL21W-1</li><li>VFD015EL43W-1</li><li>VFD022EL21W-1</li><li>VFD022EL43W-1</li><li>VFD040EL43W-1</li>
           </ul>
         </details>
 
-        <details class="vfd-detail">
+        <details class="vfd-detail" open style="order:4">
           <summary>Modelos MS300</summary>
           <ul class="vfd-model-code-list" data-model-source="ms300">
             <li>VFD11AMS21ANSAA</li><li>VFD11AMS21MFSAA</li><li>VFD11AMS21MNSAA</li><li>VFD11AMS23ANSAA</li><li>VFD11AMS23MNSAA</li><li>VFD13AMS43ANSAA</li><li>VFD13AMS43MFSAA</li><li>VFD13AMS43MNSAA</li><li>VFD17AMS23ANSAA</li><li>VFD17AMS23MNSAA</li><li>VFD17AMS43ANSAA</li><li>VFD17AMS43MFSAA</li><li>VFD17AMS43MNSAA</li><li>VFD1A5MS43ANSAA</li><li>VFD1A5MS43MFSAA</li><li>VFD1A5MS43MNSAA</li><li>VFD1A6MS11ANSAA</li><li>VFD1A6MS21ANSAA</li><li>VFD1A6MS23ANSAA</li><li>VFD25AMS23ANSAA</li><li>VFD25AMS23MNSAA</li><li>VFD25AMS43ANSAA</li><li>VFD2A5MS11ANSAA</li><li>VFD2A7MS43ANSAA</li><li>VFD2A7MS43MFSAA</li><li>VFD2A7MS43MNSAA</li><li>VFD2A8MS21ANSAA</li><li>VFD2A8MS21MFSAA</li><li>VFD2A8MS21MNSAA</li><li>VFD2A8MS23ANSAA</li><li>VFD2A8MS23MNSAA</li><li>VFD32AMS43ANSAA</li><li>VFD33AMS23ANSAA</li><li>VFD38AMS43ANSAA</li><li>VFD45AMS43ANSAA</li><li>VFD49AMS23ANSAA</li><li>VFD4A2MS43AFSAA</li><li>VFD4A2MS43ANSAA</li><li>VFD4A2MS43MFSAA</li><li>VFD4A2MS43MNSAA</li><li>VFD4A8MS11ANSAA</li><li>VFD4A8MS21ANSAA</li><li>VFD4A8MS21MFSAA</li><li>VFD4A8MS21MNSAA</li><li>VFD4A8MS23ANSAA</li><li>VFD4A8MS23MNSAA</li><li>VFD5A5MS43ANSAA</li><li>VFD5A5MS43MFSAA</li><li>VFD5A5MS43MNSAA</li><li>VFD65AMS23ANSAA</li><li>VFD7A5MS21ANSAA</li><li>VFD7A5MS21MFSAA</li><li>VFD7A5MS21MNSAA</li><li>VFD7A5MS23ANSAA</li><li>VFD7A5MS23MNSAA</li><li>VFD9A0MS43ANSAA</li><li>VFD9A0MS43MFSAA</li><li>VFD9A0MS43MNSAA</li>
           </ul>
         </details>
 
-        <details class="vfd-detail">
+        <details class="vfd-detail" open style="order:2">
           <summary>Modelos VFD-EL</summary>
           <ul class="vfd-model-code-list" data-model-source="el">
             <li>VFD002EL11A</li><li>VFD002EL21A</li><li>VFD002EL23A</li><li>VFD004EL11A</li><li>VFD004EL21A</li><li>VFD004EL23A</li><li>VFD004EL43A</li><li>VFD007EL11A</li><li>VFD007EL21A</li><li>VFD007EL23A</li><li>VFD007EL43A</li><li>VFD015EL21A</li><li>VFD015EL23A</li><li>VFD015EL43A</li><li>VFD022EL21A</li><li>VFD022EL23A</li><li>VFD022EL43A</li><li>VFD037EL23A</li><li>VFD037EL43A</li>
           </ul>
         </details>
 
-        <details class="vfd-detail">
+        <details class="vfd-detail" open style="order:5">
           <summary>Modelos C2000+</summary>
           <ul class="vfd-model-code-list" data-model-source="c2000">
             <li>VFD007C23A-21</li><li>VFD007C43A-21</li><li>VFD007C4EA-21</li><li>VFD015C23A-21</li><li>VFD015C43A-21</li><li>VFD015C4EA-21</li><li>VFD022C23A-21</li><li>VFD022C43A-21</li><li>VFD022C4EA-21</li><li>VFD037C23A-21</li><li>VFD037C43A-21</li><li>VFD037C4EA-21</li><li>VFD040C43A-21</li><li>VFD040C4EA-21</li><li>VFD055C23A-21</li><li>VFD055C43A-21</li><li>VFD055C4EA-21</li><li>VFD075C23A-21</li><li>VFD075C43A-21</li><li>VFD075C4EA-21</li><li>VFD1100C43A-21</li><li>VFD110C23A-21</li><li>VFD110C43A-21</li><li>VFD110C4EA-21</li><li>VFD1320C43A-21</li><li>VFD150C23A-21</li><li>VFD150C43A-21</li><li>VFD150C4EA-21</li><li>VFD1600C43A-21</li><li>VFD1850C43A-21</li><li>VFD185C23A-21</li><li>VFD185C43A-21</li><li>VFD185C4EA-21</li><li>VFD2000C43A-21</li><li>VFD2200C43A-21</li><li>VFD220C23A-21</li><li>VFD220C43A-21</li><li>VFD220C4EA-21</li><li>VFD2500C43A-21</li><li>VFD2800C43C-21</li><li>VFD300C23A-21</li><li>VFD300C43A-21</li><li>VFD300C4EA-21</li><li>VFD3150C43C-21</li><li>VFD3550C43C-21</li><li>VFD370C23A-21</li><li>VFD370C43S-21</li><li>VFD4000C43C-21</li><li>VFD4500C43C-21</li><li>VFD450C23A-21</li><li>VFD450C43S-21</li><li>VFD5000C43C-21</li><li>VFD550C23A-21</li><li>VFD550C43A-21</li><li>VFD5600C43C-21</li><li>VFD750C23A-21</li><li>VFD750C43A-21</li><li>VFD900C23A-21</li><li>VFD900C43A-21</li>
           </ul>
         </details>
 
-        <details class="vfd-detail">
+        <details class="vfd-detail" open style="order:3">
           <summary>Modelos CP2000</summary>
           <ul class="vfd-model-code-list" data-model-source="cp2000">
             <li>VFD007CP23A-21</li><li>VFD015CP23A-21</li><li>VFD015CP4EA-21</li><li>VFD022CP23A-21</li><li>VFD022CP4EA-21</li><li>VFD037CP23A-21</li><li>VFD037CP4EA-21</li><li>VFD055CP23A-21</li><li>VFD055CP4EA-21</li><li>VFD075CP23A-21</li><li>VFD075CP4EA-21</li><li>VFD110CP23A-21</li><li>VFD110CP4EA-21</li><li>VFD150CP23A-21</li><li>VFD150CP4EA-21</li><li>VFD185CP23A-21</li><li>VFD185CP4EA-21</li><li>VFD220CP23A-21</li><li>VFD300CP23A-21</li><li>VFD300CP4EA-21</li><li>VFD370CP23A-21</li><li>VFD370CP4EA-21</li><li>VFD450CP23A-21</li><li>VFD550CP23A-21</li><li>VFD750CP23A-21</li><li>VFD900CP23A-21</li>
@@ -266,6 +319,7 @@
       </div>
     </section>
 
+  </main>
 
   <footer class="site-footer">
     <div class="site-footer__inner">
