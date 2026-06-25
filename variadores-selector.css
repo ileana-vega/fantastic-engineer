@@ -25,8 +25,9 @@
 .vfd-selector-heading h2 {
   max-width: 900px;
   margin: 0 0 8px;
-  font-size: clamp(28px, 2.7vw, 38px);
-  line-height: 1.16;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 .vfd-selector-heading p:not(.eyebrow) {
@@ -435,8 +436,9 @@
 .vfd-configurator-heading h2 {
   max-width: 820px;
   margin: 0 0 8px;
-  font-size: clamp(28px, 2.5vw, 38px);
-  line-height: 1.15;
+  font-size: clamp(28px, 3.2vw, 42px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
 }
 
 .vfd-configurator-heading p:not(.eyebrow) {
