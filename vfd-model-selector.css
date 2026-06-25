@@ -107,3 +107,16 @@
   .match{margin-top:8px;white-space:normal}
   .close-btn{margin-top:12px}
 }
+
+.vfd-family-selector .vfd-selector-heading h2,
+#matriz-seleccion .section-heading h2,
+.delta-selector__title,
+.accessory-header h2,
+.vfd-configurator-heading h2,
+.section.compact .section-heading h2 {
+  max-width: 900px;
+  margin: 0 0 8px;
+  font-size: clamp(28px, 2.7vw, 38px);
+  line-height: 1.16;
+  letter-spacing: 0;
+}
