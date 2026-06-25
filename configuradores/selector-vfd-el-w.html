@@ -1,0 +1,815 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selector VFD-EL-W con compra y cotización</title>
+
+  <style>
+    :root{
+      --red:#e11b22;
+      --green:#2faa36;
+      --magenta:#e10088;
+      --cyan:#1c9ee7;
+      --purple:#b84895;
+      --lime:#43aa32;
+      --text:#0f0f0f;
+      --muted:#536371;
+      --panel:#ececec;
+      --white:#ffffff;
+      --border:#d5d5d5;
+      --disabled:#e4e7e9;
+      --shadow:0 16px 38px rgba(0,0,0,.08);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:#f7f9fb;
+    }
+
+    .vfd-selector{ padding:34px 18px; }
+    .vfd-wrap{ width:min(1420px, 100%); margin:0 auto; }
+
+    .vfd-panel{
+      position:relative;
+      overflow:hidden;
+      min-height:790px;
+      padding:26px 28px 34px;
+      border-radius:22px;
+      background:var(--panel);
+      box-shadow:var(--shadow);
+    }
+
+    .vfd-svg{
+      position:absolute;
+      inset:0;
+      z-index:1;
+      width:100%;
+      height:100%;
+      pointer-events:none;
+    }
+
+    .vfd-content{ position:relative; z-index:2; }
+
+    .vfd-title-row{
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:38px;
+    }
+
+    .vfd-title{
+      margin:0;
+      color:var(--cyan);
+      font-size:clamp(2.15rem, 4vw, 3.25rem);
+      line-height:1.05;
+      font-weight:900;
+    }
+
+    .vfd-model-row{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      margin-bottom:26px;
+    }
+
+    .vfd-model{
+      display:flex;
+      align-items:flex-end;
+      gap:34px;
+      padding-left:95px;
+      margin-bottom:0;
+      flex-wrap:wrap;
+    }
+
+    .vfd-segment{
+      display:inline-flex;
+      justify-content:center;
+      min-width:70px;
+      padding:0 4px 10px;
+      border-bottom:5px solid var(--seg-color);
+      color:#000;
+      font-size:clamp(2.2rem, 3.7vw, 3.55rem);
+      font-weight:900;
+      line-height:.95;
+      letter-spacing:.02em;
+    }
+
+    .vfd-segment--packing{
+      min-width:82px;
+      font-size:clamp(1.9rem, 3.3vw, 3.05rem);
+    }
+
+    .vfd-action-button[hidden]{
+      display:none;
+    }
+
+    .vfd-action-button{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      min-height:44px;
+      padding:10px 17px;
+      border:2px solid transparent;
+      border-radius:11px;
+      color:#fff;
+      cursor:pointer;
+      font:inherit;
+      font-size:.92rem;
+      font-weight:900;
+      text-decoration:none;
+      transition:
+        transform .18s ease,
+        box-shadow .18s ease,
+        opacity .18s ease;
+    }
+
+    .vfd-action-button:hover{
+      transform:translateY(-1px);
+    }
+
+    .vfd-action-button--buy{
+      background:var(--cyan);
+      box-shadow:0 8px 18px rgba(28,158,231,.22);
+    }
+
+    .vfd-action-button--quote{
+      background:#198754;
+      box-shadow:0 8px 18px rgba(25,135,84,.2);
+    }
+
+    .vfd-layout{
+      display:grid;
+      grid-template-columns:minmax(360px, .9fr) minmax(520px, 1.1fr);
+      gap:18px 34px;
+      align-items:start;
+    }
+
+    .vfd-left{
+      min-height:500px;
+      padding-top:360px;
+      position:relative;
+    }
+
+    .vfd-right{
+      display:grid;
+      gap:24px;
+      align-content:start;
+      padding-top:0;
+    }
+
+    .vfd-block{ position:relative; min-width:0; }
+    .vfd-block--product{ max-width:360px; margin-left:54px; }
+
+    .vfd-block__title{
+      margin:0 0 10px;
+      color:var(--block-color);
+      font-size:clamp(1.55rem, 2.6vw, 2.15rem);
+      line-height:1.05;
+      font-weight:900;
+    }
+
+    .vfd-block__desc{
+      margin:0;
+      color:#000;
+      font-size:1rem;
+      line-height:1.45;
+      font-weight:700;
+    }
+
+    .vfd-options{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+    }
+
+    .vfd-option{
+      min-width:148px;
+      min-height:68px;
+      padding:10px 14px;
+      border:2px solid var(--border);
+      border-radius:13px;
+      background:var(--white);
+      color:#102334;
+      cursor:pointer;
+      font:inherit;
+      font-size:1rem;
+      font-weight:900;
+      transition:
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease,
+        color .18s ease,
+        box-shadow .18s ease,
+        opacity .18s ease;
+    }
+
+    .vfd-option small{
+      display:block;
+      margin-top:5px;
+      color:#4e6070;
+      font-size:.82rem;
+      font-weight:700;
+    }
+
+    .vfd-option:hover:not(:disabled){
+      transform:translateY(-1px);
+      border-color:var(--option-color);
+      box-shadow:0 8px 18px rgba(0,0,0,.07);
+    }
+
+    .vfd-option.is-active{
+      color:#fff;
+      border-color:var(--option-color);
+      background:var(--option-color);
+      box-shadow:0 10px 22px rgba(0,0,0,.12);
+    }
+
+    .vfd-option.is-active small{ color:#fff; }
+
+    .vfd-option.is-active::after{
+      content:"✓";
+      margin-left:7px;
+      font-size:.82rem;
+    }
+
+    .vfd-option:disabled{
+      color:#87939c;
+      border-color:#d9dde0;
+      background:var(--disabled);
+      cursor:not-allowed;
+      opacity:.58;
+      box-shadow:none;
+    }
+
+    .vfd-option:disabled small{ color:#8a959d; }
+
+    .vfd-fixed{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-height:48px;
+      padding:12px 16px;
+      border:2px solid var(--fixed-color);
+      border-radius:13px;
+      color:var(--fixed-color);
+      background:#fff;
+      font-weight:900;
+    }
+
+    .vfd-fixed span{
+      color:#71465f;
+      font-size:.82rem;
+      font-weight:700;
+    }
+
+    .vfd-clear-button{
+      flex:0 0 auto;
+      min-height:44px;
+      padding:10px 16px;
+      border:2px solid var(--cyan);
+      border-radius:11px;
+      color:var(--cyan);
+      background:#fff;
+      cursor:pointer;
+      font:inherit;
+      font-size:.92rem;
+      font-weight:900;
+      transition:
+        transform .18s ease,
+        color .18s ease,
+        background .18s ease,
+        opacity .18s ease,
+        box-shadow .18s ease;
+    }
+
+    .vfd-clear-button:hover:not(:disabled){
+      transform:translateY(-1px);
+      color:#fff;
+      background:var(--cyan);
+      box-shadow:0 8px 18px rgba(28,158,231,.2);
+    }
+
+    .vfd-clear-button:disabled{
+      color:#8a959d;
+      border-color:#cbd2d7;
+      background:#eef1f3;
+      cursor:not-allowed;
+      opacity:.7;
+    }
+
+    @media (max-width:1120px){
+      .vfd-panel{ min-height:0; }
+      .vfd-svg{ display:none; }
+      .vfd-model-row{
+        align-items:center;
+        flex-direction:column;
+      }
+      .vfd-model{ justify-content:center; gap:18px; padding-left:0; }
+      .vfd-layout{ grid-template-columns:1fr; }
+      .vfd-left{ min-height:0; padding-top:0; }
+      .vfd-right{ gap:24px; }
+      .vfd-block--product{ max-width:none; margin-left:0; }
+      .vfd-block{
+        padding:18px;
+        border-left:5px solid var(--block-color);
+        border-radius:12px;
+        background:rgba(255,255,255,.55);
+      }
+    }
+
+    @media (max-width:700px){
+    }
+
+    @media (max-width:620px){
+      .vfd-selector{ padding:18px 8px; }
+      .vfd-panel{ padding:20px 14px 24px; }
+      .vfd-title-row{
+        align-items:stretch;
+        flex-direction:column;
+        margin-bottom:28px;
+      }
+      .vfd-clear-button{ width:100%; }
+      .vfd-model{ gap:12px; }
+      .vfd-segment{ min-width:54px; font-size:1.9rem; }
+      .vfd-segment--packing{ min-width:66px; font-size:1.65rem; }
+      .vfd-action-button{ width:100%; }
+      .vfd-option{ width:100%; }
+    }
+    /* Ajuste compacto para integracion en variadores.html */
+    @media (min-width: 901px){
+      .vfd-selector, .ms-selector{ padding:22px 12px; }
+      .vfd-panel, .ms-panel{ padding:20px 22px 26px; border-radius:18px; }
+      .vfd-options, .ms-options{ gap:8px; }
+      .vfd-option, .ms-option{ min-height:54px; min-width:118px; padding:8px 11px; border-radius:10px; font-size:.9rem; }
+      .vfd-option small, .ms-option small{ margin-top:3px; font-size:.74rem; }
+      .vfd-title, .ms-title{ font-size:clamp(1.8rem, 3.1vw, 2.8rem); }
+      .vfd-block__title, .ms-block__title{ margin-bottom:7px; font-size:clamp(1.35rem, 2.3vw, 1.85rem); }
+      .vfd-block__desc, .ms-block__desc{ font-size:.9rem; line-height:1.35; }
+      .vfd-clear, .ms-clear, .vfd-action, .vfd-action-button, .ms-action{ min-height:38px; padding:9px 14px; font-size:.84rem; border-radius:10px; }
+      .vfd-fixed, .ms-fixed-card{ padding:9px 12px; border-radius:10px; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="vfd-selector" id="selector-vfd-el-w">
+    <div class="vfd-wrap">
+      <div class="vfd-panel" id="diagram">
+        <svg class="vfd-svg" id="connectors" aria-hidden="true"></svg>
+
+        <div class="vfd-content">
+          <div class="vfd-title-row">
+            <h1 class="vfd-title">Cómo configurar tu modelo de variador VFD-EL-W</h1>
+
+            <button
+              type="button"
+              class="vfd-clear-button"
+              id="clear-selection"
+              aria-label="Limpiar selección"
+            >
+              Limpiar selección
+            </button>
+          </div>
+
+          <div class="vfd-model-row">
+            <div class="vfd-model" aria-label="Modelo configurado">
+              <span class="vfd-segment" id="src-product" style="--seg-color:var(--red)">VFD</span>
+              <span class="vfd-segment" id="src-capacity" style="--seg-color:var(--green)"></span>
+              <span class="vfd-segment" id="src-series" style="--seg-color:var(--magenta)">EL</span>
+              <span class="vfd-segment" id="src-voltage" style="--seg-color:var(--cyan)"></span>
+              <span class="vfd-segment" id="src-design" style="--seg-color:var(--purple)">W</span>
+              <span class="vfd-segment vfd-segment--packing" id="src-packing" style="--seg-color:var(--lime)">-1</span>
+            </div>
+
+            <a
+              class="vfd-action-button"
+              id="model-action"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-live="polite"
+              hidden
+            ></a>
+          </div>
+
+          <div class="vfd-layout">
+            <div class="vfd-left">
+              <section
+                class="vfd-block vfd-block--product"
+                id="target-product"
+                style="--block-color:var(--red)"
+              >
+                <h2 class="vfd-block__title">Producto</h2>
+                <p class="vfd-block__desc">(Variador de frecuencia)</p>
+              </section>
+            </div>
+
+            <div class="vfd-right">
+              <section
+                class="vfd-block"
+                id="target-packing"
+                style="--block-color:var(--lime)"
+              >
+                <h2 class="vfd-block__title">Método de empaque</h2>
+                <div class="vfd-fixed" style="--fixed-color:var(--lime)">
+                  -1
+                  <span>Empaque individual</span>
+                </div>
+              </section>
+
+              <section
+                class="vfd-block"
+                id="target-voltage"
+                style="--block-color:var(--cyan)"
+              >
+                <h2 class="vfd-block__title">Voltaje de entrada</h2>
+                <div class="vfd-options" id="voltage-options"></div>
+              </section>
+
+              <section
+                class="vfd-block"
+                id="target-series"
+                style="--block-color:var(--magenta)"
+              >
+                <h2 class="vfd-block__title">Serie VFD-EL-W</h2>
+                <div class="vfd-fixed" style="--fixed-color:var(--magenta)">
+                  EL-W
+                  <span>Serie fija para este selector</span>
+                </div>
+              </section>
+
+              <section
+                class="vfd-block"
+                id="target-capacity"
+                style="--block-color:var(--green)"
+              >
+                <h2 class="vfd-block__title">Capacidad de motor aplicable</h2>
+                <div class="vfd-options" id="capacity-options"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const WHATSAPP_NUMBER = "5217201185420";
+
+    const VALID_MODELS = new Set([
+      "VFD002EL21W-1",
+      "VFD004EL21W-1",
+      "VFD004EL43W-1",
+      "VFD007EL21W-1",
+      "VFD007EL43W-1",
+      "VFD015EL21W-1",
+      "VFD015EL43W-1",
+      "VFD022EL21W-1",
+      "VFD022EL43W-1",
+      "VFD040EL43W-1"
+    ]);
+
+    /*
+      Modelos con compra directa verificada en CEITSA.
+      Los modelos que no estén en este mapa abren WhatsApp para cotización.
+    */
+    const PURCHASE_URLS = {
+      "VFD002EL21W-1":"https://ceitsa.com.mx/p/VFD002EL21W-1",
+      "VFD004EL21W-1":"https://ceitsa.com.mx/p/VFD004EL21W-1",
+      "VFD004EL43W-1":"https://ceitsa.com.mx/p/VFD004EL43W-1",
+      "VFD007EL43W-1":"https://ceitsa.com.mx/p/VFD007EL43W-1",
+      "VFD015EL21W-1":"https://ceitsa.com.mx/p/VFD015EL21W-1",
+      "VFD015EL43W-1":"https://ceitsa.com.mx/p/VFD015EL43W-1",
+      "VFD022EL21W-1":"https://ceitsa.com.mx/p/VFD022EL21W-1",
+      "VFD022EL43W-1":"https://ceitsa.com.mx/p/VFD022EL43W-1"
+    };
+
+    const OPTIONS = {
+      capacity: [
+        { code:"002", label:"0.25 HP (0.2 kW)" },
+        { code:"004", label:"0.5 HP (0.4 kW)" },
+        { code:"007", label:"1 HP (0.75 kW)" },
+        { code:"015", label:"2 HP (1.5 kW)" },
+        { code:"022", label:"3 HP (2.2 kW)" },
+        { code:"040", label:"5.5 HP (4.0 kW)" }
+      ],
+      voltage: [
+        { code:"21", label:"230 V Monofásico" },
+        { code:"43", label:"460 V Trifásico" }
+      ]
+    };
+
+    const state = {
+      capacity:null,
+      voltage:null
+    };
+
+    const colors = {
+      capacity:"#2faa36",
+      voltage:"#1c9ee7"
+    };
+
+    function modelCode(capacity, voltage){
+      return `VFD${capacity}EL${voltage}W-1`;
+    }
+
+    function isValidCombination(capacity, voltage){
+      return VALID_MODELS.has(modelCode(capacity, voltage));
+    }
+
+    function optionIsAvailable(group, code){
+      if(group === "capacity"){
+        if(!state.voltage){
+          return OPTIONS.voltage.some(
+            voltage => isValidCombination(code, voltage.code)
+          );
+        }
+
+        return isValidCombination(code, state.voltage);
+      }
+
+      if(!state.capacity){
+        return OPTIONS.capacity.some(
+          capacity => isValidCombination(capacity.code, code)
+        );
+      }
+
+      return isValidCombination(state.capacity, code);
+    }
+
+    function buildQuoteUrl(model){
+      const message = encodeURIComponent(
+        `Hola, quiero solicitar una cotización del variador Delta ${model}.`
+      );
+
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    }
+
+    function renderModelAction(){
+      const action = document.getElementById("model-action");
+
+      if(!state.capacity || !state.voltage){
+        action.hidden = true;
+        action.removeAttribute("href");
+        return;
+      }
+
+      const model = modelCode(state.capacity, state.voltage);
+      const purchaseUrl = PURCHASE_URLS[model];
+
+      action.hidden = false;
+
+      action.classList.remove(
+        "vfd-action-button--buy",
+        "vfd-action-button--quote"
+      );
+
+      if(purchaseUrl){
+        action.textContent = "Comprar en CEITSA";
+        action.href = purchaseUrl;
+        action.classList.add("vfd-action-button--buy");
+        action.setAttribute(
+          "aria-label",
+          `Comprar ${model} en CEITSA`
+        );
+      }else{
+        action.textContent = "Solicitar cotización por WhatsApp";
+        action.href = buildQuoteUrl(model);
+        action.classList.add("vfd-action-button--quote");
+        action.setAttribute(
+          "aria-label",
+          `Solicitar cotización del modelo ${model} por WhatsApp`
+        );
+      }
+    }
+
+    function renderOptions(group, containerId){
+      const container = document.getElementById(containerId);
+
+      container.innerHTML = OPTIONS[group].map(item => {
+        const disabled = !optionIsAvailable(group, item.code);
+        const active = state[group] === item.code;
+
+        const unavailableText = group === "capacity"
+          ? `La capacidad ${item.label} no está disponible con el voltaje seleccionado.`
+          : `El voltaje ${item.label} no está disponible con la capacidad seleccionada.`;
+
+        return `
+          <button
+            type="button"
+            class="vfd-option ${active ? "is-active" : ""}"
+            style="--option-color:${colors[group]}"
+            data-group="${group}"
+            data-code="${item.code}"
+            aria-pressed="${active}"
+            ${disabled ? "disabled" : ""}
+            title="${disabled ? unavailableText : item.label}"
+          >
+            ${item.code}
+            <small>${item.label}</small>
+          </button>
+        `;
+      }).join("");
+
+      container
+        .querySelectorAll(".vfd-option:not(:disabled)")
+        .forEach(button => {
+          button.addEventListener("click", () => {
+            const selectedCode = button.dataset.code;
+
+            state[group] = state[group] === selectedCode
+              ? null
+              : selectedCode;
+
+            render();
+          });
+        });
+    }
+
+    function render(){
+      renderOptions("capacity", "capacity-options");
+      renderOptions("voltage", "voltage-options");
+
+      document.getElementById("src-capacity").textContent =
+        state.capacity || "";
+
+      document.getElementById("src-voltage").textContent =
+        state.voltage || "";
+
+      document.getElementById("clear-selection").disabled =
+        !state.capacity && !state.voltage;
+
+      renderModelAction();
+      requestAnimationFrame(drawLines);
+    }
+
+    function relPoint(element, mode){
+      const diagram = document.getElementById("diagram");
+      const diagramRect = diagram.getBoundingClientRect();
+      const rect = element.getBoundingClientRect();
+
+      const points = {
+        "bottom-center": {
+          x:rect.left - diagramRect.left + rect.width / 2,
+          y:rect.bottom - diagramRect.top
+        },
+        "left-title": {
+          x:rect.left - diagramRect.left - 28,
+          y:rect.top - diagramRect.top + 22
+        }
+      };
+
+      return points[mode];
+    }
+
+    function path(points){
+      return points
+        .map((point,index) =>
+          `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`
+        )
+        .join(" ");
+    }
+
+    function drawLines(){
+      const svg = document.getElementById("connectors");
+      const panel = document.getElementById("diagram");
+
+      if(window.innerWidth <= 1120){
+        svg.innerHTML = "";
+        return;
+      }
+
+      const rect = panel.getBoundingClientRect();
+      svg.setAttribute(
+        "viewBox",
+        `0 0 ${rect.width} ${rect.height}`
+      );
+
+      const sourceProduct = relPoint(
+        document.getElementById("src-product"),
+        "bottom-center"
+      );
+
+      const sourceCapacity = relPoint(
+        document.getElementById("src-capacity"),
+        "bottom-center"
+      );
+
+      const sourceSeries = relPoint(
+        document.getElementById("src-series"),
+        "bottom-center"
+      );
+
+      const sourceVoltage = relPoint(
+        document.getElementById("src-voltage"),
+        "bottom-center"
+      );
+
+      const productRect = document
+        .getElementById("target-product")
+        .getBoundingClientRect();
+
+      const panelRect = panel.getBoundingClientRect();
+      const productEndY =
+        productRect.top - panelRect.top - 16;
+
+      const targetVoltage = relPoint(
+        document.getElementById("target-voltage"),
+        "left-title"
+      );
+
+      const targetSeries = relPoint(
+        document.getElementById("target-series"),
+        "left-title"
+      );
+
+      const targetCapacity = relPoint(
+        document.getElementById("target-capacity"),
+        "left-title"
+      );
+
+      const lines = [
+        {
+          color:"#e11b22",
+          d:path([
+            sourceProduct,
+            {
+              x:sourceProduct.x,
+              y:productEndY
+            }
+          ])
+        },
+        {
+          color:"#2faa36",
+          d:path([
+            sourceCapacity,
+            {
+              x:sourceCapacity.x,
+              y:targetCapacity.y
+            },
+            targetCapacity
+          ])
+        },
+        {
+          color:"#e10088",
+          d:path([
+            sourceSeries,
+            {
+              x:sourceSeries.x,
+              y:targetSeries.y
+            },
+            targetSeries
+          ])
+        },
+        {
+          color:"#1c9ee7",
+          d:path([
+            sourceVoltage,
+            {
+              x:sourceVoltage.x,
+              y:targetVoltage.y
+            },
+            targetVoltage
+          ])
+        }
+      ];
+
+      svg.innerHTML = lines.map(line => `
+        <path
+          d="${line.d}"
+          fill="none"
+          stroke="${line.color}"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      `).join("");
+    }
+
+    document
+      .getElementById("clear-selection")
+      .addEventListener("click", () => {
+        state.capacity = null;
+        state.voltage = null;
+        render();
+      });
+
+    window.addEventListener("resize", () => {
+      clearTimeout(window.__vfdElwTimer);
+      window.__vfdElwTimer =
+        setTimeout(drawLines,100);
+    });
+
+    render();
+  </script>
+</body>
+</html>
+

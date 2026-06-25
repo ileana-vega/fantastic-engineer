@@ -1,0 +1,1108 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selector visual de variadores VFD-MS300</title>
+
+  <style>
+    :root {
+      --red:#e11b22;
+      --green:#2faa36;
+      --magenta:#e10088;
+      --cyan:#159fdf;
+      --orange:#ed8b22;
+      --purple:#9747a8;
+      --teal:#168f83;
+      --navy:#305b8f;
+      --gray:#6b7480;
+      --text:#101820;
+      --panel:#ececec;
+      --white:#ffffff;
+      --border:#d3d9de;
+      --disabled:#e3e7ea;
+      --shadow:0 16px 38px rgba(0,0,0,.08);
+    }
+
+    * { box-sizing:border-box; }
+
+    body {
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:#f7f9fb;
+    }
+
+    .ms-selector { padding:34px 18px; }
+    .ms-wrap { width:min(1480px, 100%); margin:0 auto; }
+
+    .ms-panel {
+      position:relative;
+      overflow:hidden;
+      min-height:910px;
+      padding:26px 28px 36px;
+      border-radius:22px;
+      background:var(--panel);
+      box-shadow:var(--shadow);
+    }
+
+    .ms-connectors {
+      position:absolute;
+      inset:0;
+      z-index:1;
+      width:100%;
+      height:100%;
+      overflow:visible;
+      pointer-events:none;
+    }
+
+    .ms-content { position:relative; z-index:2; }
+
+    .ms-title-row {
+      display:flex;
+      align-items:flex-start;
+      justify-content:space-between;
+      gap:18px;
+      margin-bottom:34px;
+    }
+
+    .ms-title {
+      margin:0;
+      color:var(--cyan);
+      font-size:clamp(2.1rem, 4vw, 3.2rem);
+      line-height:1.06;
+      font-weight:900;
+    }
+
+    .ms-clear {
+      flex:0 0 auto;
+      min-height:44px;
+      padding:10px 17px;
+      border:2px solid var(--cyan);
+      border-radius:11px;
+      color:var(--cyan);
+      background:#fff;
+      cursor:pointer;
+      font:inherit;
+      font-size:.92rem;
+      font-weight:900;
+      transition:
+        transform .18s ease,
+        color .18s ease,
+        background .18s ease,
+        opacity .18s ease,
+        box-shadow .18s ease;
+    }
+
+    .ms-clear:hover:not(:disabled) {
+      transform:translateY(-1px);
+      color:#fff;
+      background:var(--cyan);
+      box-shadow:0 8px 18px rgba(21,159,223,.2);
+    }
+
+    .ms-clear:disabled {
+      color:#8a959d;
+      border-color:#cbd2d7;
+      background:#eef1f3;
+      cursor:not-allowed;
+      opacity:.72;
+    }
+
+    .ms-model {
+      display:flex;
+      align-items:flex-end;
+      gap:21px;
+      padding-left:72px;
+      margin-bottom:24px;
+      flex-wrap:wrap;
+    }
+
+    .ms-segment {
+      display:inline-flex;
+      justify-content:center;
+      min-width:58px;
+      min-height:54px;
+      padding:0 4px 9px;
+      border-bottom:5px solid var(--segment-color);
+      color:#000;
+      font-size:clamp(1.85rem, 3vw, 3rem);
+      font-weight:900;
+      line-height:1;
+      letter-spacing:.015em;
+    }
+
+    .ms-segment--wide { min-width:88px; }
+
+    .ms-model-action {
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      align-self:center;
+      min-height:46px;
+      margin-left:12px;
+      padding:11px 18px;
+      border:2px solid transparent;
+      border-radius:11px;
+      color:#fff;
+      background:var(--cyan);
+      box-shadow:0 9px 20px rgba(21,159,223,.22);
+      font-size:.92rem;
+      font-weight:900;
+      line-height:1.15;
+      text-align:center;
+      text-decoration:none;
+      transition:
+        transform .18s ease,
+        background .18s ease,
+        box-shadow .18s ease,
+        opacity .18s ease;
+    }
+
+    .ms-model-action:hover {
+      transform:translateY(-1px);
+      box-shadow:0 12px 24px rgba(21,159,223,.28);
+    }
+
+    .ms-model-action.is-quote {
+      background:#198754;
+      box-shadow:0 9px 20px rgba(25,135,84,.20);
+    }
+
+    .ms-model-action.is-checking {
+      color:#5d6871;
+      border-color:#cbd2d7;
+      background:#eef1f3;
+      box-shadow:none;
+      pointer-events:none;
+    }
+
+    .ms-model-action[hidden] {
+      display:none;
+    }
+
+    .ms-layout {
+      display:grid;
+      grid-template-columns:minmax(320px, .72fr) minmax(650px, 1.28fr);
+      gap:24px 42px;
+      align-items:start;
+    }
+
+    .ms-left {
+      min-height:620px;
+      padding-top:500px;
+    }
+
+    .ms-right {
+      display:grid;
+      gap:22px;
+      align-content:start;
+    }
+
+    .ms-fixed-grid {
+      display:grid;
+      grid-template-columns:repeat(4, minmax(0,1fr));
+      gap:12px;
+    }
+
+    .ms-fixed-card {
+      min-width:0;
+      padding:13px 14px;
+      border:2px solid var(--fixed-color);
+      border-radius:13px;
+      background:#fff;
+    }
+
+    .ms-fixed-card__title {
+      display:block;
+      margin-bottom:6px;
+      color:var(--fixed-color);
+      font-size:.75rem;
+      font-weight:900;
+      letter-spacing:.06em;
+      text-transform:uppercase;
+    }
+
+    .ms-fixed-card__value {
+      display:block;
+      margin-bottom:3px;
+      color:var(--fixed-color);
+      font-size:1.1rem;
+      font-weight:900;
+    }
+
+    .ms-fixed-card__text {
+      display:block;
+      color:#586673;
+      font-size:.75rem;
+      font-weight:700;
+      line-height:1.35;
+    }
+
+    .ms-block { position:relative; min-width:0; }
+    .ms-block--product { max-width:350px; margin-left:48px; }
+
+    .ms-block__title {
+      margin:0 0 10px;
+      color:var(--block-color);
+      font-size:clamp(1.45rem, 2.5vw, 2.05rem);
+      line-height:1.05;
+      font-weight:900;
+    }
+
+    .ms-block__desc {
+      margin:0;
+      color:#000;
+      font-size:1rem;
+      line-height:1.45;
+      font-weight:700;
+    }
+
+    .ms-options {
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+
+    .ms-option {
+      min-width:136px;
+      min-height:64px;
+      padding:9px 12px;
+      border:2px solid var(--border);
+      border-radius:12px;
+      color:#112333;
+      background:#fff;
+      cursor:pointer;
+      font:inherit;
+      font-size:.96rem;
+      font-weight:900;
+      transition:
+        transform .18s ease,
+        border-color .18s ease,
+        background .18s ease,
+        color .18s ease,
+        box-shadow .18s ease,
+        opacity .18s ease;
+    }
+
+    .ms-option small {
+      display:block;
+      margin-top:5px;
+      color:#526371;
+      font-size:.78rem;
+      font-weight:700;
+      line-height:1.25;
+    }
+
+    .ms-option:hover:not(:disabled) {
+      transform:translateY(-1px);
+      border-color:var(--option-color);
+      box-shadow:0 8px 18px rgba(0,0,0,.07);
+    }
+
+    .ms-option.is-active {
+      color:#fff;
+      border-color:var(--option-color);
+      background:var(--option-color);
+      box-shadow:0 10px 22px rgba(0,0,0,.12);
+    }
+
+    .ms-option.is-active small { color:#fff; }
+
+    .ms-option.is-active::after {
+      content:"✓";
+      margin-left:6px;
+      font-size:.8rem;
+    }
+
+    .ms-option:disabled {
+      color:#89949d;
+      border-color:#d8dde0;
+      background:var(--disabled);
+      cursor:not-allowed;
+      opacity:.56;
+      box-shadow:none;
+    }
+
+    .ms-option:disabled small { color:#8e989f; }
+
+    .ms-current .ms-option {
+      min-width:122px;
+    }
+
+    @media (max-width:1180px) {
+      .ms-panel { min-height:0; }
+      .ms-connectors { display:none; }
+      .ms-model { justify-content:center; gap:13px; padding-left:0; }
+      .ms-layout { grid-template-columns:1fr; }
+      .ms-left { min-height:0; padding-top:0; }
+      .ms-block--product { max-width:none; margin-left:0; }
+      .ms-block {
+        padding:17px;
+        border-left:5px solid var(--block-color);
+        border-radius:12px;
+        background:rgba(255,255,255,.55);
+      }
+    }
+
+    @media (max-width:880px) {
+      .ms-fixed-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+    }
+
+    @media (max-width:620px) {
+      .ms-selector { padding:18px 8px; }
+      .ms-panel { padding:20px 14px 26px; }
+      .ms-title-row {
+        align-items:stretch;
+        flex-direction:column;
+        margin-bottom:26px;
+      }
+      .ms-clear { width:100%; }
+      .ms-model { gap:9px; }
+      .ms-segment {
+        min-width:44px;
+        min-height:42px;
+        font-size:1.55rem;
+      }
+      .ms-segment--wide { min-width:66px; }
+      .ms-model-action {
+        width:100%;
+        margin:8px 0 0;
+      }
+      .ms-fixed-grid { grid-template-columns:1fr; }
+      .ms-option { width:100%; }
+    }
+    /* Ajuste compacto para integracion en variadores.html */
+    @media (min-width: 901px){
+      .vfd-selector, .ms-selector{ padding:22px 12px; }
+      .vfd-panel, .ms-panel{ padding:20px 22px 26px; border-radius:18px; }
+      .vfd-options, .ms-options{ gap:8px; }
+      .vfd-option, .ms-option{ min-height:54px; min-width:118px; padding:8px 11px; border-radius:10px; font-size:.9rem; }
+      .vfd-option small, .ms-option small{ margin-top:3px; font-size:.74rem; }
+      .vfd-title, .ms-title{ font-size:clamp(1.8rem, 3.1vw, 2.8rem); }
+      .vfd-block__title, .ms-block__title{ margin-bottom:7px; font-size:clamp(1.35rem, 2.3vw, 1.85rem); }
+      .vfd-block__desc, .ms-block__desc{ font-size:.9rem; line-height:1.35; }
+      .vfd-clear, .ms-clear, .vfd-action, .vfd-action-button, .ms-action{ min-height:38px; padding:9px 14px; font-size:.84rem; border-radius:10px; }
+      .vfd-fixed, .ms-fixed-card{ padding:9px 12px; border-radius:10px; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <section class="ms-selector" id="selector-ms300">
+    <div class="ms-wrap">
+      <div class="ms-panel" id="ms-diagram">
+        <svg class="ms-connectors" id="ms-connectors" aria-hidden="true"></svg>
+
+        <div class="ms-content">
+          <div class="ms-title-row">
+            <h1 class="ms-title">Cómo configurar tu modelo de variador VFD-MS300</h1>
+
+            <button
+              type="button"
+              class="ms-clear"
+              id="ms-clear"
+              aria-label="Limpiar selección"
+              disabled
+            >
+              Limpiar selección
+            </button>
+          </div>
+
+          <div class="ms-model" aria-label="Modelo configurado">
+            <span class="ms-segment ms-segment--wide" id="src-product" style="--segment-color:var(--red)">VFD</span>
+            <span class="ms-segment ms-segment--wide" id="src-current" style="--segment-color:var(--green)"></span>
+            <span class="ms-segment" id="src-series" style="--segment-color:var(--magenta)">MS</span>
+            <span class="ms-segment" id="src-voltage" style="--segment-color:var(--cyan)"></span>
+            <span class="ms-segment" id="src-protection" style="--segment-color:var(--orange)"></span>
+            <span class="ms-segment" id="src-emc" style="--segment-color:var(--purple)"></span>
+            <span class="ms-segment" id="src-sto" style="--segment-color:var(--teal)">S</span>
+            <span class="ms-segment" id="src-type" style="--segment-color:var(--navy)">A</span>
+            <span class="ms-segment" id="src-version" style="--segment-color:var(--gray)">A</span>
+
+            <a
+              class="ms-model-action"
+              id="ms-model-action"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              hidden
+            >
+              Verificando disponibilidad…
+            </a>
+          </div>
+
+          <div class="ms-layout">
+            <div class="ms-left">
+              <section
+                class="ms-block ms-block--product"
+                id="target-product"
+                style="--block-color:var(--red)"
+              >
+                <h2 class="ms-block__title">Producto</h2>
+                <p class="ms-block__desc">(Variador de frecuencia)</p>
+              </section>
+            </div>
+
+            <div class="ms-right">
+              <div class="ms-fixed-grid">
+                <div class="ms-fixed-card" style="--fixed-color:var(--magenta)">
+                  <span class="ms-fixed-card__title">Serie</span>
+                  <span class="ms-fixed-card__value">MS</span>
+                  <span class="ms-fixed-card__text">Serie estándar MS300</span>
+                </div>
+
+                <div class="ms-fixed-card" style="--fixed-color:var(--teal)">
+                  <span class="ms-fixed-card__title">Seguridad</span>
+                  <span class="ms-fixed-card__value">S</span>
+                  <span class="ms-fixed-card__text">STO integrado</span>
+                </div>
+
+                <div class="ms-fixed-card" style="--fixed-color:var(--navy)">
+                  <span class="ms-fixed-card__title">Tipo de modelo</span>
+                  <span class="ms-fixed-card__value">A</span>
+                  <span class="ms-fixed-card__text">Modelo estándar</span>
+                </div>
+
+                <div class="ms-fixed-card" style="--fixed-color:var(--gray)">
+                  <span class="ms-fixed-card__title">Versión</span>
+                  <span class="ms-fixed-card__value">A</span>
+                  <span class="ms-fixed-card__text">Versión A</span>
+                </div>
+              </div>
+
+              <section
+                class="ms-block"
+                id="target-emc"
+                style="--block-color:var(--purple)"
+              >
+                <h2 class="ms-block__title">Filtro EMC</h2>
+                <div class="ms-options" id="emc-options"></div>
+              </section>
+
+              <section
+                class="ms-block"
+                id="target-protection"
+                style="--block-color:var(--orange)"
+              >
+                <h2 class="ms-block__title">Nivel de protección</h2>
+                <div class="ms-options" id="protection-options"></div>
+              </section>
+
+              <section
+                class="ms-block"
+                id="target-voltage"
+                style="--block-color:var(--cyan)"
+              >
+                <h2 class="ms-block__title">Voltaje de entrada</h2>
+                <div class="ms-options" id="voltage-options"></div>
+              </section>
+
+              <section
+                class="ms-block ms-current"
+                id="target-current"
+                style="--block-color:var(--green)"
+              >
+                <h2 class="ms-block__title">Corriente nominal de salida</h2>
+                <div class="ms-options" id="current-options"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    /*
+      Catálogo base:
+      https://ceitsa.com.mx/docs/ms300-ceitsa.pdf
+
+      La validación se realiza únicamente contra los 58 modelos
+      proporcionados para este selector.
+    */
+
+    const VALID_MODEL_CODES = [
+      "VFD11AMS21ANSAA",
+      "VFD11AMS21MFSAA",
+      "VFD11AMS21MNSAA",
+      "VFD11AMS23ANSAA",
+      "VFD11AMS23MNSAA",
+      "VFD13AMS43ANSAA",
+      "VFD13AMS43MFSAA",
+      "VFD13AMS43MNSAA",
+      "VFD17AMS23ANSAA",
+      "VFD17AMS23MNSAA",
+      "VFD17AMS43ANSAA",
+      "VFD17AMS43MFSAA",
+      "VFD17AMS43MNSAA",
+      "VFD1A5MS43ANSAA",
+      "VFD1A5MS43MFSAA",
+      "VFD1A5MS43MNSAA",
+      "VFD1A6MS11ANSAA",
+      "VFD1A6MS21ANSAA",
+      "VFD1A6MS23ANSAA",
+      "VFD25AMS23ANSAA",
+      "VFD25AMS23MNSAA",
+      "VFD25AMS43ANSAA",
+      "VFD2A5MS11ANSAA",
+      "VFD2A7MS43ANSAA",
+      "VFD2A7MS43MFSAA",
+      "VFD2A7MS43MNSAA",
+      "VFD2A8MS21ANSAA",
+      "VFD2A8MS21MFSAA",
+      "VFD2A8MS21MNSAA",
+      "VFD2A8MS23ANSAA",
+      "VFD2A8MS23MNSAA",
+      "VFD32AMS43ANSAA",
+      "VFD33AMS23ANSAA",
+      "VFD38AMS43ANSAA",
+      "VFD45AMS43ANSAA",
+      "VFD49AMS23ANSAA",
+      "VFD4A2MS43AFSAA",
+      "VFD4A2MS43ANSAA",
+      "VFD4A2MS43MFSAA",
+      "VFD4A2MS43MNSAA",
+      "VFD4A8MS11ANSAA",
+      "VFD4A8MS21ANSAA",
+      "VFD4A8MS21MFSAA",
+      "VFD4A8MS21MNSAA",
+      "VFD4A8MS23ANSAA",
+      "VFD4A8MS23MNSAA",
+      "VFD5A5MS43ANSAA",
+      "VFD5A5MS43MFSAA",
+      "VFD5A5MS43MNSAA",
+      "VFD65AMS23ANSAA",
+      "VFD7A5MS21ANSAA",
+      "VFD7A5MS21MFSAA",
+      "VFD7A5MS21MNSAA",
+      "VFD7A5MS23ANSAA",
+      "VFD7A5MS23MNSAA",
+      "VFD9A0MS43ANSAA",
+      "VFD9A0MS43MFSAA",
+      "VFD9A0MS43MNSAA"
+];
+
+    const MODEL_PATTERN =
+      /^VFD(.+?)MS(11|21|23|43)([AM])([NF])SAA$/;
+
+    const MODELS = VALID_MODEL_CODES.map(rawCode => {
+      const code = String(rawCode).replace(/\s+/g, "").trim().toUpperCase();
+      const match = code.match(MODEL_PATTERN);
+
+      if(!match){
+        throw new Error(`Modelo MS300 no reconocido: ${code}`);
+      }
+
+      return {
+        code,
+        current:match[1],
+        voltage:match[2],
+        protection:match[3],
+        emc:match[4]
+      };
+    });
+
+    const FILTERS = {
+      current:[
+      {
+            "code": "1A5",
+            "label": "1.5 A (HD)"
+      },
+      {
+            "code": "1A6",
+            "label": "1.6 A (HD)"
+      },
+      {
+            "code": "2A5",
+            "label": "2.5 A (HD)"
+      },
+      {
+            "code": "2A7",
+            "label": "2.7 A (HD)"
+      },
+      {
+            "code": "2A8",
+            "label": "2.8 A (HD)"
+      },
+      {
+            "code": "4A2",
+            "label": "4.2 A (HD)"
+      },
+      {
+            "code": "4A8",
+            "label": "4.8 A (HD)"
+      },
+      {
+            "code": "5A5",
+            "label": "5.5 A (HD)"
+      },
+      {
+            "code": "7A5",
+            "label": "7.5 A (HD)"
+      },
+      {
+            "code": "9A0",
+            "label": "9 A (HD)"
+      },
+      {
+            "code": "11A",
+            "label": "11 A (HD)"
+      },
+      {
+            "code": "13A",
+            "label": "13 A (HD)"
+      },
+      {
+            "code": "17A",
+            "label": "17 A (HD)"
+      },
+      {
+            "code": "25A",
+            "label": "25 A (HD)"
+      },
+      {
+            "code": "32A",
+            "label": "32 A (HD)"
+      },
+      {
+            "code": "33A",
+            "label": "33 A (HD)"
+      },
+      {
+            "code": "38A",
+            "label": "38 A (HD)"
+      },
+      {
+            "code": "45A",
+            "label": "45 A (HD)"
+      },
+      {
+            "code": "49A",
+            "label": "49 A (HD)"
+      },
+      {
+            "code": "65A",
+            "label": "65 A (HD)"
+      }
+],
+      voltage:[
+        { code:"11", label:"115 V Monofásico" },
+        { code:"21", label:"230 V Monofásico" },
+        { code:"23", label:"230 V Trifásico" },
+        { code:"43", label:"460 V Trifásico" }
+      ],
+      protection:[
+        { code:"A", label:"IP20" },
+        { code:"M", label:"IP66 / NEMA 4X" }
+      ],
+      emc:[
+        { code:"N", label:"Sin filtro EMC" },
+        { code:"F", label:"Filtro EMC incorporado" }
+      ]
+    };
+
+    const FILTER_ORDER = [
+      "current",
+      "voltage",
+      "protection",
+      "emc"
+    ];
+
+    const COLORS = {
+      current:"#2faa36",
+      voltage:"#159fdf",
+      protection:"#ed8b22",
+      emc:"#9747a8"
+    };
+
+    const state = {
+      current:null,
+      voltage:null,
+      protection:null,
+      emc:null
+    };
+
+    const WHATSAPP_NUMBER = "5217201185420";
+
+    /*
+      Modelos MS300 publicados actualmente en la tienda de CEITSA.
+      Se usan enlaces directos, sin consultas fetch ni validación CORS.
+    */
+    const PUBLISHED_MODEL_CODES = new Set([
+      "VFD11AMS21ANSAA",
+      "VFD11AMS23ANSAA",
+      "VFD13AMS43ANSAA",
+      "VFD17AMS23ANSAA",
+      "VFD17AMS43ANSAA",
+      "VFD1A5MS43ANSAA",
+      "VFD1A6MS11ANSAA",
+      "VFD1A6MS21ANSAA",
+      "VFD1A6MS23ANSAA",
+      "VFD25AMS23ANSAA",
+      "VFD25AMS43ANSAA",
+      "VFD2A5MS11ANSAA",
+      "VFD2A7MS43ANSAA",
+      "VFD2A8MS21ANSAA",
+      "VFD2A8MS23ANSAA",
+      "VFD32AMS43ANSAA",
+      "VFD33AMS23ANSAA",
+      "VFD38AMS43ANSAA",
+      "VFD45AMS43ANSAA",
+      "VFD49AMS23ANSAA",
+      "VFD4A2MS43ANSAA",
+      "VFD4A8MS11ANSAA",
+      "VFD4A8MS21ANSAA",
+      "VFD4A8MS23ANSAA",
+      "VFD5A5MS43ANSAA",
+      "VFD65AMS23ANSAA",
+      "VFD7A5MS21ANSAA",
+      "VFD7A5MS23ANSAA",
+      "VFD9A0MS43ANSAA"
+    ]);
+
+    function normalizeModelCode(value){
+      return String(value || "")
+        .replace(/\s+/g, "")
+        .trim()
+        .toUpperCase();
+    }
+
+    function selectedModel(){
+      if(FILTER_ORDER.some(group => !state[group])){
+        return null;
+      }
+
+      return MODELS.find(model =>
+        FILTER_ORDER.every(group =>
+          model[group] === state[group]
+        )
+      ) || null;
+    }
+
+    function quotationUrl(modelCode){
+      const cleanCode = normalizeModelCode(modelCode);
+
+      const message = encodeURIComponent(
+        `Hola, quiero solicitar una cotización del variador Delta MS300 ${cleanCode}.`
+      );
+
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    }
+
+    function purchaseUrl(modelCode){
+      const cleanCode = normalizeModelCode(modelCode);
+
+      return `https://ceitsa.com.mx/p/${encodeURIComponent(cleanCode)}`;
+    }
+
+    function updateModelAction(){
+      const action =
+        document.getElementById("ms-model-action");
+
+      const model = selectedModel();
+
+      if(!model){
+        action.hidden = true;
+        action.removeAttribute("href");
+        action.classList.remove(
+          "is-quote",
+          "is-checking"
+        );
+        return;
+      }
+
+      const cleanCode =
+        normalizeModelCode(model.code);
+
+      const isPublished =
+        PUBLISHED_MODEL_CODES.has(cleanCode);
+
+      action.hidden = false;
+      action.classList.remove("is-checking");
+
+      if(isPublished){
+        action.textContent = "Comprar en CEITSA";
+        action.href = purchaseUrl(cleanCode);
+        action.classList.remove("is-quote");
+      }else{
+        action.textContent = "Solicitar cotización";
+        action.href = quotationUrl(cleanCode);
+        action.classList.add("is-quote");
+      }
+    }
+
+    function modelMatchesState(model, candidateGroup=null, candidateCode=null){
+      return FILTER_ORDER.every(group => {
+        const expected = group === candidateGroup
+          ? candidateCode
+          : state[group];
+
+        return !expected || model[group] === expected;
+      });
+    }
+
+    function optionIsAvailable(group, code){
+      return MODELS.some(model =>
+        modelMatchesState(model, group, code)
+      );
+    }
+
+    function disabledMessage(group, option){
+      const labels = {
+        current:"corriente",
+        voltage:"voltaje",
+        protection:"nivel de protección",
+        emc:"filtro EMC"
+      };
+
+      return `La opción ${option.label} no está disponible con la selección actual de ${labels[group]}.`;
+    }
+
+    function renderOptions(group, containerId){
+      const container =
+        document.getElementById(containerId);
+
+      container.innerHTML = FILTERS[group]
+        .map(option => {
+          const active =
+            state[group] === option.code;
+
+          const disabled =
+            !optionIsAvailable(group, option.code);
+
+          return `
+            <button
+              type="button"
+              class="ms-option ${active ? "is-active" : ""}"
+              style="--option-color:${COLORS[group]}"
+              data-group="${group}"
+              data-code="${option.code}"
+              aria-pressed="${active}"
+              ${disabled ? "disabled" : ""}
+              title="${disabled
+                ? disabledMessage(group, option)
+                : option.label}"
+            >
+              ${option.code}
+              <small>${option.label}</small>
+            </button>
+          `;
+        })
+        .join("");
+
+      container
+        .querySelectorAll(".ms-option:not(:disabled)")
+        .forEach(button => {
+          button.addEventListener("click", () => {
+            const group =
+              button.dataset.group;
+
+            const code =
+              button.dataset.code;
+
+            state[group] =
+              state[group] === code
+                ? null
+                : code;
+
+            render();
+          });
+        });
+    }
+
+    function render(){
+      renderOptions("emc", "emc-options");
+      renderOptions(
+        "protection",
+        "protection-options"
+      );
+      renderOptions(
+        "voltage",
+        "voltage-options"
+      );
+      renderOptions(
+        "current",
+        "current-options"
+      );
+
+      document.getElementById("src-current")
+        .textContent = state.current || "";
+
+      document.getElementById("src-voltage")
+        .textContent = state.voltage || "";
+
+      document.getElementById("src-protection")
+        .textContent = state.protection || "";
+
+      document.getElementById("src-emc")
+        .textContent = state.emc || "";
+
+      document.getElementById("ms-clear")
+        .disabled = FILTER_ORDER.every(
+          group => !state[group]
+        );
+
+      updateModelAction();
+      requestAnimationFrame(drawLines);
+    }
+
+    function relativePoint(element, mode){
+      const panel =
+        document.getElementById("ms-diagram");
+
+      const panelRect =
+        panel.getBoundingClientRect();
+
+      const rect =
+        element.getBoundingClientRect();
+
+      const points = {
+        "bottom-center":{
+          x:rect.left - panelRect.left
+            + rect.width / 2,
+          y:rect.bottom - panelRect.top
+        },
+        "left-title":{
+          x:rect.left - panelRect.left - 28,
+          y:rect.top - panelRect.top + 21
+        }
+      };
+
+      return points[mode];
+    }
+
+    function path(points){
+      return points.map((point,index) =>
+        `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`
+      ).join(" ");
+    }
+
+    function drawLines(){
+      const svg =
+        document.getElementById("ms-connectors");
+
+      const panel =
+        document.getElementById("ms-diagram");
+
+      if(window.innerWidth <= 1180){
+        svg.innerHTML = "";
+        return;
+      }
+
+      const panelRect =
+        panel.getBoundingClientRect();
+
+      svg.setAttribute(
+        "viewBox",
+        `0 0 ${panelRect.width} ${panelRect.height}`
+      );
+
+      const sourceProduct = relativePoint(
+        document.getElementById("src-product"),
+        "bottom-center"
+      );
+
+      const sourceCurrent = relativePoint(
+        document.getElementById("src-current"),
+        "bottom-center"
+      );
+
+      const sourceVoltage = relativePoint(
+        document.getElementById("src-voltage"),
+        "bottom-center"
+      );
+
+      const productRect = document
+        .getElementById("target-product")
+        .getBoundingClientRect();
+
+      const productEndY =
+        productRect.top - panelRect.top - 15;
+
+      const targetVoltage = relativePoint(
+        document.getElementById("target-voltage"),
+        "left-title"
+      );
+
+      const targetCurrent = relativePoint(
+        document.getElementById("target-current"),
+        "left-title"
+      );
+
+      /*
+        El orden vertical de los bloques está invertido respecto
+        a los segmentos seleccionables (EMC, protección, voltaje,
+        corriente). De esta forma cada línea termina antes de que
+        la siguiente cruce su recorrido.
+      */
+      const lines = [
+        {
+          color:"#e11b22",
+          d:path([
+            sourceProduct,
+            {
+              x:sourceProduct.x,
+              y:productEndY
+            }
+          ])
+        },
+        {
+          color:"#159fdf",
+          d:path([
+            sourceVoltage,
+            {
+              x:sourceVoltage.x,
+              y:targetVoltage.y
+            },
+            targetVoltage
+          ])
+        },
+        {
+          color:"#2faa36",
+          d:path([
+            sourceCurrent,
+            {
+              x:sourceCurrent.x,
+              y:targetCurrent.y
+            },
+            targetCurrent
+          ])
+        }
+      ];
+
+      svg.innerHTML = lines.map(line => `
+        <path
+          d="${line.d}"
+          fill="none"
+          stroke="${line.color}"
+          stroke-width="4"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      `).join("");
+    }
+
+    document
+      .getElementById("ms-clear")
+      .addEventListener("click", () => {
+        FILTER_ORDER.forEach(group => {
+          state[group] = null;
+        });
+
+        render();
+      });
+
+    window.addEventListener("resize", () => {
+      clearTimeout(window.__ms300Timer);
+
+      window.__ms300Timer =
+        setTimeout(drawLines,100);
+    });
+
+    render();
+  </script>
+</body>
+</html>
+

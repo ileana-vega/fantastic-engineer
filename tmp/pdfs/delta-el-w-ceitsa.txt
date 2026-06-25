@@ -1,0 +1,203 @@
+
+--- PAGE 2 ---
+Sensorless Vector Control Compact Drive
+VFD-EL-W Series
+Simple Speed Control
+Horizontal Movement
+Fixed Load Applications
+Frame A1 Frame A2 Frame B
+1
+
+--- PAGE 3 ---
+Safety and Reliability
+150%
+60s 150 % / 60 secs overload capability
+Energy-saving
+CE certification
+Easy Maintenance
+Natural cooling (Frame A1):
+no maintenance required
+Fan cooling (Frame A2, Frame B):
+easy fan installation, reliable design,
+fast dust removal
+Complete Functions
+Single / multi-pump control:
+constant pressure mode & alternative operation
+P
+I Built-in PID feedback control
+D
+Protection: overload, over voltage / over current stall prevention
+2
+
+--- PAGE 6 ---
+Frames and Appearances
+■ Frame A1 / A2
+A Digital Keypad
+Input Terminals
+(R / L1, S / L2, T / L3) B Choose NPN / PNP
+Frequency Control C Choose ACI / AVI
+Potentiometer
+D Control Terminals
+Digital Keypad A
+E RS-485 Terminal
+(RJ45)
+B C
+Control Board Cover
+D
+E
+Output Terminals
+(U / T1, V / T2, W / T3)
+Grounding Terminals
+Cooling Fan
+* Frame A1 does not
+include a cooling fan
+■ Frame B
+A Digital Keypad
+Input Terminals
+B Choose NPN / PNP
+(R / L1, S / L2, T / L3)
+C Choose AVI / ACI
+Frequency Control
+Potentiometer
+D Control Terminals
+A
+Digital Keypad
+E RS-485 Terminal
+Case (RJ45)
+B C
+Control Board Cover
+D
+E
+Output Terminals
+(U / T1, V / T2, W / T3)
+Grounding Terminals
+5
+
+--- PAGE 7 ---
+Model Explanation
+VFD 007 EL 21 W -1
+Methods of Packing
+-1: Individual Package
+N/A: 12 pcs / Carton
+Minimal & Economic
+Input Voltage
+21: 230 V 1 PH
+43: 460 V 3 PH
+VFD-EL-W Series
+Applicable Motor Capacity
+002: 0.25 HP (0.2 kW)
+Variable Frequency Drive 004: 0.5 HP (0.4 kW)
+007: 1 HP (0.75 kW)
+015: 2 HP (1.5 kW)
+022: 3 HP (2.2 kW)
+040: 5 .5 HP (4.0 kW)
+Specifications
+Product Specifications
+Voltage 230 V 460 V
+Frame A1 B A1 A2 B
+VFD-__EL21W(-1)
+Model 002 004 007 015 022 004 007 015 022 040
+VFD-__EL43W(-1)
+Max. Applicable Motor Output (kW) 0.2 0.4 0.75 1.5 2.2 0.4 0.75 1.5 2.2 4.0
+Max. Applicable Motor Output (HP) 0.25 0.5 1.0 2.0 3.0 0.5 1.0 2.0 3.0 5.5
+Rated Output Capacity (kVA) 0.6 1.0 1.6 2.9 4.2 1.2 2.0 3.3 4.4 7.4
+Rated Output Current (A) 1.6 2.5 4.2 7.5 11.0 1.5 2.5 4.2 5.5 9.0
+Output
+RS-485 Terminal Maximum Output Voltage (V) 3-Phase Proportional to Input Voltage
+Rating
+(RJ45) Output Frequency (Hz) 0.1 ~ 400
+Carrier Frequency (kHz) 2 ~ 12 (Default 8 kHz)
+Rated Input Current (A) 4.9 6.5 9.3 15.7 24.0 1.8 3.2 4.3 7.1 10.0
+Input Rated Voltage / Frequency Single Phase, AC 200 V ~ 240 V，50 / 60 Hz Three Phase, AC 380 V ~ 480 V，50 / 60 Hz
+Rating Voltage Tolerance ±10 % (180 V ~ 264 V) ±10 % (342 V ~ 528 V)
+Frequency Tolerance ±5 % (47 Hz ~ 63 Hz)
+Weight (kg) 1.0 1.4 1.0 1.4
+Cooling Method Natural Cooling Fan Cooling Natural Cooling Fan Cooling
+Brake Unit N/A
+DC Choke N/A
+EMI Filter N/A
+6
+
+--- PAGE 9 ---
+Dimensions
+■ Frame A1
+W D
+W1
+See A
+Model
+S
+VFD002EL21W(-1) A
+VFD004EL21W(-1) (Mounting Hole)
+VFD004EL43W(-1)
+VFD007EL21W(-1)
+VFD007EL43W(-1)
+Frame W W1 H H1 D D1 S
+mm 92.0 82.0 162.0 152 128.7 2.00 5.4
+A1
+inch 3.62 3.23 6.38 5.98 5.07 0.08 0.21
+■ Frame A2
+Model
+VFD015EL43W(-1)
+Frame W W1 H H1 H2 D D1 S
+mm 92.0 82.0 180.5 162.0 152 128.7 2.00 5.4
+A2
+inch 3.62 3.23 7.11 6.38 5.98 5.07 0.08 0.21
+8
+H 1H
+D1
+W
+W1
+H
+1H 2H
+D
+D1
+See A
+S
+A
+(Mounting Hole)
+
+--- PAGE 10 ---
+■ Frame B
+W1
+Model
+VFD015EL21W(-1)
+VFD022EL21W(-1)
+VFD022EL43W(-1)
+VFD040EL43W(-1)
+Frame W W1 H H1 D D1 S1 S2
+mm 100.0 89.0 174.0 162.9 136.0 4.0 5.9 5.4
+B
+inch 3.94 3.50 6.85 6.42 5.35 0.16 0.23 0.21
+Ordering Information
+Frame Cooling Method Operating Temperature Power Range Models
+VFD002EL21W(-1)
+VFD004EL21W(-1)
+230 V: 0.2 ~ 0.75 kW
+Frame A1 Natural Cooling VFD004EL43W(-1)
+460 V: 0.4 ~ 0.75 kW
+VFD007EL21W(-1)*
+VFD007EL43W(-1)
+Frame A2 -10°C ~ 50°C 460 V: 1.5 kW VFD015EL43W(-1)
+Fan Cooling
+VFD015EL21W(-1)
+230 V: 1.5 ~ 2.2 kW VFD022EL21W(-1)
+Frame B
+460 V: 2.2 ~ 4.0 kW VFD022EL43W(-1)
+VFD040EL43W(-1)
+VFDxxxELxxW-1 and VFDxxxELxxW share the same electrical specifications.
+*VFD007EL21W(-1): to reach 50℃ operating temperature, a fan kit MKEL-AFKM1 is required (without derating).
+*VFD007EL21W(-1): to reach 40℃ operating temperature, no need for a fan kit (without derating).
+9
+1H
+W
+H
+D
+D1
+See A
+See B
+S1
+A
+(Mounting Hole)
+S2
+B
+(Mounting Hole)

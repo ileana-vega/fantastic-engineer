@@ -1,0 +1,105 @@
+
+--- PAGE 2 ---
+Features
+Standard Modbus Protocol Complete Protection Functions
+Standard Modbus protocol via RS-485 High precision current detection, full overload
+protection (oL, oL1 and oL2), overvoltage/
+overcurrent stall prevention, short-circuit
+Built-in EMC Filter protection, reset after fault, speed search
+function and motor overheat protection by PTC
+(230V single-phase and 460V 3-phase)
+The built-in EMC filter reduces
+electromagnetic interference and complies
+with the EN61800-3 standard Power Range
+Single-phase 115 V series: 0.2 ~ 0.75 kW (0.25 ~ 1 hp)
+Single-phase 230 V series: 0.2 ~ 2.2 kW (0.25 ~ 3 hp)
+Compact Design 3-phase 230 V series: 0.2 ~ 3.7 kW (0.25 ~ 5 hp)
+3-phase 460 V series: 0.4 ~ 3.7 kW (0.50 ~ 5 hp)
+Space saving and easy DIN rail
+mounting with optional DIN rail adapter
+(Built-in for Frame B)
+o
+Side-by-side Installation (40 C)
+High-efficiency cooling and flexible spacing
+Optional Fieldbus Modules
+Provide connection to a variety of networks,
+including PROFIBUS, DeviceNet and
+CANopen
+RFI Switch for IT Mains
+Removable "Y" capacitor to use with IT
+mains supplies
+Easy Maintenance
+Removable cooling fan for easy maintenance
+DC Bus Sharing
+Multiple VFD-EL can be connected in parallel
+to share the regenerative braking energy.
+This prevents over-voltage and stabilizes
+DC bus voltage.
+*This function is not supported by the 115 V model.
+1
+
+--- PAGE 10 ---
+Dimensions
+Frame A
+MODEL
+VFD002EL11A
+VFD002EL21A
+VFD002EL23A
+VFD004EL11A
+VFD004EL21A
+VFD004EL23A
+VDF004EL43A
+VFD007EL21A
+VDF007EL23A
+VDF007EL43A
+VDF015EL23A
+VFD015EL43A
+Unit: mm[inch]
+Frame W H D W1 H1 D1 S1 S2
+mm 72.0 174.0 136.0 59.0 151.6 4.0 5.4 5.4
+A
+inch 2.83 6.86 5.36 2.32 5.97 0.16 0.21 0.21
+Frame B
+MODEL
+VFD007EL11A
+VFD015EL21A
+VFD022EL21A
+VDF022EL23A
+VFD022EL43A
+VDF037EL23A
+VFD037EL43A
+Unit: mm[inch]
+Frame W H D W1 H1 D1 D2 S1 S2
+mm 100.0 174.0 136.0 89.0 162.9 47.4 4.0 5.9 5.4
+B
+inch 3.94 6.85 5.36 3.50 6.42 1.87 0.16 0.23 0.21
+9
+
+--- PAGE 11 ---
+Accessories
+Fieldbus Modules
+▪ DeviceNet ▪ PROFIBUS ▪ CANopen
+CME-DN01 CME-PD01 CME-COP01
+Others
+▪ Brake unit ▪ Communication keypad ▪ DIN Rail (Width 35mm)
+BUE-20015 BUE-40015 VFD-PU06 MKEL-DRA MKEL-DRB
+BUE-20037 BUE-40037
+▪ Brake resistor ▪ Zero phase reactor ▪ Grounding plate
+RF220X00A MKE-EP
+Ordering Information
+Frame Size Power Range Models
+VFD002EL 11A / 21A / 23A
+115 V: 0.2 kW ~ 0.4 kW
+VFD004EL 11A / 21A / 23A / 43A
+Frame A 230 V: 0.2 kW ~ 1.5 kW
+VFD007EL 21A / 23A / 43A
+460 V: 0.4 kW ~ 1.5 kW
+VFD015EL 23A / 43A
+VFD007EL11A
+115 V: 0.75 kW
+VFD015EL 21A
+Frame B 230 V: 1.5 kW ~ 3.7 kW
+VFD022EL 21A / 23A / 43A
+460 V: 2.2 kW ~ 3.7 kW
+VFD037EL 23A / 43A
+10

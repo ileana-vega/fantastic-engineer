@@ -6,42 +6,35 @@
 }
 
 .vfd-selector-heading {
-  max-width: 1050px;
-  margin: 0 auto 12px;
-  text-align: center;
+  max-width: 1320px;
+  margin: 0 auto 28px;
+  text-align: left;
 }
 
 .vfd-selector-heading .eyebrow {
-  position: relative;
   margin-bottom: 12px;
   color: var(--ceitsa-blue);
   font-size: 13px;
-  letter-spacing: 0.08em;
+  font-weight: 900;
 }
 
 .vfd-selector-heading .eyebrow::after {
-  position: absolute;
-  left: 50%;
-  bottom: -8px;
-  width: 58px;
-  height: 3px;
-  border-radius: 999px;
-  background: var(--ceitsa-blue);
-  content: "";
-  transform: translateX(-50%);
+  display: none;
 }
 
 .vfd-selector-heading h2 {
-  max-width: 980px;
-  margin: 0 auto 6px;
-  font-size: clamp(26px, 2.8vw, 34px);
-  line-height: 1.05;
+  max-width: 900px;
+  margin: 0 0 8px;
+  font-size: clamp(28px, 2.7vw, 38px);
+  line-height: 1.16;
 }
 
 .vfd-selector-heading p:not(.eyebrow) {
+  max-width: 900px;
   margin: 0;
   color: #344256;
-  font-size: 15px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .vfd-selector-shell {
@@ -417,6 +410,114 @@
   font-weight: 900;
 }
 
+.vfd-configurators {
+  padding: 46px clamp(18px, 5vw, 62px) 28px;
+  background:
+    radial-gradient(circle at 82% 12%, rgba(0, 114, 206, 0.11), transparent 30%),
+    linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+}
+
+.vfd-configurator-heading {
+  max-width: 1320px;
+  margin: 0 auto 18px;
+}
+
+.vfd-configurator-heading .eyebrow,
+.vfd-configurator-card__head .eyebrow {
+  color: var(--ceitsa-blue);
+}
+
+.vfd-configurator-heading .eyebrow::after,
+.vfd-configurator-card__head .eyebrow::after {
+  display: none;
+}
+
+.vfd-configurator-heading h2 {
+  max-width: 820px;
+  margin: 0 0 8px;
+  font-size: clamp(28px, 2.5vw, 38px);
+  line-height: 1.15;
+}
+
+.vfd-configurator-heading p:not(.eyebrow) {
+  max-width: 940px;
+  margin: 0;
+  color: #344256;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.vfd-configurator-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-width: 1320px;
+  margin: 22px auto 24px;
+}
+
+.vfd-configurator-nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 38px;
+  padding: 8px 15px;
+  border: 1px solid rgba(0, 114, 206, 0.22);
+  border-radius: 8px;
+  color: var(--ceitsa-blue);
+  background: #ffffff;
+  font-size: 13px;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(24, 37, 47, 0.06);
+}
+
+.vfd-configurator-list {
+  display: grid;
+  gap: 24px;
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+.vfd-configurator-card {
+  scroll-margin-top: 92px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 114, 206, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 42px rgba(24, 37, 47, 0.08);
+}
+
+.vfd-configurator-card__head {
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid rgba(0, 114, 206, 0.12);
+  background: linear-gradient(90deg, rgba(0, 114, 206, 0.08), rgba(255, 255, 255, 0));
+}
+
+.vfd-configurator-card__head h3 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.18;
+}
+
+.vfd-configurator-frame-shell {
+  --config-scale: 0.82;
+  width: 100%;
+  height: var(--config-viewport-height, 725px);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.vfd-configurator-frame {
+  display: block;
+  width: 122%;
+  height: var(--config-height, 820px);
+  border: 0;
+  background: #ffffff;
+  transform: scale(var(--config-scale));
+  transform-origin: top left;
+}
+
 @media (max-width: 1200px) {
   .vfd-selector-shell,
   .vfd-selector-detail {
@@ -448,7 +549,7 @@
   }
 
   .vfd-selector-heading h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .vfd-selector-heading p:not(.eyebrow) {
@@ -526,5 +627,31 @@
 
   .vfd-selector-specs div:last-child {
     border-bottom: 0;
+  }
+
+  .vfd-configurators {
+    padding: 34px 16px 22px;
+  }
+
+  .vfd-configurator-nav {
+    gap: 8px;
+  }
+
+  .vfd-configurator-nav a {
+    flex: 1 1 130px;
+  }
+
+  .vfd-configurator-card__head {
+    padding: 18px 16px 14px;
+  }
+
+  .vfd-configurator-frame-shell {
+    --config-scale: 1;
+    height: var(--config-mobile-height, 1120px);
+  }
+
+  .vfd-configurator-frame {
+    width: 100%;
+    height: var(--config-mobile-height, 1120px);
   }
 }

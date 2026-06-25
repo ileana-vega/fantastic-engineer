@@ -1,0 +1,514 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selector CP2000 con compra y cotización</title>
+
+  <style>
+    :root{
+      --red:#e11b22;
+      --green:#2faa36;
+      --magenta:#e10088;
+      --cyan:#1c9ee7;
+      --purple:#b84895;
+      --gray:#687784;
+      --ceitsa-blue:#087eb8;
+      --ceitsa-blue-dark:#075f8a;
+      --whatsapp:#198754;
+      --text:#0f0f0f;
+      --muted:#536371;
+      --panel:#ececec;
+      --white:#ffffff;
+      --border:#d5d5d5;
+      --disabled:#e2e6e9;
+      --shadow:0 16px 38px rgba(0,0,0,.08);
+    }
+
+    *{ box-sizing:border-box; }
+    body{ margin:0; font-family:Arial, Helvetica, sans-serif; color:var(--text); background:#f7f9fb; }
+    .vfd-selector{ padding:34px 18px; }
+    .vfd-wrap{ width:min(1420px, 100%); margin:0 auto; }
+    .vfd-panel{ position:relative; overflow:hidden; min-height:680px; padding:26px 28px 34px; border-radius:22px; background:var(--panel); box-shadow:var(--shadow); }
+    .vfd-svg{ position:absolute; inset:0; z-index:1; width:100%; height:100%; pointer-events:none; }
+    .vfd-content{ position:relative; z-index:2; }
+
+    .vfd-title-row{ display:flex; align-items:flex-start; justify-content:space-between; gap:20px; margin-bottom:38px; }
+    .vfd-title{ margin:0; color:var(--cyan); font-size:clamp(2.05rem, 4vw, 3.25rem); line-height:1.08; font-weight:900; }
+    .vfd-clear{ flex:0 0 auto; min-height:42px; padding:10px 16px; border:2px solid var(--ceitsa-blue); border-radius:11px; color:var(--ceitsa-blue); background:#fff; cursor:pointer; font:inherit; font-size:.9rem; font-weight:900; transition:transform .18s ease, color .18s ease, background .18s ease; }
+    .vfd-clear:hover{ transform:translateY(-1px); color:#fff; background:var(--ceitsa-blue); }
+
+    .vfd-model{ display:flex; align-items:flex-end; gap:24px; padding-left:84px; margin-bottom:24px; flex-wrap:wrap; }
+    .vfd-segment{ display:inline-flex; justify-content:center; align-items:flex-end; min-width:54px; min-height:58px; padding:0 4px 10px; border-bottom:5px solid var(--seg-color); color:#000; font-size:clamp(2.1rem, 3.7vw, 3.35rem); font-weight:900; line-height:.95; letter-spacing:.02em; }
+    .vfd-segment.is-wide{ min-width:74px; }
+    .vfd-segment.is-series{ min-width:82px; }
+    .vfd-segment.is-suffix{ min-width:auto; color:var(--gray); border-bottom-color:var(--gray); font-size:clamp(1.8rem, 3vw, 2.65rem); }
+
+    .vfd-action-slot{ display:flex; align-items:flex-end; justify-content:flex-end; min-width:300px; min-height:72px; padding-bottom:2px; margin-left:14px; }
+    .vfd-action{ display:inline-flex; align-items:center; justify-content:center; min-width:230px; min-height:46px; padding:18px 22px; border:0; border-radius:14px; color:#fff; background:var(--ceitsa-blue); box-shadow:0 14px 28px rgba(8,126,184,.18); font-size:1rem; font-weight:900; line-height:1.1; text-align:center; text-decoration:none; transition:transform .18s ease, opacity .18s ease, background .18s ease, box-shadow .18s ease; }
+    .vfd-action:hover{ transform:translateY(-1px); }
+    .vfd-action.is-purchase:hover{ background:var(--ceitsa-blue-dark); box-shadow:0 16px 30px rgba(8,126,184,.22); }
+    .vfd-action.is-quote{ background:var(--whatsapp); box-shadow:0 14px 28px rgba(25,135,84,.18); }
+    .vfd-action.is-quote:hover{ background:#116c42; box-shadow:0 16px 30px rgba(25,135,84,.22); }
+    .vfd-action.is-hidden{ visibility:hidden; opacity:0; pointer-events:none; }
+
+    .vfd-layout{ display:grid; grid-template-columns:minmax(360px, .92fr) minmax(520px, 1.12fr); gap:18px 34px; align-items:start; }
+    .vfd-left{ min-height:470px; padding-top:315px; position:relative; }
+    .vfd-right{ display:grid; gap:22px; align-content:start; padding-top:0; }
+    .vfd-block{ position:relative; min-width:0; }
+    .vfd-block--product{ max-width:360px; margin-left:54px; }
+    .vfd-block__title{ margin:0 0 10px; color:var(--block-color); font-size:clamp(1.55rem, 3vw, 2.15rem); line-height:1.05; font-weight:900; }
+    .vfd-block__desc{ margin:0; color:#000; font-size:1rem; line-height:1.45; font-weight:700; }
+
+    .vfd-options{ display:flex; flex-wrap:wrap; gap:12px; }
+    .vfd-option{ min-width:138px; min-height:68px; padding:10px 14px; border:2px solid var(--border); border-radius:13px; background:var(--white); color:#102334; cursor:pointer; font:inherit; font-size:1rem; font-weight:900; transition:transform .18s ease, border-color .18s ease, background .18s ease, color .18s ease, box-shadow .18s ease; }
+    .vfd-option small{ display:block; margin-top:5px; color:#4e6070; font-size:.82rem; font-weight:700; }
+    .vfd-option:hover:not(:disabled){ transform:translateY(-1px); border-color:var(--option-color); box-shadow:0 8px 18px rgba(0,0,0,.07); }
+    .vfd-option.is-active{ color:#fff; border-color:var(--option-color); background:var(--option-color); box-shadow:0 10px 22px rgba(0,0,0,.12); }
+    .vfd-option.is-active small{ color:#fff; }
+    .vfd-option:disabled{ color:#9aa4ab; border-color:var(--disabled); background:#f1f3f4; cursor:not-allowed; box-shadow:none; }
+    .vfd-option:disabled small{ color:#a4adb3; }
+
+    .vfd-fixed{ display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border:2px solid var(--fixed-color, var(--magenta)); border-radius:13px; color:var(--fixed-color, var(--magenta)); background:#fff; font-weight:900; }
+    .vfd-fixed span{ color:#71465f; font-size:.82rem; font-weight:700; }
+
+    @media (max-width:1180px){
+      .vfd-panel{ min-height:0; }
+      .vfd-svg{ display:none; }
+      .vfd-model{ justify-content:center; gap:18px; padding-left:0; }
+      .vfd-layout{ grid-template-columns:1fr; }
+      .vfd-left{ min-height:0; padding-top:0; }
+      .vfd-right{ gap:24px; }
+      .vfd-block--product{ max-width:none; margin-left:0; }
+      .vfd-block{ padding:18px; border-left:5px solid var(--block-color); border-radius:12px; background:rgba(255,255,255,.55); }
+    }
+
+    @media (max-width:720px){
+      .vfd-title-row{ align-items:stretch; flex-direction:column; }
+      .vfd-clear{ align-self:flex-start; }
+      .vfd-action-slot{ width:100%; min-width:0; margin-left:0; }
+      .vfd-action{ width:100%; }
+    }
+
+    @media (max-width:620px){
+      .vfd-selector{ padding:18px 8px; }
+      .vfd-panel{ padding:20px 14px 24px; }
+      .vfd-model{ gap:12px; }
+      .vfd-segment{ min-width:48px; font-size:1.85rem; }
+      .vfd-segment.is-wide{ min-width:62px; }
+      .vfd-segment.is-series{ min-width:70px; }
+      .vfd-option{ width:100%; }
+    }
+    /* Ajuste compacto para integracion en variadores.html */
+    @media (min-width: 901px){
+      .vfd-selector, .ms-selector{ padding:22px 12px; }
+      .vfd-panel, .ms-panel{ padding:20px 22px 26px; border-radius:18px; }
+      .vfd-options, .ms-options{ gap:8px; }
+      .vfd-option, .ms-option{ min-height:54px; min-width:118px; padding:8px 11px; border-radius:10px; font-size:.9rem; }
+      .vfd-option small, .ms-option small{ margin-top:3px; font-size:.74rem; }
+      .vfd-title, .ms-title{ font-size:clamp(1.8rem, 3.1vw, 2.8rem); }
+      .vfd-block__title, .ms-block__title{ margin-bottom:7px; font-size:clamp(1.35rem, 2.3vw, 1.85rem); }
+      .vfd-block__desc, .ms-block__desc{ font-size:.9rem; line-height:1.35; }
+      .vfd-clear, .ms-clear, .vfd-action, .vfd-action-button, .ms-action{ min-height:38px; padding:9px 14px; font-size:.84rem; border-radius:10px; }
+      .vfd-fixed, .ms-fixed-card{ padding:9px 12px; border-radius:10px; }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="vfd-selector" id="selector-cp2000">
+    <div class="vfd-wrap">
+      <div class="vfd-panel" id="diagram">
+        <svg class="vfd-svg" id="connectors" aria-hidden="true"></svg>
+        <div class="vfd-content">
+          <div class="vfd-title-row">
+            <h1 class="vfd-title">Cómo configurar tu modelo de variador CP2000</h1>
+            <button class="vfd-clear" id="clear-selection" type="button">Limpiar selección</button>
+          </div>
+
+          <div class="vfd-model" aria-label="Modelo configurado">
+            <span class="vfd-segment is-wide" id="src-product" style="--seg-color:var(--red)">VFD</span>
+            <span class="vfd-segment is-wide" id="src-capacity" style="--seg-color:var(--green)"></span>
+            <span class="vfd-segment is-series" id="src-series" style="--seg-color:var(--magenta)">CP</span>
+            <span class="vfd-segment is-wide" id="src-voltage" style="--seg-color:var(--cyan)"></span>
+            <span class="vfd-segment" id="src-version" style="--seg-color:var(--purple)"></span>
+            <span class="vfd-segment is-suffix" id="src-suffix" style="--seg-color:var(--gray)">-21</span>
+
+            <span class="vfd-action-slot">
+              <a class="vfd-action is-hidden" id="model-action" href="#" target="_blank" rel="noopener noreferrer" aria-hidden="true">Comprar en CEITSA</a>
+            </span>
+          </div>
+
+          <div class="vfd-layout">
+            <div class="vfd-left">
+              <section class="vfd-block vfd-block--product" id="target-product" style="--block-color:var(--red)">
+                <h2 class="vfd-block__title">Producto</h2>
+                <p class="vfd-block__desc">(Variador de frecuencia)</p>
+              </section>
+            </div>
+
+            <div class="vfd-right">
+              <section class="vfd-block" id="target-version" style="--block-color:var(--purple)">
+                <h2 class="vfd-block__title">Versión</h2>
+                <div class="vfd-options" id="version-options"></div>
+              </section>
+
+              <section class="vfd-block" id="target-voltage" style="--block-color:var(--cyan)">
+                <h2 class="vfd-block__title">Voltaje de entrada</h2>
+                <div class="vfd-options" id="voltage-options"></div>
+              </section>
+
+              <section class="vfd-block" id="target-series" style="--block-color:var(--magenta)">
+                <h2 class="vfd-block__title">Serie CP2000</h2>
+                <div class="vfd-fixed" style="--fixed-color:var(--magenta)">
+                  CP
+                  <span>Serie fija para este selector</span>
+                </div>
+              </section>
+
+              <section class="vfd-block" id="target-capacity" style="--block-color:var(--green)">
+                <h2 class="vfd-block__title">Capacidad de motor aplicable</h2>
+                <div class="vfd-options" id="capacity-options"></div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const WHATSAPP_NUMBER = "5217201185420";
+
+    const OPTIONS = {
+      capacity: [
+        {
+                "code": "007",
+                "label": "0.75 kW"
+        },
+        {
+                "code": "015",
+                "label": "1.5 kW"
+        },
+        {
+                "code": "022",
+                "label": "2.2 kW"
+        },
+        {
+                "code": "037",
+                "label": "3.7 kW"
+        },
+        {
+                "code": "055",
+                "label": "5.5 kW"
+        },
+        {
+                "code": "075",
+                "label": "7.5 kW"
+        },
+        {
+                "code": "110",
+                "label": "11 kW"
+        },
+        {
+                "code": "150",
+                "label": "15 kW"
+        },
+        {
+                "code": "185",
+                "label": "18.5 kW"
+        },
+        {
+                "code": "220",
+                "label": "22 kW"
+        },
+        {
+                "code": "300",
+                "label": "30 kW"
+        },
+        {
+                "code": "370",
+                "label": "37 kW"
+        },
+        {
+                "code": "450",
+                "label": "45 kW"
+        },
+        {
+                "code": "550",
+                "label": "55 kW"
+        },
+        {
+                "code": "750",
+                "label": "75 kW"
+        },
+        {
+                "code": "900",
+                "label": "90 kW"
+        }
+],
+      voltage: [
+        {
+                "code": "23",
+                "label": "230 V trifásico"
+        },
+        {
+                "code": "4E",
+                "label": "575 V trifásico"
+        }
+],
+      version: [
+        {
+                "code": "A",
+                "label": "Versión A"
+        }
+]
+    };
+
+    const MODELS = {
+      "VFD007CP23A-21": {
+            "purchase": false
+      },
+      "VFD015CP23A-21": {
+            "purchase": false
+      },
+      "VFD015CP4EA-21": {
+            "purchase": false
+      },
+      "VFD022CP23A-21": {
+            "purchase": false
+      },
+      "VFD022CP4EA-21": {
+            "purchase": false
+      },
+      "VFD037CP23A-21": {
+            "purchase": false
+      },
+      "VFD037CP4EA-21": {
+            "purchase": false
+      },
+      "VFD055CP23A-21": {
+            "purchase": false
+      },
+      "VFD055CP4EA-21": {
+            "purchase": false
+      },
+      "VFD075CP23A-21": {
+            "purchase": false
+      },
+      "VFD075CP4EA-21": {
+            "purchase": false
+      },
+      "VFD110CP23A-21": {
+            "purchase": false
+      },
+      "VFD110CP4EA-21": {
+            "purchase": false
+      },
+      "VFD150CP23A-21": {
+            "purchase": false
+      },
+      "VFD150CP4EA-21": {
+            "purchase": false
+      },
+      "VFD185CP23A-21": {
+            "purchase": false
+      },
+      "VFD185CP4EA-21": {
+            "purchase": false
+      },
+      "VFD220CP23A-21": {
+            "purchase": false
+      },
+      "VFD300CP23A-21": {
+            "purchase": false
+      },
+      "VFD300CP4EA-21": {
+            "purchase": false
+      },
+      "VFD370CP23A-21": {
+            "purchase": false
+      },
+      "VFD370CP4EA-21": {
+            "purchase": false
+      },
+      "VFD450CP23A-21": {
+            "purchase": false
+      },
+      "VFD550CP23A-21": {
+            "purchase": false
+      },
+      "VFD750CP23A-21": {
+            "purchase": false
+      },
+      "VFD900CP23A-21": {
+            "purchase": false
+      }
+};
+
+    const state = { capacity:null, voltage:null, version:null };
+    const colors = { capacity:"#2faa36", voltage:"#1c9ee7", version:"#b84895" };
+
+    function modelCode(capacity = state.capacity, voltage = state.voltage, version = state.version){
+      if(!capacity || !voltage || !version) return null;
+      return `VFD${capacity}CP${voltage}${version}-21`;
+    }
+
+    function optionIsAvailable(group, code){
+      const criteria = {
+        capacity: group === "capacity" ? code : state.capacity,
+        voltage: group === "voltage" ? code : state.voltage,
+        version: group === "version" ? code : state.version
+      };
+
+      return Object.keys(MODELS).some(codeModel => {
+        const match = codeModel.match(/^VFD(\d+)CP(23|4E)(A)-21$/);
+        if(!match) return false;
+        const [_, cap, volt, ver] = match;
+        return (!criteria.capacity || criteria.capacity === cap)
+          && (!criteria.voltage || criteria.voltage === volt)
+          && (!criteria.version || criteria.version === ver);
+      });
+    }
+
+    function renderOptions(group, containerId){
+      const container = document.getElementById(containerId);
+      container.innerHTML = OPTIONS[group].map(item => {
+        const active = state[group] === item.code;
+        const disabled = !optionIsAvailable(group, item.code);
+        return `
+          <button
+            type="button"
+            class="vfd-option ${active ? "is-active" : ""}"
+            style="--option-color:${colors[group]}"
+            data-group="${group}"
+            data-code="${item.code}"
+            aria-pressed="${active}"
+            ${disabled ? "disabled" : ""}
+            title="${item.label}"
+          >
+            ${item.code}
+            <small>${item.label}</small>
+          </button>
+        `;
+      }).join("");
+
+      container.querySelectorAll(".vfd-option:not(:disabled)").forEach(button => {
+        button.addEventListener("click", () => {
+          const group = button.dataset.group;
+          const code = button.dataset.code;
+          state[group] = state[group] === code ? null : code;
+          render();
+        });
+      });
+    }
+
+    function quoteUrl(code){
+      const message = encodeURIComponent(`Hola, quiero solicitar una cotización y disponibilidad del variador Delta ${code}.`);
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    }
+
+    function renderAction(){
+      const action = document.getElementById("model-action");
+      const code = modelCode();
+      if(!code || !MODELS[code]){
+        action.className = "vfd-action is-hidden";
+        action.href = "#";
+        action.textContent = "Comprar en CEITSA";
+        action.setAttribute("aria-hidden", "true");
+        return;
+      }
+
+      const model = MODELS[code];
+      action.classList.remove("is-hidden", "is-purchase", "is-quote");
+      action.setAttribute("aria-hidden", "false");
+      if(model.purchase){
+        action.classList.add("is-purchase");
+        action.href = `https://ceitsa.com.mx/p/${code}`;
+        action.textContent = "Comprar en CEITSA";
+        action.title = `Comprar ${code} en CEITSA`;
+      } else {
+        action.classList.add("is-quote");
+        action.href = quoteUrl(code);
+        action.textContent = "Solicitar cotización";
+        action.title = `Solicitar cotización de ${code} por WhatsApp`;
+      }
+    }
+
+    function render(){
+      renderOptions("capacity", "capacity-options");
+      renderOptions("voltage", "voltage-options");
+      renderOptions("version", "version-options");
+      document.getElementById("src-capacity").textContent = state.capacity || "";
+      document.getElementById("src-voltage").textContent = state.voltage || "";
+      document.getElementById("src-version").textContent = state.version || "";
+      renderAction();
+      requestAnimationFrame(drawLines);
+    }
+
+    function relPoint(element, mode){
+      const diagram = document.getElementById("diagram");
+      const d = diagram.getBoundingClientRect();
+      const r = element.getBoundingClientRect();
+      const points = {
+        bottomCenter: { x:r.left - d.left + r.width/2, y:r.bottom - d.top },
+        leftTitle: { x:r.left - d.left - 28, y:r.top - d.top + 22 }
+      };
+      return mode === "bottom-center" ? points.bottomCenter : points.leftTitle;
+    }
+
+    function path(points){
+      return points.map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`).join(" ");
+    }
+
+    function drawLines(){
+      const svg = document.getElementById("connectors");
+      const panel = document.getElementById("diagram");
+      if(window.innerWidth <= 1180){
+        svg.innerHTML = "";
+        return;
+      }
+
+      const panelRect = panel.getBoundingClientRect();
+      svg.setAttribute("viewBox", `0 0 ${panelRect.width} ${panelRect.height}`);
+
+      const product = relPoint(document.getElementById("src-product"), "bottom-center");
+      const capacity = relPoint(document.getElementById("src-capacity"), "bottom-center");
+      const series = relPoint(document.getElementById("src-series"), "bottom-center");
+      const voltage = relPoint(document.getElementById("src-voltage"), "bottom-center");
+
+      const productBlock = document.getElementById("target-product").getBoundingClientRect();
+      const productEndY = productBlock.top - panelRect.top - 16;
+      const capacityTarget = relPoint(document.getElementById("target-capacity"), "left-title");
+      const seriesTarget = relPoint(document.getElementById("target-series"), "left-title");
+      const voltageTarget = relPoint(document.getElementById("target-voltage"), "left-title");
+
+      const lines = [
+        { color:"#e11b22", d:path([product, {x:product.x, y:productEndY}]) },
+        { color:"#2faa36", d:path([capacity, {x:capacity.x, y:capacityTarget.y}, capacityTarget]) },
+        { color:"#e10088", d:path([series, {x:series.x, y:seriesTarget.y}, seriesTarget]) },
+        { color:"#1c9ee7", d:path([voltage, {x:voltage.x, y:voltageTarget.y}, voltageTarget]) }
+      ];
+
+      svg.innerHTML = lines.map(line => `
+        <path d="${line.d}" fill="none" stroke="${line.color}" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+      `).join("");
+    }
+
+    document.getElementById("clear-selection").addEventListener("click", () => {
+      state.capacity = null;
+      state.voltage = null;
+      state.version = null;
+      render();
+    });
+
+    window.addEventListener("resize", () => {
+      clearTimeout(window.__vfdTimer);
+      window.__vfdTimer = setTimeout(drawLines, 100);
+    });
+
+    render();
+  </script>
+</body>
+</html>
+

@@ -1,0 +1,523 @@
+
+--- PAGE 4 ---
+Models Overview
+Standard Models
+115V single-phase
+Applicable Motor Output (kW) 0.2 0.4 0.75
+Applicable Motor Output (HP) 0.25 0.5 1
+Frame Size A C
+230V single-phase
+Applicable Motor Output (kW) 0.2 0.4 0.75 1.5 2.2
+Applicable Motor Output (HP) 0.25 0.5 1 2 3
+Frame Size A B C
+(cid:21)(cid:22)(cid:19)(cid:57)(cid:3)(cid:86)(cid:76)(cid:81)(cid:74)(cid:79)(cid:72)(cid:16)(cid:83)(cid:75)(cid:68)(cid:86)(cid:72)(cid:3)(cid:11)(cid:37)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)(cid:12)
+Applicable Motor Output (kW) 0.2 0.4 0.75 1.5 2.2
+Applicable Motor Output (HP) 0.25 0.5 1 2 3
+Frame Size B C
+230V 3-phase
+Applicable Motor Output (kW) 0.2 0.4 0.75 1.5 2.2 3.7 / 4 5.5 7.5 11 15
+Applicable Motor Output (HP) 0.25 0.5 1 2 3 5 7.5 10 15 20
+Frame Size A B C D E F
+460V 3-phase
+Applicable Motor Output (kW) 0.4 0.75 1.5 2.2 3.7 / 4 5.5 7.5 11 15 18.5 22
+Applicable Motor Output (HP) 0.5 1 2 3 5 7.5 10 15 20 25 30
+Frame Size A B C D E F
+(cid:23)(cid:25)(cid:19)(cid:57)(cid:3)(cid:22)(cid:16)(cid:83)(cid:75)(cid:68)(cid:86)(cid:72)(cid:3)(cid:11)(cid:37)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)(cid:12)
+Applicable Motor Output (kW) 0.4 0.75 1.5 2.2 3.7 / 4 5.5 7.5 11 15 18.5 22
+Applicable Motor Output (HP) 0.5 1 2 3 5 7.5 10 15 20 25 30
+Frame Size B C D E F
+3333333
+
+--- PAGE 5 ---
+High Speed Models
+230V single-phase
+Applicable Motor Output (kW) 1.5 2.2
+Applicable Motor Output (HP) 2 3
+Frame Size C
+(cid:21)(cid:22)(cid:19)(cid:57)(cid:3)(cid:86)(cid:76)(cid:81)(cid:74)(cid:79)(cid:72)(cid:16)(cid:83)(cid:75)(cid:68)(cid:86)(cid:72)(cid:3)(cid:11)(cid:37)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)(cid:12)
+Applicable Motor Output (kW) 1.5 2.2
+Applicable Motor Output (HP) 2 3
+Frame Size C
+230V 3-phase
+Applicable Motor Output (kW) 1.5 2.2 3.7 / 4 5.5 7.5 11 15
+Applicable Motor Output (HP) 2 3 5 7.5 10 15 20
+Frame Size B C D E F
+460V 3-phase
+Applicable Motor Output (kW) 1.5 2.2 3.7 / 4 5.5 7.5 11 15 18.5 22
+Applicable Motor Output (HP) 2 3 5 7.5 10 15 20 25 30
+Frame Size B C D E F
+(cid:23)(cid:25)(cid:19)(cid:57)(cid:3)(cid:22)(cid:16)(cid:83)(cid:75)(cid:68)(cid:86)(cid:72)(cid:3)(cid:11)(cid:37)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)(cid:12)
+Applicable Motor Output (kW) 1.5 2.2 3.7 / 4 5.5 7.5 11 15 18.5 22
+Applicable Motor Output (HP) 2 3 5 7.5 10 15 20 25 30
+Frame Size B C D E F
+44444444444
+
+--- PAGE 16 ---
+(cid:51)(cid:85)(cid:82)(cid:71)(cid:88)(cid:70)(cid:87)(cid:3)(cid:54)(cid:83)(cid:72)(cid:70)(cid:76)(cid:191)(cid:70)(cid:68)(cid:87)(cid:76)(cid:82)(cid:81)(cid:86)
+(cid:48)(cid:82)(cid:71)(cid:72)(cid:79)(cid:86)(cid:3)(cid:90)(cid:76)(cid:87)(cid:75)(cid:3)(cid:69)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)
+Frame B C
+Applicable Motor Output (kW) 0.2 0.4 0.75 1.5 2.2
+Applicable Motor Output (HP) 1/4 1/2 1 2 3
+1155
+retrevnI tuptuO
+(cid:48)(cid:82)(cid:71)(cid:72)(cid:79)(cid:86)(cid:3)(cid:90)(cid:76)(cid:87)(cid:75)(cid:82)(cid:88)(cid:87)(cid:3)(cid:69)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)
+Frame A C
+Applicable Motor Output (kW) 0.2 0.4 0.75
+Applicable Motor Output (HP) 1/4 1/2 1
+Heavy Rated Output
+1.6 2.8 4.8 7.5 11
+Duty Current (A)
+Normal Rated Output
+1.8 3.2 5 8.5 12.5
+Duty Current (A)
+Carrier Frequency (kHz) (cid:21)(cid:3)(cid:97)(cid:3)(cid:20)(cid:24)(cid:3)(cid:78)(cid:43)(cid:93)(cid:3)(cid:11)(cid:71)(cid:72)(cid:73)(cid:68)(cid:88)(cid:79)(cid:87)(cid:3)(cid:23)(cid:3)(cid:78)(cid:43)(cid:93)(cid:12)
+Brake Chopper Built-in
+DC Reactor Optional
+AC Reactor Optional
+Natural air
+Cooling Method Fan cooling
+cooling
+(cid:3)(cid:54)(cid:76)(cid:93)(cid:72)(cid:29)(cid:3)(cid:58)(cid:91)(cid:43)(cid:3)(cid:11)(cid:80)(cid:80)(cid:12) (cid:26)(cid:21)(cid:91)(cid:20)(cid:23)(cid:21) (cid:27)(cid:26)(cid:91)(cid:20)(cid:24)(cid:26)
+Size: D (mm) (cid:20)(cid:24)(cid:28) (cid:20)(cid:26)(cid:28)
+(cid:48)(cid:82)(cid:71)(cid:72)(cid:79)(cid:86)(cid:3)(cid:90)(cid:76)(cid:87)(cid:75)(cid:82)(cid:88)(cid:87)(cid:3)(cid:68)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)
+Frame A B C
+Cooling Method Natural air cooling Fan cooling
+Size: W(cid:319)H (mm) 68(cid:319)128 68(cid:319)128 72(cid:319)142 87(cid:319)157
+Size: D (mm) (cid:28)(cid:25) 125 143 152
+retrevnI tuptuO
+(cid:54)(cid:83)(cid:72)(cid:70)(cid:76)(cid:191)(cid:70)(cid:68)(cid:87)(cid:76)(cid:82)(cid:81)(cid:86)
+Single-
+phase
+115 V
+Heavy Rated Output
+1.6 2.5 4.8
+Duty Current (A)
+Normal Rated Output
+1.8 2.7 5.5
+Duty Current (A)
+Carrier Frequency (kHz) (cid:21)(cid:3)(cid:97)(cid:3)(cid:20)(cid:24)(cid:3)(cid:78)(cid:43)(cid:93)(cid:3)(cid:11)(cid:71)(cid:72)(cid:73)(cid:68)(cid:88)(cid:79)(cid:87)(cid:3)(cid:23)(cid:3)(cid:78)(cid:43)(cid:93)(cid:12)
+Brake Chopper Built-in
+DC Reactor Optional
+AC Reactor Optional
+Cooling Method Natural air cooling Fan cooling
+Size: W(cid:319)H (mm) 68(cid:319)128 87(cid:319)157
+Size: D (mm) (cid:28)(cid:25) 125 152
+Single-
+phase
+230 V
+
+--- PAGE 17 ---
+(cid:48)(cid:82)(cid:71)(cid:72)(cid:79)(cid:86)(cid:3)(cid:90)(cid:76)(cid:87)(cid:75)(cid:3)(cid:69)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)
+Frame B C D E F
+Applicable Motor Output (kW) 0.4 0.75 1.5 2.2 3.7 / 4 5.5 7.5 11 15 18.5 22
+Applicable Motor Output (HP) 1/2 1 2 3 5 7.5 10 15 20 25 30
+1166
+retrevnI tuptuO
+(cid:48)(cid:82)(cid:71)(cid:72)(cid:79)(cid:86)(cid:3)(cid:90)(cid:76)(cid:87)(cid:75)(cid:82)(cid:88)(cid:87)(cid:3)(cid:69)(cid:88)(cid:76)(cid:79)(cid:87)(cid:16)(cid:76)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)
+Frame A B C D E F
+Applicable Motor Output (kW) 0.2 0.4 0.75 1.5 2.2 3.7 / 4 5.5 7.5 11 15
+Applicable Motor Output (HP) 1/4 1/2 1 2 3 5 7.5 10 15 20
+3-phase
+460 V
+Heavy Rated Output
+1.5 2.7 4.2 5.5 (cid:28) 13 17 25 32 38 45
+Duty Current (A)
+Normal Rated Output
+1.8 3 4.6 6.5 10.5 15.7 20.5 28 36 41.5 (cid:23)(cid:28)
+Duty Current (A)
+Carrier Frequency (kHz) (cid:21)(cid:3)(cid:97)(cid:3)(cid:20)(cid:24)(cid:3)(cid:78)(cid:43)(cid:93)(cid:3)(cid:11)(cid:71)(cid:72)(cid:73)(cid:68)(cid:88)(cid:79)(cid:87)(cid:3)(cid:23)(cid:3)(cid:78)(cid:43)(cid:93)(cid:12)
+Brake Chopper Built-in
+DC Reactor Optional
+AC Reactor Optional
+Cooling Method Fan cooling
+Size: W(cid:319)H (mm) 72(cid:319)142 87(cid:319)157 (cid:20)(cid:19)(cid:28)(cid:319)207 130(cid:319)250 175(cid:319)300
+Size: D (mm) (cid:20)(cid:24)(cid:28) (cid:20)(cid:26)(cid:28) 187 (cid:21)(cid:20)(cid:28) 244
+(cid:48)(cid:82)(cid:71)(cid:72)(cid:79)(cid:86)(cid:3)(cid:90)(cid:76)(cid:87)(cid:75)(cid:82)(cid:88)(cid:87)(cid:3)(cid:68)(cid:81)(cid:3)(cid:40)(cid:48)(cid:38)(cid:3)(cid:191)(cid:79)(cid:87)(cid:72)(cid:85)
+Frame A B C D E F
+Natural air
+Cooling Method Fan cooling
+cooling
+Size: W(cid:319)H (mm) 68(cid:319)128 72(cid:319)142 87(cid:319)157 (cid:20)(cid:19)(cid:28)(cid:319)207 130(cid:319)250 175(cid:319)300
+Size: D (mm) (cid:20)(cid:21)(cid:28) 143 143 152 154 185 (cid:20)(cid:28)(cid:21)
+retrevnI tuptuO
+3-phase
+230 V
+Heavy Rated Output
+1.6 2.8 4.8 7.5 11 17 25 33 (cid:23)(cid:28) 65
+Duty Current (A)
+Normal Rated Output
+1.8 3.2 5 8 12.5 (cid:20)(cid:28)(cid:17)(cid:24) 27 36 51 (cid:25)(cid:28)
+Duty Current (A)
+Carrier Frequency (kHz) (cid:21)(cid:3)(cid:97)(cid:3)(cid:20)(cid:24)(cid:3)(cid:78)(cid:43)(cid:93)(cid:3)(cid:11)(cid:71)(cid:72)(cid:73)(cid:68)(cid:88)(cid:79)(cid:87)(cid:3)(cid:23)(cid:3)(cid:78)(cid:43)(cid:93)(cid:12)
+Brake Chopper Built-in
+DC Reactor Optional
+AC Reactor Optional
+Cooling Method Natural air cooling Fan cooling
+Size: W(cid:319)H (mm) 68(cid:319)128 72(cid:319)142 87(cid:319)157 (cid:20)(cid:19)(cid:28)(cid:319)207 130(cid:319)250 175(cid:319)300
+Size: D (mm) (cid:28)(cid:25) 110 143 143 152 154 185 (cid:20)(cid:28)(cid:21)
+
+--- PAGE 20 ---
+Dimensions
+Frame A W
+W1
+MODEL
+FRAME A1 FRAME A2 FRAME A3 FRAME A4 FRAME A5
+VFD1A6MS11ANSAA VFD2A8MS23ANSAA VFD2A5MS11ANSAA VFD1A5MS43ANSAA VFD4A8MS23ANSAA
+VFD1A6MS11ENSAA VFD2A8MS23ENSAA VFD2A5MS11ENSAA VFD1A5MS43ENSAA VFD4A8MS23ENSAA
+VFD1A6MS21ANSAA VFD2A8MS21ANSAA VFD2A7MS43ANSAA
+VFD1A6MS21ENSAA VFD2A8MS21ENSAA VFD2A7MS43ENSAA
+VFD1A6MS23ANSAA
+VFD1A6MS23ENSAA
+Frame W H D W1 H1 D1 S1 Frame W H D W1 H1 D1 S1
+mm 68.0 128.0 (cid:28)(cid:25)(cid:17)(cid:19) 56.0 118.0 3.0 5.2 mm 68.0 128.0 (cid:20)(cid:21)(cid:28)(cid:17)(cid:19) 56.0 118.0 3.0 5.2
+A1 A4
+inch 2.68 5.04 3.78 2.20 4.65 0.12 0.20 inch 2.68 5.04 5.08 2.20 4.65 0.12 0.20
+Frame W H D W1 H1 D1 S1 Frame W H D W1 H1 D1 S1
+mm 68.0 128.0 110.0 56.0 118.0 3.0 5.2 mm 68.0 128.0 143.0 56.0 118.0 3.0 5.2
+A2 A5
+inch 2.68 5.04 4.33 2.20 4.65 0.12 0.20 inch 2.68 5.04 5.63 2.20 4.65 0.12 0.20
+Frame W H D W1 H1 D1 S1
+mm 68.0 128.0 125.0 56.0 118.0 3.0 5.2
+A3
+inch 2.68 5.04 (cid:23)(cid:17)(cid:28)(cid:21) 2.20 4.65 0.12 0.20
+1199
+1H
+H
+D
+D1
+S1
+S1
+Mounting Hole
+Mounting hole
+
+--- PAGE 21 ---
+Frame B W
+W1
+S1
+S1
+Detail A (Mounting Hole)
+MODEL
+FRAME B1 FRAME B2 FRAME B3
+Standard Models: High Speed Models: Standard Models: Standard Models: High Speed Models:
+VFD7A5MS23ANSAA VFD7A5MS23ANSHA VFD4A8MS21ANSAA VFD1A6MS21AFSAA VFD4A2MS43AFSHA
+VFD7A5MS23ENSAA VFD7A5MS23ENSHA VFD4A8MS21ENSAA VFD2A8MS21AFSAA
+VFD4A2MS43ANSAA VFD4A2MS43ANSHA VFD4A8MS21AFSAA
+VFD4A2MS43ENSAA VFD4A2MS43ENSHA VFD1A5MS43AFSAA
+VFD2A7MS43AFSAA
+VFD4A2MS43AFSAA
+Frame W H D W1 H1 D1 S1
+mm 72.0 142.0 143.0 60.0 130.0 6.4 5.2
+B1
+inch 2.83 (cid:24)(cid:17)(cid:24)(cid:28) 5.63 2.36 5.12 0.25 0.20
+Frame W H D W1 H1 D1 S1
+mm 72.0 142.0 143.0 60.0 130.0 3.0 5.2
+B2
+inch 2.83 (cid:24)(cid:17)(cid:24)(cid:28) 5.63 2.36 5.12 0.12 0.20
+Frame W H D W1 H1 D1 S1
+mm 72.0 142.0 (cid:20)(cid:24)(cid:28)(cid:17)(cid:19) 60.0 130.0 4.3 5.2
+B3
+inch 2.83 (cid:24)(cid:17)(cid:24)(cid:28) 6.26 2.36 5.12 0.17 0.20
+2200
+1H H
+D
+D1
+Mounting hole
+
+--- PAGE 22 ---
+Dimensions
+Frame C W
+W1
+S1
+S1
+Detail A (Mounting Hole)
+MODEL
+FRAME C1 FRAME C2
+Standard Models: High Speed Models: Standard Models: High Speed Models:
+VFD4A8MS11ANSAA VFD4A8MS11ENSAA VFD7A5MS21ANSHA VFD7A5MS21ENSHA VFD7A5MS21AFSAA VFD7A5MS21AFSHA
+VFD7A5MS21ANSAA VFD7A5MS21ENSAA VFD11AMS21ANSHA VFD11AMS21ENSHA VFD11AMS21AFSAA VFD11AMS21AFSHA
+VFD11AMS21ANSAA VFD11AMS21ENSAA VFD11AMS23ANSHA VFD11AMS23ENSHA VFD5A5MS43AFSAA VFD5A5MS43AFSHA
+VFD11AMS23ANSAA VFD11AMS23ENSAA VFD17AMS23ANSHA VFD17AMS23ENSHA (cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:41)(cid:54)(cid:36)(cid:36) (cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:41)(cid:54)(cid:43)(cid:36)
+VFD17AMS23ANSAA VFD17AMS23ENSAA VFD5A5MS43ANSHA VFD5A5MS43ENSHA
+VFD5A5MS43ANSAA VFD5A5MS43ENSAA (cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:49)(cid:54)(cid:43)(cid:36) (cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:40)(cid:49)(cid:54)(cid:43)(cid:36)
+(cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:49)(cid:54)(cid:36)(cid:36) (cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:40)(cid:49)(cid:54)(cid:36)(cid:36)
+Frame W H D W1 H1 D1 S1
+mm 87.0 157.0 152.0 73.0 144.5 5.0 5.5
+C1
+inch 3.43 6.18 (cid:24)(cid:17)(cid:28)(cid:27) 2.87 (cid:24)(cid:17)(cid:25)(cid:28) 0.20 0.22
+Frame W H D W1 H1 D1 S1
+mm 87.0 157.0 (cid:20)(cid:26)(cid:28)(cid:17)(cid:19) 73.0 144.5 5.0 5.5
+C2
+inch 3.43 6.18 7.05 2.87 (cid:24)(cid:17)(cid:25)(cid:28) 0.20 0.22
+2211
+1H H
+D
+D1
+Mounting hole
+
+--- PAGE 23 ---
+Frame D W
+W1
+MODEL
+FRAME D1 FRAME D2
+Standard Models: High Speed Models: Standard Models: High Speed Models:
+VFD25AMS23ANSAA VFD25AMS23ANSHA VFD13AMS43AFSAA VFD13AMS43AFSHA
+VFD25AMS23ENSAA VFD25AMS23ENSHA VFD17AMS43AFSAA VFD17AMS43AFSHA
+VFD13AMS43ANSAA VFD13AMS43ANSHA
+VFD13AMS43ENSAA VFD13AMS43ENSHA
+VFD17AMS43ANSAA VFD17AMS43ANSHA
+VFD17AMS43ENSAA VFD17AMS43ENSHA
+Frame W H D W1 H1 D1 S1
+mm (cid:20)(cid:19)(cid:28)(cid:17)(cid:19) 207.0 154.0 (cid:28)(cid:23)(cid:17)(cid:19) (cid:20)(cid:28)(cid:22)(cid:17)(cid:27) 6.0 5.5
+D1
+inch (cid:23)(cid:17)(cid:21)(cid:28) 8.15 6.06 3.70 7.63 0.24 0.22
+Frame W H D W1 H1 D1 S1
+mm (cid:20)(cid:19)(cid:28)(cid:17)(cid:19) 207.0 187.0 (cid:28)(cid:23)(cid:17)(cid:19) (cid:20)(cid:28)(cid:22)(cid:17)(cid:27) 6.0 5.5
+D2
+inch (cid:23)(cid:17)(cid:21)(cid:28) 8.15 7.36 3.70 7.63 0.24 0.22
+2222
+1H H
+D
+D1
+S1
+Mounting Hole
+S1
+Mounting hole
+
+--- PAGE 24 ---
+Dimensions
+Frame E W
+MODEL
+FRAME E1 FRAME E2
+Standard Models: High Speed Models: Standard Models: High Speed Models:
+VFD33AMS23ANSAA VFD33AMS23ANSHA VFD25AMS43AFSAA VFD25AMS43AFSHA
+VFD33AMS23ENSAA VFD33AMS23ENSHA VFD32AMS43AFSAA VFD32AMS43AFSHA
+(cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:36)(cid:49)(cid:54)(cid:36)(cid:36) (cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:36)(cid:49)(cid:54)(cid:43)(cid:36)
+(cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:40)(cid:49)(cid:54)(cid:36)(cid:36) (cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:40)(cid:49)(cid:54)(cid:43)(cid:36)
+VFD25AMS43ANSAA VFD25AMS43ANSHA
+VFD25AMS43ENSAA VFD25AMS43ENSHA
+VFD32AMS43ANSAA VFD32AMS43ANSHA
+VFD32AMS43ENSAA VFD32AMS43ENSHA
+Frame W H D W1 H1 D1 S1
+mm 130.0 250.0 185.0 115.0 236.8 6.0 5.5
+E1
+inch 5.12 (cid:28)(cid:17)(cid:27)(cid:23) 7.83 4.53 (cid:28)(cid:17)(cid:22)(cid:21) 0.24 0.22
+Frame W H D W1 H1 D1 S1
+mm 130.0 250.0 (cid:21)(cid:20)(cid:28)(cid:17)(cid:19) 115.0 236.8 6.0 5.5
+E2
+inch 5.12 (cid:28)(cid:17)(cid:27)(cid:23) 8.62 4.53 (cid:28)(cid:17)(cid:22)(cid:21) 0.24 0.22
+2233
+H
+W1
+1H
+D
+D1
+S1
+Mounting Hole
+S1
+Mounting hole
+
+--- PAGE 25 ---
+Frame F W
+W1
+S1
+S1
+MODEL
+FRAME F1 FRAME F2
+Standard Models: High Speed Models: Standard Models: High Speed Models:
+VFD65AMS23ANSAA VFD65AMS23ANSHA VFD38AMS43AFSAA VFD38AMS43AFSHA
+VFD65AMS23ENSAA VFD65AMS23ENSHA VFD45AMS43AFSAA VFD45AMS43AFSHA
+VFD38AMS43ANSAA VFD38AMS43ANSHA
+VFD38AMS43ENSAA VFD38AMS43ENSHA
+VFD45AMS43ANSAA VFD45AMS43ANSHA
+VFD45AMS43ENSAA VFD45AMS43ENSHA
+Frame W H D W1 H1 D1 S1
+mm 175.0 300.0 (cid:20)(cid:28)(cid:21)(cid:17)(cid:19) 154.0 (cid:21)(cid:26)(cid:28)(cid:17)(cid:24) 6.5 8.4
+F1
+inch (cid:25)(cid:17)(cid:27)(cid:28) 11.81 7.56 6.06 11.00 0.26 0.33
+Frame W H D W1 H1 D1 S1
+mm 175.0 300.0 244.0 154.0 (cid:21)(cid:26)(cid:28)(cid:17)(cid:24) 6.5 8.4
+F2
+inch (cid:25)(cid:17)(cid:27)(cid:28) 11.81 (cid:28)(cid:17)(cid:25)(cid:20) 6.06 11.00 0.26 0.33
+2244
+1H H
+D
+D1
+Mounting Hole
+Mounting hole
+
+--- PAGE 29 ---
+Ordering Information
+MS300 Standard Models (0 ~ 599 Hz)
+Power Range Standard Models (0 ~ 599 Hz)
+Max. Applicable Drive Rated Frame
+Model Name
+Motor Capacity Output Current Size Built-in EMC Filter IP40 Models
+[HP] [kW] [A]
+115 V / single-phase
+VFD1A6MS11ANSAA - -
+0.25 0.2 1.6 A
+VFD1A6MS11ENSAA - V
+VFD2A5MS11ANSAA - -
+0.5 0.4 2.5 A
+VFD2A5MS11ENSAA - V
+VFD4A8MS11ANSAA - -
+1 0.75 4.8 C
+VFD4A8MS11ENSAA - V
+230 V / single-phase
+A VFD1A6MS21ANSAA - -
+1/4 0.2 1.6 A VFD1A6MS21ENSAA - V
+B VFD1A6MS21AFSAA V -
+A VFD2A8MS21ANSAA - -
+0.5 0.4 2.8 A VFD2A8MS21ENSAA - V
+B VFD2A8MS21AFSAA V -
+VFD4A8MS21ANSAA - -
+1 0.75 4.8 B VFD4A8MS21AFSAA V -
+VFD4A8MS21ENSAA - V
+VFD7A5MS21ANSAA - -
+2 1.5 7.5 C VFD7A5MS21AFSAA V -
+VFD7A5MS21ENSAA - V
+VFD11AMS21ANSAA - -
+3 2.2 11.0 C VFD11AMS21AFSAA V -
+VFD11AMS21ENSAA - V
+230 V / 3-phase
+VFD1A6MS23ANSAA - -
+0.25 0.2 1.6 A
+VFD1A6MS23ENSAA - V
+VFD2A8MS23ANSAA - -
+0.5 0.4 2.8 A
+VFD2A8MS23ENSAA - V
+VFD4A8MS23ANSAA - -
+1 0.75 4.8 A
+VFD4A8MS23ENSAA - V
+VFD7A5MS23ANSAA - -
+2 1.5 7.5 B
+VFD7A5MS23ENSAA - V
+VFD11AMS23ANSAA - -
+3 2.2 11.0 C
+VFD11AMS23ENSAA - V
+VFD17AMS23ANSAA - -
+5 3.7 / 4 17.0 C
+VFD17AMS23ENSAA - V
+VFD25AMS23ANSAA - -
+7.5 5.5 25.0 D
+VFD25AMS23ENSAA - V
+VFD33AMS23ANSAA - -
+10 7.5 33.0 E
+VFD33AMS23ENSAA - V
+(cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:36)(cid:49)(cid:54)(cid:36)(cid:36) - -
+15 11 (cid:23)(cid:28)(cid:17)(cid:19) E
+(cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:40)(cid:49)(cid:54)(cid:36)(cid:36) - V
+VFD65AMS23ANSAA - -
+20 15 65.0 F
+VFD65AMS23ENSAA - V
+2288
+
+--- PAGE 30 ---
+Ordering Information
+MS300 Standard Models (0 ~ 599 Hz)
+Power Range Standard Models (0 ~ 599 Hz)
+Max. Applicable Drive Rated Frame
+Model Name
+Motor Capacity Output Current Size Built-in EMC Filter IP40 Models
+[HP] [kW] [A]
+460 V / 3-phase
+A VFD1A5MS43ANSAA - -
+0.5 0.4 1.5 A VFD1A5MS43ENSAA - V
+B VFD1A5MS43AFSAA V -
+A VFD2A7MS43ANSAA - -
+1 0.75 2.7 A VFD2A7MS43ENSAA - V
+B VFD2A7MS43AFSAA V -
+VFD4A2MS43ANSAA - -
+2 1.5 4.2 B VFD4A2MS43ENSAA - V
+VFD4A2MS43AFSAA V -
+VFD5A5MS43ANSAA - -
+3 2.2 5.5 C VFD5A5MS43ENSAA - V
+VFD5A5MS43AFSAA V -
+(cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:49)(cid:54)(cid:36)(cid:36) - -
+5 3.7 / 4 (cid:28)(cid:17)(cid:19) C (cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:40)(cid:49)(cid:54)(cid:36)(cid:36) - V
+(cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:41)(cid:54)(cid:36)(cid:36) V -
+VFD13AMS43ANSAA - -
+7.5 5.5 13.0 D VFD13AMS43ENSAA - V
+VFD13AMS43AFSAA V -
+VFD17AMS43ANSAA - -
+10 7.5 17.0 D VFD17AMS43ENSAA - V
+VFD17AMS43AFSAA V -
+VFD25AMS43ANSAA - -
+15 11 25.0 E VFD25AMS43ENSAA - V
+VFD25AMS43AFSAA V -
+VFD32AMS43ANSAA - -
+20 15 32.0 E VFD32AMS43ENSAA - V
+VFD32AMS43AFSAA V -
+VFD38AMS43ANSAA - -
+25 18.5 38.0 F VFD38AMS43ENSAA - V
+VFD38AMS43AFSAA V -
+VFD45AMS43ANSAA - -
+30 22 45.0 F VFD45AMS43ENSAA - V
+VFD45AMS43AFSAA V -
+2299
+
+--- PAGE 31 ---
+MS300 High Speed Models (0 ~ 1500 Hz)
+Power Range High Speed Models (0 ~ 1500 Hz)
+Max. Applicable Drive Rated Frame
+Model Name
+Motor Capacity Output Current Size Built-in EMC Filter IP40 Models
+[HP] [kW] [A]
+230V / single-phase
+VFD7A5MS21ANSHA - -
+2 1.5 7.5 C VFD7A5MS21ENSHA - V
+VFD7A5MS21AFSHA V
+VFD11AMS21ANSHA - -
+3 2.2 11.0 C VFD11AMS21ENSHA - V
+VFD11AMS21AFSHA V -
+230V / 3-phase
+VFD7A5MS23ANSHA - -
+2 1.5 7.5 B
+VFD7A5MS23ENSHA - V
+VFD11AMS23ANSHA - -
+3 2.2 11.0 C
+VFD11AMS23ENSHA - V
+VFD17AMS23ANSHA - -
+5 3.7 / 4 17.0 C
+VFD17AMS23ENSHA - V
+VFD25AMS23ANSHA - -
+7.5 5.5 25.0 D
+VFD25AMS23ENSHA - V
+VFD33AMS23ANSHA - -
+10 7.5 33.0 E
+VFD33AMS23ENSHA - V
+(cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:36)(cid:49)(cid:54)(cid:43)(cid:36) - -
+15 11 (cid:23)(cid:28)(cid:17)(cid:19) E
+(cid:57)(cid:41)(cid:39)(cid:23)(cid:28)(cid:36)(cid:48)(cid:54)(cid:21)(cid:22)(cid:40)(cid:49)(cid:54)(cid:43)(cid:36) - V
+VFD65AMS23ANSHA - -
+20 15 65.0 F
+VFD65AMS23ENSHA - V
+460V / 3-phase
+VFD4A2MS43ANSHA - -
+2 1.5 4.2 B VFD4A2MS43ENSHA - V
+VFD4A2MS43AFSHA V -
+VFD5A5MS43ANSHA - -
+3 2.2 5.5 C VFD5A5MS43ENSHA - V
+VFD5A5MS43AFSHA V -
+(cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:49)(cid:54)(cid:43)(cid:36) - -
+5 3.7 / 4 (cid:28)(cid:17)(cid:19) C (cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:40)(cid:49)(cid:54)(cid:43)(cid:36) - V
+(cid:57)(cid:41)(cid:39)(cid:28)(cid:36)(cid:19)(cid:48)(cid:54)(cid:23)(cid:22)(cid:36)(cid:41)(cid:54)(cid:43)(cid:36) V -
+VFD13AMS43ANSHA - -
+7.5 5.5 13.0 D VFD13AMS43ENSHA - V
+VFD13AMS43AFSHA V -
+VFD17AMS43ANSHA - -
+10 7.5 17.0 D VFD17AMS43ENSHA - V
+VFD17AMS43AFSHA V -
+VFD25AMS43ANSHA - -
+15 11 25.0 E VFD25AMS43ENSHA - V
+VFD25AMS43AFSHA V -
+VFD32AMS43ANSHA - -
+20 15 32.0 E VFD32AMS43ENSHA - V
+VFD32AMS43AFSHA V -
+VFD38AMS43ANSHA - -
+25 18.5 38.0 F VFD38AMS43ENSHA - V
+VFD38AMS43AFSHA V -
+VFD45AMS43ANSHA - -
+30 22 45.0 F VFD45AMS43ENSHA - V
+VFD45AMS43AFSHA V -
+3300

@@ -1,13 +1,7 @@
 (function () {
   const current = window.location.pathname.split("/").pop() || "index.html";
   const activeByPage = {
-    "demostracion.html": "demostracion.html",
-    "capacitacion.html": "capacitacion.html",
-    "variadores.html": "productos.html",
-    "productos.html": "productos.html",
-    "tienda.html": "tienda.html",
-    "contacto.html": "contacto.html",
-    "servicios.html": "servicios.html",
+    "variadores.html": "variadores.html",
     "index.html": "index.html"
   };
   document.querySelectorAll(".menu a").forEach((link) => {
@@ -179,10 +173,10 @@
               <div><strong>Voltajes</strong><span data-vfd-voltage>Validar 110 / 220 / 440 VAC</span></div>
               <div><strong>Aplicacion ideal</strong><span data-vfd-application>Maquinaria compacta</span></div>
             </div>
-            <a class="btn primary vfd-selector-cta" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Solicitar mas informacion</a>
+            <a class="btn primary vfd-selector-cta" href="https://wa.me/5217201185420" target="_blank" rel="noopener">Solicitar mas informacion</a>
           </article>
         </div>
-        <p class="vfd-selector-note">No sabes cual elegir? <a href="https://wa.me/5217294907147" target="_blank" rel="noopener">Contactanos</a>, nuestro equipo te asesora sin costo.</p>
+        <p class="vfd-selector-note">No sabes cual elegir? <a href="https://wa.me/5217201185420" target="_blank" rel="noopener">Contactanos</a>, nuestro equipo te asesora sin costo.</p>
       </section>
     `);
   }
