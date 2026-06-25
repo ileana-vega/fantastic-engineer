@@ -9,6 +9,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="variadores-selector.css">
+  <link rel="stylesheet" href="vfd-model-selector.css">
 </head>
 <body>
   <header class="site-header">
@@ -34,17 +36,86 @@
     </section>  <!-- fin del hero -->
 
     <section class="vfd-spec-band" aria-label="Rangos generales Delta VFD">
-      <div><strong>VFD-EL-W</strong><span>Serie básica para uso general o aplicaciones pequeñas</span></div>
-      <div><strong>VFD-EL</strong><span>Serie básica para uso general o aplicaciones pequeñas</span></div>
-      <div><strong>IM + PM</strong><span>MS300 permite motor de induccion e iman permanente</span></div>
-      <div><strong>RS-485 + redes</strong><span>Modbus, EtherNet/IP, DeviceNet, PROFIBUS y mas</span></div>
+      <div><strong>VFD-EL-W</strong><span>Maquinaria compacta, manejo de materiales o presión constante</span></div>
+      <div><strong>VFD-EL</strong><span>Control básico de una bomba, ventilador o transportador pequeño</span></div>
+      <div><strong>MS300</strong><span>Maquinaria automatizada con PLC, seguridad STO y redes industriales</span></div>
+      <div><strong>C2000+</strong><span>Alto torque, cargas pesadas y control preciso de velocidad, torque o posición</span></div>
+      <div><strong>CP2000</strong><span>Bombas, ventiladores, HVAC, automatización de edificios y ahorro energético</span></div>
     </section>
 
-    <section class="section" id="selector">
+    <section class="vfd-family-selector" id="selector" aria-labelledby="vfd-family-selector-title">
+      <div class="vfd-selector-heading">
+        <p class="eyebrow">Variadores de velocidad Delta</p>
+        <h2 id="vfd-family-selector-title">Selecciona la familia que mejor se adapta a tu aplicación</h2>
+        <p>Descubre las características y beneficios de cada serie de variadores de velocidad Delta.</p>
+      </div>
+
+      <div class="vfd-selector-shell">
+        <div class="vfd-selector-list" role="tablist" aria-label="Familias de variadores Delta">
+          <button class="vfd-selector-option is-active" type="button" role="tab" aria-selected="true" data-vfd-family="el">
+            <span class="vfd-selector-thumb"><img src="assets/vfd-el.webp" alt=""></span>
+            <span><strong>EL</strong><small>Control básico de una bomba, ventilador o transportador pequeño</small></span>
+            <em aria-hidden="true">›</em>
+          </button>
+          <button class="vfd-selector-option" type="button" role="tab" aria-selected="false" data-vfd-family="elw">
+            <span class="vfd-selector-thumb"><img src="assets/vfd-el-w.webp" alt=""></span>
+            <span><strong>EL-W</strong><small>Maquinaria compacta, manejo de materiales o presión constante</small></span>
+            <em aria-hidden="true">›</em>
+          </button>
+          <button class="vfd-selector-option" type="button" role="tab" aria-selected="false" data-vfd-family="ms300">
+            <span class="vfd-selector-thumb"><img src="assets/vfd-ms300.webp" alt=""></span>
+            <span><strong>MS300</strong><small>Maquinaria automatizada con PLC, seguridad STO y redes industriales</small></span>
+            <em aria-hidden="true">›</em>
+          </button>
+          <button class="vfd-selector-option" type="button" role="tab" aria-selected="false" data-vfd-family="c2000">
+            <span class="vfd-selector-thumb"><img src="assets/vfd-c2000-plus.webp" alt=""></span>
+            <span><strong>C2000+</strong><small>Alto torque, cargas pesadas y control preciso de velocidad, torque o posición</small></span>
+            <em aria-hidden="true">›</em>
+          </button>
+          <button class="vfd-selector-option" type="button" role="tab" aria-selected="false" data-vfd-family="cp2000">
+            <span class="vfd-selector-thumb"><img src="assets/vfd-cp2000-plus.webp" alt=""></span>
+            <span><strong>CP2000</strong><small>Bombas, ventiladores, HVAC, automatización de edificios y ahorro energético</small></span>
+            <em aria-hidden="true">›</em>
+          </button>
+        </div>
+
+        <article class="vfd-selector-detail" aria-live="polite">
+          <div class="vfd-selector-copy">
+            <span class="vfd-selected-label">Familia seleccionada</span>
+            <h3 data-vfd-title>EL</h3>
+            <h4 data-vfd-subtitle>Compacto y económico para aplicaciones básicas</h4>
+            <p data-vfd-description>La serie EL de Delta ofrece una solución compacta y confiable para el control de velocidad de motores trifásicos. Ideal para aplicaciones simples que requieren eficiencia y facilidad de uso.</p>
+            <ul class="vfd-benefit-list" data-vfd-benefits>
+              <li>Excelente relación costo-beneficio</li>
+              <li>Diseño compacto y fácil instalación</li>
+              <li>Control eficiente y confiable</li>
+              <li>Protecciones integradas para mayor seguridad</li>
+            </ul>
+          </div>
+          <div class="vfd-selector-visual">
+            <img class="vfd-selector-device" src="assets/vfd-el.webp" alt="Variador de frecuencia Delta EL" data-vfd-visual>
+          </div>
+          <div class="vfd-selector-specs">
+            <div><strong>Potencias disponibles</strong><span data-vfd-power>1 a 5 HP</span></div>
+            <div><strong>Voltajes</strong><span data-vfd-voltage>Validar 110 / 220 / 440 VAC</span></div>
+            <div><strong>Aplicación típica</strong><span data-vfd-application>Maquinaria compacta</span></div>
+          </div>
+          <div class="vfd-selector-actions">
+            <a class="btn soft vfd-selector-model-link" href="#selector-modelo" data-vfd-model-link>Seleccionar modelo</a>
+            <a class="btn primary vfd-selector-cta" href="https://wa.me/5217294907147" target="_blank" rel="noopener">Solicitar más información</a>
+            <a class="btn secondary vfd-selector-buy" href="https://ceitsa.com.mx/search?cat=154&amp;filter=serie%3Avfd-el" target="_blank" rel="noopener" data-vfd-buy>Comprar</a>
+          </div>
+        </article>
+      </div>
+
+      <p class="vfd-selector-note">¿No sabes cuál elegir? <a href="https://wa.me/5217294907147" target="_blank" rel="noopener">Contáctanos</a>, nuestro equipo te asesora sin costo.</p>
+    </section>
+
+    <section class="section" id="matriz-seleccion">
       <div class="section-heading">
         <div>
           <p class="eyebrow">Matriz de seleccion</p>
-          <h2>Elige la serie por exigencia de aplicacion, potencia y comunicacion</h2>
+          <h2>Compara cada familia por enfoque, control, funciones y aplicacion</h2>
         </div>
         <a href="#criterios">Criterios de especificacion</a>
       </div>
@@ -54,50 +125,100 @@
           <thead>
             <tr>
               <th>Serie</th>
-              <th>Uso recomendado</th>
-              <th>Potencia indicada</th>
-              <th>Tension indicada</th>
-              <th>Control y funciones</th>
-              <th>Comunicacion</th>
+              <th>Tipo y enfoque</th>
+              <th>Control y motores</th>
+              <th>Funciones relevantes</th>
+              <th>Aplicaciones indicadas por Delta</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>VFD-EL / Micro EL</strong></td>
-              <td>Aplicaciones estandar, compactas, de bajo a mediano desempeno y torque constante.</td>
-              <td>Rango de seleccion: 1 a 5 HP.</td>
-              <td>Confirmar por modelo; validar alimentacion disponible en 110, 220 o 440 VAC segun aplicacion.</td>
-              <td>Auto aceleracion/desaceleracion, equipo compacto y facil de implementar.</td>
-              <td>Modbus por RS-485.</td>
+              <td><strong>VFD-EL</strong></td>
+              <td>Microvariador multifuncion para aplicaciones compactas y relativamente sencillas.</td>
+              <td>Curva V/f ajustable de tres puntos. Frecuencia de salida de 0.1 a 600 Hz.</td>
+              <td>PID integrado, filtro EMI en modelos determinados, interruptor RFI, proteccion contra sobrecarga, RS-485 con Modbus y modulos opcionales para otros protocolos.</td>
+              <td>Bombas y ventiladores pequenos, maquinas de soplado, bandas transportadoras y equipos sencillos de procesamiento.</td>
             </tr>
             <tr>
-              <td><strong>VFD MS300</strong></td>
-              <td>Uso general, aplicaciones ligeras a medianas y gabinetes compactos.</td>
-              <td>1/4 a 30 HP.</td>
-              <td>110, 220 y 440 VAC.</td>
-              <td>PLC integrado, keypad removible, instalacion side-by-side, filtro EMC, puerto USB y control para motores de induccion e iman permanente.</td>
-              <td>Base industrial con opciones para DeviceNet, EtherNet/IP, PROFIBUS, CANopen y expansiones segun accesorios.</td>
+              <td><strong>VFD-EL-W</strong></td>
+              <td>Variador compacto de nueva generacion con control vectorial. Orientado a maquinaria compacta, transporte y bombeo.</td>
+              <td>Control vectorial; modos de operacion mediante teclado, terminales externos o comunicacion Modbus. Permite operar dos motores en paralelo.</td>
+              <td>Operacion multivelocidad, compensacion de torque, PID, control de multiples bombas, suministro de agua a presion constante y deteccion de fugas. Capacidad de sobrecarga de 150% durante 1 minuto.</td>
+              <td>Enchapadoras de cantos, transportadores logisticos, manejo de materiales y bombas de presion constante.</td>
             </tr>
             <tr>
-              <td><strong>VFD C2000</strong></td>
-              <td>Control vectorial de alto desempeno para velocidad, torque y posicion.</td>
-              <td>1 a 475 HP segun configuracion, tension y modelo seleccionado.</td>
-              <td>220, 440, 575 y 690 VAC.</td>
-              <td>Control vectorial, cuatro cuadrantes de par, diseno modular e interfaz configurable.</td>
-              <td>EtherNet/IP, PROFIBUS DP, DeviceNet, Modbus TCP/IP y opciones de expansion.</td>
+              <td><strong>MS300</strong></td>
+              <td>Variador vectorial compacto estandar para automatizacion de maquinaria, con mayores capacidades de integracion y programacion.</td>
+              <td>Control en lazo abierto de motores de induccion IM y de imanes permanentes PM. Modelos estandar de 0 a 599 Hz y versiones de alta velocidad de hasta 1,500 Hz bajo las condiciones senaladas por Delta.</td>
+              <td>PLC integrado de 2,000 pasos, STO SIL2/PLd, chopper de frenado, control de varios motores, USB, RS-485 Modbus y tarjetas para EtherCAT, EtherNet/IP, PROFINET, PROFIBUS, CANopen y otras redes. Sobrecarga de 120%/60 s en ND y 150%/60 s en HD.</td>
+              <td>Maquinas herramienta, textiles, maquinaria para madera, empacadoras, equipos electronicos, ventiladores, bombas y compresores de aire.</td>
             </tr>
             <tr>
-              <td><strong>C2000 Plus</strong></td>
-              <td>Aplicaciones de alta exigencia en alimentos, quimica, metalurgia, plasticos y procesos con sobrecarga alta.</td>
-              <td>Modelos de alta potencia en 460 V hasta 560 kW; confirmar configuracion exacta por aplicacion.</td>
-              <td>Enfasis en 460 V para alta potencia; confirmar tension exacta por modelo.</td>
-              <td>Control de velocidad, torque y posicion con o sin sensor, para motores sincronicos y asincronicos; PLC incorporado.</td>
-              <td>Multiples protocolos industriales segun tarjeta o modulo de comunicacion.</td>
+              <td><strong>C2000+</strong></td>
+              <td>Variador de alto desempeno para aplicaciones de servicio pesado y torque constante. Su rango de potencia puede alcanzar hasta 560 kW.</td>
+              <td>Control preciso de velocidad, torque y posicion. Compatible con motores sincronicos y asincronicos, con sensor o sin sensor. Control vectorial sin sensor para motores IM, PM y SynRM.</td>
+              <td>Sobrecarga de hasta 150% durante 60 s y 180% durante 3 s; PLC de 10,000 pasos; control de posicionamiento; control maestro-esclavo de torque; integracion de E/S remotas y multiples opciones de comunicacion industrial.</td>
+              <td>Extrusoras, molinos de caucho, inyectoras, dobladoras de tubo, transportadores, bobinadoras, gruas puente, elevadores de escenario, hornos de templado de vidrio y agitadores electromagneticos.</td>
+            </tr>
+            <tr>
+              <td><strong>CP2000</strong></td>
+              <td>Variador especializado en ahorro energetico y control de cargas de torque variable, particularmente bombas, ventiladores y HVAC.</td>
+              <td>Control vectorial sin sensor y curva V/f de tres puntos para cargas variables. Su PID inteligente adapta la operacion a los cambios de carga.</td>
+              <td>PLC de 10,000 pasos, calendario, Modbus y BACnet integrados, tarjetas para redes industriales, modo de incendio, arranque al vuelo, reinicio despues de perdidas momentaneas de energia y control de hasta ocho bombas mediante accesorios.</td>
+              <td>Bombas de desplazamiento fijo, automatizacion de edificios y fabricas, sistemas HVAC, bombas de enfriamiento, torres de enfriamiento y aplicaciones generales de motores.</td>
             </tr>
           </tbody>
         </table>
       </div>
     </section>
+
+    <section class="drive-selector" id="selector-modelo">
+<div class="drive-selector__wrap">
+<header class="drive-selector__head">
+<p class="drive-selector__eyebrow">Selector de producto Delta</p>
+<h2>Encuentra el variador adecuado</h2>
+<p class="drive-selector__intro">Comienza por cualquier atributo: familia, voltaje, fases, potencia, gabinete o filtro EMC. Los botones activos pueden volver a pulsarse para deseleccionarlos.</p>
+</header>
+
+<div class="selector-panel">
+<form class="selector-controls" id="driveForm" novalidate>
+<section class="selector-section">
+<p class="selector-label">Familia del variador <small style="color:var(--muted);font-weight:700">(opcional)</small></p>
+<div class="choice-grid family-grid" id="familyChoices"></div>
+</section>
+
+<div id="dynamicFilters">
+<section class="selector-section"><p class="selector-label">Voltaje de alimentación</p><div class="choice-grid" id="voltageChoices"></div></section>
+<section class="selector-section"><p class="selector-label">Fases de entrada</p><div class="choice-grid" id="phaseChoices"></div></section>
+<section class="selector-section"><p class="selector-label">Potencia del motor</p><div class="choice-grid" id="powerChoices"></div></section>
+<section class="selector-section optional-filter" id="enclosureSection" hidden><p class="selector-label">Gabinete y protección</p><div class="choice-grid" id="enclosureChoices"></div></section>
+<section class="selector-section optional-filter" id="emcSection" hidden><p class="selector-label">Filtro EMC</p><div class="choice-grid" id="emcChoices"></div></section>
+<p class="selector-help">La selección final también debe validarse con corriente nominal, tipo de carga, sobrecarga, ambiente y accesorios.</p>
+</div>
+
+<div class="selector-actions">
+<button class="action-btn action-btn--ghost" id="resetBtn" type="button">Limpiar selección</button>
+<a class="action-btn action-btn--primary" id="quoteBtn" href="#cotizar" aria-disabled="true">Solicitar cotización</a>
+</div>
+</form>
+
+<aside class="selector-result" aria-live="polite">
+<div class="result-head"><div><p class="result-kicker">Resultado</p><h3 class="result-title" id="resultTitle">Catálogo completo</h3></div><span class="result-count" id="resultCount">0 modelos</span></div>
+<p class="family-description" id="familyDescription">Consulta abierta entre todas las familias. Selecciona cualquier atributo para reducir los resultados.</p>
+<div class="selection-summary" id="summary">
+<div class="summary-item"><span>Familia</span><strong id="sumFamily">—</strong></div>
+<div class="summary-item"><span>Voltaje</span><strong id="sumVoltage">—</strong></div>
+<div class="summary-item"><span>Entrada</span><strong id="sumPhase">—</strong></div>
+<div class="summary-item"><span>Potencia</span><strong id="sumPower">—</strong></div>
+<div class="summary-item"><span>Gabinete</span><strong id="sumEnclosure">—</strong></div>
+<div class="summary-item"><span>Filtro EMC</span><strong id="sumEmc">—</strong></div>
+</div>
+<div class="model-list" id="modelList"></div>
+<p class="notice">Los modelos publicados en CEITSA muestran la opción Comprar en CEITSA. Los demás muestran Solicitar cotización y abren WhatsApp con el número de parte incluido automáticamente en el mensaje.</p>
+</aside>
+</div>
+</div>
+</section>
 
     <section class="vfd-family-grid" aria-label="Series de variadores Delta">
       <article class="vfd-family-card">
@@ -178,23 +299,38 @@
 
       <div class="vfd-details-grid">
         <details class="vfd-detail" open>
-          <summary>Modelos VFD MS300</summary>
-          <p>VFD1A6MS11ANSAA, VFD2A5MS11ANSAA, VFD4A8MS11ANSAA, VFD1A6MS21ANSAA, VFD2A8MS21ANSAA, VFD4A8MS21ANSAA, VFD7A5MS21ANSAA, VFD11AMS21ANSAA, VFD1A6MS23ANSAA, VFD2A8MS23ANSAA, VFD4A8MS23ANSAA, VFD7A5MS23ANSAA, VFD11AMS23ANSAA, VFD17AMS23ANSAA, VFD25AMS23ANSAA, VFD33AMS23ANSAA, VFD49AMS23ANSAA, VFD65AMS23ANSAA, VFD1A5MS43ANSAA, VFD2A7MS43ANSAA, VFD4A2MS43ANSAA, VFD5A5MS43ANSAA, VFD9A0MS43ANSAA, VFD13AMS43ANSAA, VFD17AMS43ANSAA, VFD25AMS43ANSAA, VFD32AMS43ANSAA, VFD38AMS43ANSAA, VFD45AMS43ANSAA.</p>
+          <summary>Modelos VFD-EL-W</summary>
+          <ul class="vfd-model-code-list" data-model-source="elw">
+            <li>VFD002EL21W-1</li><li>VFD004EL21W-1</li><li>VFD004EL43W-1</li><li>VFD007EL21W-1</li><li>VFD007EL43W-1</li><li>VFD015EL21W-1</li><li>VFD015EL43W-1</li><li>VFD022EL21W-1</li><li>VFD022EL43W-1</li><li>VFD040EL43W-1</li>
+          </ul>
         </details>
 
         <details class="vfd-detail">
-          <summary>Accesorios y modulos MS300</summary>
-          <p>MKM-DRB, MKM-DRC, MKM-MAPB, MKM-MAPC, CMM-DN01, CMM-EIP01, CMM-PD01, CMM-COP01, EMM-BPS01, EMM-D33A, EMM-R2CA, EMM-R3AA, EMM-A22A, EMM-PG01O, EMM-PG01L, EMM-PG01R.</p>
+          <summary>Modelos MS300</summary>
+          <ul class="vfd-model-code-list" data-model-source="ms300">
+            <li>VFD11AMS21ANSAA</li><li>VFD11AMS21MFSAA</li><li>VFD11AMS21MNSAA</li><li>VFD11AMS23ANSAA</li><li>VFD11AMS23MNSAA</li><li>VFD13AMS43ANSAA</li><li>VFD13AMS43MFSAA</li><li>VFD13AMS43MNSAA</li><li>VFD17AMS23ANSAA</li><li>VFD17AMS23MNSAA</li><li>VFD17AMS43ANSAA</li><li>VFD17AMS43MFSAA</li><li>VFD17AMS43MNSAA</li><li>VFD1A5MS43ANSAA</li><li>VFD1A5MS43MFSAA</li><li>VFD1A5MS43MNSAA</li><li>VFD1A6MS11ANSAA</li><li>VFD1A6MS21ANSAA</li><li>VFD1A6MS23ANSAA</li><li>VFD25AMS23ANSAA</li><li>VFD25AMS23MNSAA</li><li>VFD25AMS43ANSAA</li><li>VFD2A5MS11ANSAA</li><li>VFD2A7MS43ANSAA</li><li>VFD2A7MS43MFSAA</li><li>VFD2A7MS43MNSAA</li><li>VFD2A8MS21ANSAA</li><li>VFD2A8MS21MFSAA</li><li>VFD2A8MS21MNSAA</li><li>VFD2A8MS23ANSAA</li><li>VFD2A8MS23MNSAA</li><li>VFD32AMS43ANSAA</li><li>VFD33AMS23ANSAA</li><li>VFD38AMS43ANSAA</li><li>VFD45AMS43ANSAA</li><li>VFD49AMS23ANSAA</li><li>VFD4A2MS43AFSAA</li><li>VFD4A2MS43ANSAA</li><li>VFD4A2MS43MFSAA</li><li>VFD4A2MS43MNSAA</li><li>VFD4A8MS11ANSAA</li><li>VFD4A8MS21ANSAA</li><li>VFD4A8MS21MFSAA</li><li>VFD4A8MS21MNSAA</li><li>VFD4A8MS23ANSAA</li><li>VFD4A8MS23MNSAA</li><li>VFD5A5MS43ANSAA</li><li>VFD5A5MS43MFSAA</li><li>VFD5A5MS43MNSAA</li><li>VFD65AMS23ANSAA</li><li>VFD7A5MS21ANSAA</li><li>VFD7A5MS21MFSAA</li><li>VFD7A5MS21MNSAA</li><li>VFD7A5MS23ANSAA</li><li>VFD7A5MS23MNSAA</li><li>VFD9A0MS43ANSAA</li><li>VFD9A0MS43MFSAA</li><li>VFD9A0MS43MNSAA</li>
+          </ul>
         </details>
 
         <details class="vfd-detail">
-          <summary>Modelos VFD C2000</summary>
-          <p>VFD007C23A, VFD015C23A, VFD022C23A, VFD037C23A, VFD055C23A, VFD075C23A, VFD110C23A, VFD150C23A, VFD185C23A, VFD220C23A, VFD300C23A, VFD370C23A, VFD450C23A, VFD550C23A, VFD750C23A, VFD900C23A, VFD007C43A, VFD015C43A, VFD022C43A, VFD037C43A, VFD055C43A, VFD075C43A, VFD110C43A, VFD150C43A, VFD185C43A, VFD220C43A, VFD300C43A, VFD370C43S, VFD450C43S, VFD550C43A, VFD750C43A, VFD900C43A, VFD1100C43A, VFD1320C43A, VFD1600C43A, VFD1850C43A, VFD2200C43A, VFD2800C43A, VFD3150C43A, VFD3550C43A, VFD4500C43A.</p>
+          <summary>Modelos VFD-EL</summary>
+          <ul class="vfd-model-code-list" data-model-source="el">
+            <li>VFD002EL11A</li><li>VFD002EL21A</li><li>VFD002EL23A</li><li>VFD004EL11A</li><li>VFD004EL21A</li><li>VFD004EL23A</li><li>VFD004EL43A</li><li>VFD007EL11A</li><li>VFD007EL21A</li><li>VFD007EL23A</li><li>VFD007EL43A</li><li>VFD015EL21A</li><li>VFD015EL23A</li><li>VFD015EL43A</li><li>VFD022EL21A</li><li>VFD022EL23A</li><li>VFD022EL43A</li><li>VFD037EL23A</li><li>VFD037EL43A</li>
+          </ul>
         </details>
 
         <details class="vfd-detail">
-          <summary>Accesorios, comunicacion y frenado C2000</summary>
-          <p>MKC-KPPK, MKC-DN1CB, MKC-D0N1CB, MKC-EN1CB, MKC-AFKM, MKC-AFM, MKC-AFM1, MKC-BFKB, MKC-BFKM1, MKC-BFKM2, MKC-BFM, MKC-CFKB1, MKC-CFKB2, MKC-CFKM, MKC-CFM, MKC-DFKB, MKC-DFKM, MKC-EFKB, MKC-EFKM1, MKC-EFKM2, MKC-FFKB, MKC-FFKM, MKC-FN1CB, MKC-GFKM, MKC-GN1CB, MKC-HFKM, CMC-EIP01, MC-MOD01, CMC-DN01, CMC-PD01, EMC-COP01, EMC-D42A, EMC-R6AA, EMC-D611A, EMC-BPS01, EMC-PG01L, EMC-PG01O, EMC-PG01U, EMC-PG01R, EMC-PG02L, EMC-PG02O, KPC-CC01, KPC-CE01, VFDB2015, VFDB2022, VFDB4030, VFDB4045, VFDB4110, VFDB4132, VFDB4160, VFDB4185, VFDB5055, BR080W200, BR080W750, BR200W091, BR200W150, BR200W250, BR200W360, BR300W070, BR300W082, BR300W100, BR300W250, BR300W400, BR400W040, BR400W150, BR500W030, BR500W056, BR500W100, BR650W039, BR750W033, BR750W140, BR1K0W016, BR1K0W020, BR1K0W050, BR1K0W075, BR1K0W4P3, BR1K0W5P1, BR1K1W024, BR1K1W091, BR1K2W008, BR1K2W015, BR1K2W3P9, BR1K2W6P8, BR1K5W005, BR1K5W012, BR1K5W013, BR1K5W040, BR1K5W043, BR1K5W3P3.</p>
+          <summary>Modelos C2000+</summary>
+          <ul class="vfd-model-code-list" data-model-source="c2000">
+            <li>VFD007C23A-21</li><li>VFD007C43A-21</li><li>VFD007C4EA-21</li><li>VFD015C23A-21</li><li>VFD015C43A-21</li><li>VFD015C4EA-21</li><li>VFD022C23A-21</li><li>VFD022C43A-21</li><li>VFD022C4EA-21</li><li>VFD037C23A-21</li><li>VFD037C43A-21</li><li>VFD037C4EA-21</li><li>VFD040C43A-21</li><li>VFD040C4EA-21</li><li>VFD055C23A-21</li><li>VFD055C43A-21</li><li>VFD055C4EA-21</li><li>VFD075C23A-21</li><li>VFD075C43A-21</li><li>VFD075C4EA-21</li><li>VFD1100C43A-21</li><li>VFD110C23A-21</li><li>VFD110C43A-21</li><li>VFD110C4EA-21</li><li>VFD1320C43A-21</li><li>VFD150C23A-21</li><li>VFD150C43A-21</li><li>VFD150C4EA-21</li><li>VFD1600C43A-21</li><li>VFD1850C43A-21</li><li>VFD185C23A-21</li><li>VFD185C43A-21</li><li>VFD185C4EA-21</li><li>VFD2000C43A-21</li><li>VFD2200C43A-21</li><li>VFD220C23A-21</li><li>VFD220C43A-21</li><li>VFD220C4EA-21</li><li>VFD2500C43A-21</li><li>VFD2800C43C-21</li><li>VFD300C23A-21</li><li>VFD300C43A-21</li><li>VFD300C4EA-21</li><li>VFD3150C43C-21</li><li>VFD3550C43C-21</li><li>VFD370C23A-21</li><li>VFD370C43S-21</li><li>VFD4000C43C-21</li><li>VFD4500C43C-21</li><li>VFD450C23A-21</li><li>VFD450C43S-21</li><li>VFD5000C43C-21</li><li>VFD550C23A-21</li><li>VFD550C43A-21</li><li>VFD5600C43C-21</li><li>VFD750C23A-21</li><li>VFD750C43A-21</li><li>VFD900C23A-21</li><li>VFD900C43A-21</li>
+          </ul>
+        </details>
+
+        <details class="vfd-detail">
+          <summary>Modelos CP2000</summary>
+          <ul class="vfd-model-code-list" data-model-source="cp2000">
+            <li>VFD007CP23A-21</li><li>VFD015CP23A-21</li><li>VFD015CP4EA-21</li><li>VFD022CP23A-21</li><li>VFD022CP4EA-21</li><li>VFD037CP23A-21</li><li>VFD037CP4EA-21</li><li>VFD055CP23A-21</li><li>VFD055CP4EA-21</li><li>VFD075CP23A-21</li><li>VFD075CP4EA-21</li><li>VFD110CP23A-21</li><li>VFD110CP4EA-21</li><li>VFD150CP23A-21</li><li>VFD150CP4EA-21</li><li>VFD185CP23A-21</li><li>VFD185CP4EA-21</li><li>VFD220CP23A-21</li><li>VFD300CP23A-21</li><li>VFD300CP4EA-21</li><li>VFD370CP23A-21</li><li>VFD370CP4EA-21</li><li>VFD450CP23A-21</li><li>VFD550CP23A-21</li><li>VFD750CP23A-21</li><li>VFD900CP23A-21</li>
+          </ul>
         </details>
       </div>
     </section>
@@ -208,6 +344,7 @@
 
       <div class="quote-panel">
         <form class="quote-form" data-mail-subject="Solicitud de variador Delta CEITSA">
+          <input type="hidden" id="modeloInteres" name="Modelo seleccionado">
           <label>Nombre
             <input type="text" name="Nombre" autocomplete="name" required>
           </label>
@@ -319,5 +456,7 @@
     <a href="mailto:atencion_ventas@ceitsa.com" aria-label="Correo CEITSA">@</a>
   </div>
   <script src="app.js"></script>
+  <script src="variadores-selector.js"></script>
+  <script src="vfd-model-selector.js"></script>
 </body>
 </html>

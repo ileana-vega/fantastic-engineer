@@ -1,0 +1,47 @@
+<section class="drive-selector" id="selector-modelo">
+<div class="drive-selector__wrap">
+<header class="drive-selector__head">
+<p class="drive-selector__eyebrow">Selector de producto Delta</p>
+<h2>Encuentra el variador adecuado</h2>
+<p class="drive-selector__intro">Comienza por cualquier atributo: familia, voltaje, fases, potencia, gabinete o filtro EMC. Los botones activos pueden volver a pulsarse para deseleccionarlos.</p>
+</header>
+
+<div class="selector-panel">
+<form class="selector-controls" id="driveForm" novalidate>
+<section class="selector-section">
+<p class="selector-label">Familia del variador <small style="color:var(--muted);font-weight:700">(opcional)</small></p>
+<div class="choice-grid family-grid" id="familyChoices"></div>
+</section>
+
+<div id="dynamicFilters">
+<section class="selector-section"><p class="selector-label">Voltaje de alimentación</p><div class="choice-grid" id="voltageChoices"></div></section>
+<section class="selector-section"><p class="selector-label">Fases de entrada</p><div class="choice-grid" id="phaseChoices"></div></section>
+<section class="selector-section"><p class="selector-label">Potencia del motor</p><div class="choice-grid" id="powerChoices"></div></section>
+<section class="selector-section optional-filter" id="enclosureSection" hidden><p class="selector-label">Gabinete y protección</p><div class="choice-grid" id="enclosureChoices"></div></section>
+<section class="selector-section optional-filter" id="emcSection" hidden><p class="selector-label">Filtro EMC</p><div class="choice-grid" id="emcChoices"></div></section>
+<p class="selector-help">La selección final también debe validarse con corriente nominal, tipo de carga, sobrecarga, ambiente y accesorios.</p>
+</div>
+
+<div class="selector-actions">
+<button class="action-btn action-btn--ghost" id="resetBtn" type="button">Limpiar selección</button>
+<a class="action-btn action-btn--primary" id="quoteBtn" href="#cotizar" aria-disabled="true">Solicitar cotización</a>
+</div>
+</form>
+
+<aside class="selector-result" aria-live="polite">
+<div class="result-head"><div><p class="result-kicker">Resultado</p><h3 class="result-title" id="resultTitle">Catálogo completo</h3></div><span class="result-count" id="resultCount">0 modelos</span></div>
+<p class="family-description" id="familyDescription">Consulta abierta entre todas las familias. Selecciona cualquier atributo para reducir los resultados.</p>
+<div class="selection-summary" id="summary">
+<div class="summary-item"><span>Familia</span><strong id="sumFamily">—</strong></div>
+<div class="summary-item"><span>Voltaje</span><strong id="sumVoltage">—</strong></div>
+<div class="summary-item"><span>Entrada</span><strong id="sumPhase">—</strong></div>
+<div class="summary-item"><span>Potencia</span><strong id="sumPower">—</strong></div>
+<div class="summary-item"><span>Gabinete</span><strong id="sumEnclosure">—</strong></div>
+<div class="summary-item"><span>Filtro EMC</span><strong id="sumEmc">—</strong></div>
+</div>
+<div class="model-list" id="modelList"></div>
+<p class="notice">Los modelos publicados en CEITSA muestran la opción Comprar en CEITSA. Los demás muestran Solicitar cotización y abren WhatsApp con el número de parte incluido automáticamente en el mensaje.</p>
+</aside>
+</div>
+</div>
+</section>
