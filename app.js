@@ -39,4 +39,19 @@
       window.location.href = `mailto:atencion_ventas@ceitsa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     });
   });
+
+  if (current === "variadores.html" && document.querySelector(".vfd-spec-band")) {
+    if (!document.querySelector('link[href="variadores-selector.css"]')) {
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "variadores-selector.css";
+      document.head.appendChild(link);
+    }
+    if (!document.querySelector('script[src="variadores-selector.js"]')) {
+      const script = document.createElement("script");
+      script.src = "variadores-selector.js";
+      script.defer = true;
+      document.body.appendChild(script);
+    }
+  }
 })();
