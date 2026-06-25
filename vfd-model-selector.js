@@ -6,11 +6,11 @@ const accessories=[{"model":"CMC-DN01","series":["C2000+","CP2000"],"type":"Tarj
 const whatsapp="https://wa.me/5217201185420";
 
 const familyDescriptions={
-  "VFD-EL":"Familia compacta VFD-EL.",
-  "VFD-EL-W":"Familia compacta VFD-EL-W.",
-  "MS300":"Familia MS300 con variantes IP20 e IP66/NEMA 4X.",
-  "C2000+":"Familia vectorial C2000+.",
-  "CP2000":"Familia CP2000 para bombas, ventiladores y HVAC."
+  "VFD-EL":"Variador compacto multifunción para aplicaciones simples de velocidad variable.",
+  "VFD-EL-W":"Variador compacto económico para control simple de velocidad y aplicaciones de carga fija.",
+  "MS300":"Variador compacto moderno con funciones integradas para automatización industrial general.",
+  "C2000+":"Variador de alto desempeño para aplicaciones de torque constante y control preciso.",
+  "CP2000":"Variador especializado para bombas, ventiladores y sistemas HVAC con enfoque en ahorro energético."
 };
 
 const driveState={

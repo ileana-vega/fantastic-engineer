@@ -26,26 +26,26 @@
   const families = {
     el: {
       label: "VFD-EL",
-      title: "EL",
+      title: "VFD-EL",
       image: "assets/vfd-el.webp",
       imageAlt: "Variador de frecuencia Delta EL",
-      subtitle: "Compacto y económico para aplicaciones básicas",
-      description: "La serie EL de Delta ofrece una solución compacta y confiable para el control de velocidad de motores trifásicos. Ideal para aplicaciones simples que requieren eficiencia y facilidad de uso.",
-      benefits: ["Excelente relación costo-beneficio", "Diseño compacto y fácil instalación", "Control eficiente y confiable", "Protecciones integradas para mayor seguridad"],
-      power: "1 a 5 HP",
-      voltage: "Validar 110 / 220 / 440 VAC",
+      subtitle: "Variador compacto multifunción para aplicaciones simples de velocidad variable.",
+      description: "Bombas y ventiladores pequeños, sopladores, bandas transportadoras y equipos de proceso simple.",
+      benefits: ["Control V/F con curva ajustable.", "PID integrado para control de proceso.", "Comunicación RS-485 Modbus.", "Filtro EMI integrado en modelos seleccionados.", "Instalación compacta para tableros con espacio limitado."],
+      power: "0.25 a 5 HP, según modelo",
+      voltage: "110 / 220 / 440 VCA",
       application: "Maquinaria compacta"
     },
     elw: {
       label: "VFD-EL-W",
-      title: "EL-W",
+      title: "VFD-EL-W",
       image: "assets/vfd-el-w.webp",
       imageAlt: "Variador de frecuencia Delta EL-W",
-      subtitle: "Compacto vectorial para mayor desempeño",
-      description: "La familia EL-W conserva un formato compacto y añade control vectorial para aplicaciones que requieren mejor respuesta de torque, operación estable y parametrización sencilla.",
-      benefits: ["Control vectorial en formato compacto", "Respuesta estable en aplicaciones ligeras", "Integración sencilla en gabinetes reducidos", "Opción práctica para modernización de equipos"],
-      power: "Validar por modelo",
-      voltage: "220 / 440 VAC segun seleccion",
+      subtitle: "Variador compacto económico para control simple de velocidad y aplicaciones de carga fija.",
+      description: "Maquinaria compacta, movimiento horizontal, transportadores, equipos de proceso sencillo y control de presión constante.",
+      benefits: ["Control vectorial sensorless.", "Sobrecarga 150% por 60 segundos.", "RS-485 Modbus.", "Diseño compacto.", "Adecuado para aplicaciones de velocidad simple o carga fija."],
+      power: "0.25 a 5.5 HP, según modelo",
+      voltage: "220 / 440 VCA",
       application: "Máquinas pequeñas"
     },
     ms300: {
@@ -53,36 +53,36 @@
       title: "MS300",
       image: "assets/vfd-ms300.webp",
       imageAlt: "Variador de frecuencia Delta MS300",
-      subtitle: "Versátil y moderno para diversas aplicaciones",
-      description: "MS300 es una plataforma compacta de uso general con PLC integrado, puerto USB, filtro EMC y compatibilidad con motores de inducción e iman permanente.",
-      benefits: ["Potencia flexible para uso general", "PLC integrado y keypad removible", "Instalacion side-by-side", "Opciónes de red industrial por accesorios"],
-      power: "1/4 a 30 HP",
+      subtitle: "Variador compacto moderno con funciones integradas para automatización industrial general.",
+      description: "Máquinas herramienta, empaque, textil, bombas, ventiladores, compresores y maquinaria automatizada.",
+      benefits: ["Control de motores de inducción y de imán permanente.", "STO integrado.", "PLC integrado de 2K pasos.", "Puerto USB para carga/descarga de parámetros.", "Keypad removible.", "Opción de filtro EMC integrado.", "Instalación compacta y side-by-side."],
+      power: "1/4 a 30 HP, según modelo",
       voltage: "110 / 220 / 440 VAC",
-      application: "Uso general industrial"
+      application: "Maquinaria automatizada"
     },
     c2000: {
       label: "C2000+",
       title: "C2000+",
       image: "assets/vfd-c2000-plus.webp",
       imageAlt: "Variador de frecuencia Delta C2000 Plus",
-      subtitle: "Alto desempeño para aplicaciones exigentes",
-      description: "C2000 Plus esta orientado a procesos severos donde se requiere control de velocidad, torque y posición, con o sin sensor, y alta capacidad de sobrecarga.",
-      benefits: ["Control de velocidad, torque y posición", "Operación con o sin retroalimentación", "PLC incorporado para lógica local", "Diseñado para procesos de alta exigencia"],
-      power: "Hasta 560 kW en 460 V",
-      voltage: "460 VAC, validar configuracion",
-      application: "Procesos severos"
+      subtitle: "Variador de alto desempeño para aplicaciones de torque constante y control preciso.",
+      description: "Extrusores, grúas, elevación, máquinas de inyección, procesamiento de metales, plásticos, bandas de transporte pesadas y maquinaria de alto torque.",
+      benefits: ["Control preciso de velocidad, torque y posición.", "Compatible con motores síncronos y asíncronos.", "Control con y sin sensor.", "PLC integrado de 10K pasos.", "Opciones de comunicación industrial.", "Alta capacidad de sobrecarga para aplicaciones heavy duty."],
+      power: "1 a 750 HP, según modelo",
+      voltage: "230 / 460 VCA, según versión.",
+      application: "Maquinaria de alto torque"
     },
     cp2000: {
       label: "CP2000",
       title: "CP2000",
       image: "assets/vfd-cp2000-plus.webp",
       imageAlt: "Variador de frecuencia Delta CP2000",
-      subtitle: "Especializado en bombas, ventiladores y HVAC",
-      description: "CP2000 está enfocado en aplicaciones de flujo variable donde el ahorro energético, la operación continua y las funciones dedicadas a bombas y ventiladores son prioridad.",
-      benefits: ["Funciones dedicadas para HVAC", "Ahorro energético en flujo variable", "Control estable para bombas y ventiladores", "Ideal para servicios auxiliares industriales"],
-      power: "Seleccionar por carga",
-      voltage: "Validar por modelo",
-      application: "Bombas y ventilación"
+      subtitle: "Variador especializado para bombas, ventiladores y sistemas HVAC con enfoque en ahorro energético.",
+      description: "HVAC, bombas de enfriamiento, torres de enfriamiento, automatización de edificios, ventiladores y sistemas de bombeo.",
+      benefits: ["Control vectorial sensorless para bombas y ventiladores.", "Funciones PID y parámetros HVAC.", "PLC integrado de 10K pasos.", "Comunicación Modbus y BACnet integrada.", "Control multipump con accesorios.", "Funciones para ahorro energético y ambientes de carga variable."],
+      power: "1 a 125 HP, según modelo",
+      voltage: "220 / 440 VCA.",
+      application: "Bombas, ventiladores y HVAC"
     }
   };
 

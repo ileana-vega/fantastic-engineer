@@ -292,6 +292,10 @@
   content: "\2713";
 }
 
+.vfd-benefit-list li:nth-child(n)::before {
+  content: "\2713";
+}
+
 .vfd-selector-visual {
   position: relative;
   z-index: 1;
@@ -356,7 +360,7 @@
   grid-row: 1 / span 2;
   width: 32px;
   height: 32px;
-  content: "kW";
+  content: "HP";
   font-size: 13px;
 }
 
@@ -649,11 +653,14 @@
 
   .vfd-configurator-frame-shell {
     --config-scale: 1;
-    height: var(--config-mobile-height, 1120px);
+    height: min(var(--config-mobile-height, 1120px), 78vh);
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
   }
 
   .vfd-configurator-frame {
     width: 100%;
-    height: var(--config-mobile-height, 1120px);
+    height: 100%;
+    min-height: 0;
   }
 }
