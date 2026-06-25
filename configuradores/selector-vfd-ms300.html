@@ -74,6 +74,14 @@
       font-weight:900;
     }
 
+    .ms-title-actions {
+      display:flex;
+      flex:0 0 auto;
+      flex-direction:column;
+      align-items:stretch;
+      gap:32px;
+    }
+
     .ms-clear {
       flex:0 0 auto;
       min-height:44px;
@@ -138,15 +146,14 @@
       display:inline-flex;
       align-items:center;
       justify-content:center;
-      align-self:center;
+      align-self:stretch;
       min-height:46px;
-      margin-left:12px;
       padding:11px 18px;
       border:2px solid transparent;
       border-radius:11px;
       color:#fff;
-      background:var(--cyan);
-      box-shadow:0 9px 20px rgba(21,159,223,.22);
+      background:#1c9ee7;
+      box-shadow:0 9px 20px rgba(28,158,231,.22);
       font-size:.92rem;
       font-weight:900;
       line-height:1.15;
@@ -161,7 +168,7 @@
 
     .ms-model-action:hover {
       transform:translateY(-1px);
-      box-shadow:0 12px 24px rgba(21,159,223,.28);
+      box-shadow:0 12px 24px rgba(28,158,231,.28);
     }
 
     .ms-model-action.is-quote {
@@ -357,6 +364,7 @@
         flex-direction:column;
         margin-bottom:26px;
       }
+      .ms-title-actions,
       .ms-clear { width:100%; }
       .ms-model { gap:9px; }
       .ms-segment {
@@ -365,10 +373,7 @@
         font-size:1.55rem;
       }
       .ms-segment--wide { min-width:66px; }
-      .ms-model-action {
-        width:100%;
-        margin:8px 0 0;
-      }
+      .ms-model-action { width:100%; }
       .ms-fixed-grid { grid-template-columns:1fr; }
       .ms-option { width:100%; }
     }
@@ -382,7 +387,7 @@
       .vfd-title, .ms-title{ font-size:clamp(1.45rem, 2.5vw, 2.25rem); }
       .vfd-block__title, .ms-block__title{ margin-bottom:7px; font-size:clamp(1.35rem, 2.3vw, 1.85rem); }
       .vfd-block__desc, .ms-block__desc{ font-size:.9rem; line-height:1.35; }
-      .vfd-clear, .ms-clear, .vfd-action, .vfd-action-button, .ms-action{ min-height:38px; padding:9px 14px; font-size:.84rem; border-radius:10px; }
+      .vfd-clear, .ms-clear, .vfd-action, .vfd-action-button, .ms-action, .ms-model-action{ min-height:38px; padding:9px 14px; font-size:.84rem; border-radius:10px; }
       .vfd-fixed, .ms-fixed-card{ padding:9px 12px; border-radius:10px; }
     }
 
@@ -399,15 +404,28 @@
           <div class="ms-title-row">
             <h1 class="ms-title">Cómo configurar tu modelo de variador VFD-MS300</h1>
 
-            <button
-              type="button"
-              class="ms-clear"
-              id="ms-clear"
-              aria-label="Limpiar selección"
-              disabled
-            >
-              Limpiar selección
-            </button>
+            <div class="ms-title-actions">
+              <button
+                type="button"
+                class="ms-clear"
+                id="ms-clear"
+                aria-label="Limpiar selección"
+                disabled
+              >
+                Limpiar selección
+              </button>
+
+              <a
+                class="ms-model-action"
+                id="ms-model-action"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                hidden
+              >
+                Verificando disponibilidad…
+              </a>
+            </div>
           </div>
 
           <div class="ms-model" aria-label="Modelo configurado">
@@ -421,16 +439,6 @@
             <span class="ms-segment" id="src-type" style="--segment-color:var(--navy)">A</span>
             <span class="ms-segment" id="src-version" style="--segment-color:var(--gray)">A</span>
 
-            <a
-              class="ms-model-action"
-              id="ms-model-action"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              hidden
-            >
-              Verificando disponibilidad…
-            </a>
           </div>
 
           <div class="ms-layout">

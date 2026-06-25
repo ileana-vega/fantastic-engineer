@@ -35,6 +35,7 @@
 
     .vfd-title-row{ display:flex; align-items:flex-start; justify-content:space-between; gap:20px; margin-bottom:38px; }
     .vfd-title{ margin:0; color:var(--cyan); font-size:clamp(1.75rem, 3.2vw, 2.65rem); line-height:1.08; font-weight:900; }
+    .vfd-title-actions{ display:flex; flex:0 0 auto; flex-direction:column; align-items:stretch; gap:32px; }
     .vfd-clear{ flex:0 0 auto; min-height:42px; padding:10px 16px; border:2px solid var(--ceitsa-blue); border-radius:11px; color:var(--ceitsa-blue); background:#fff; cursor:pointer; font:inherit; font-size:.9rem; font-weight:900; transition:transform .18s ease, color .18s ease, background .18s ease; }
     .vfd-clear:hover{ transform:translateY(-1px); color:#fff; background:var(--ceitsa-blue); }
 
@@ -44,10 +45,9 @@
     .vfd-segment.is-series{ min-width:82px; }
     .vfd-segment.is-suffix{ min-width:auto; color:var(--gray); border-bottom-color:var(--gray); font-size:clamp(1.8rem, 3vw, 2.65rem); }
 
-    .vfd-action-slot{ display:flex; align-items:flex-end; justify-content:flex-end; min-width:300px; min-height:72px; padding-bottom:2px; margin-left:14px; }
-    .vfd-action{ display:inline-flex; align-items:center; justify-content:center; min-width:230px; min-height:46px; padding:18px 22px; border:0; border-radius:14px; color:#fff; background:var(--ceitsa-blue); box-shadow:0 14px 28px rgba(8,126,184,.18); font-size:1rem; font-weight:900; line-height:1.1; text-align:center; text-decoration:none; transition:transform .18s ease, opacity .18s ease, background .18s ease, box-shadow .18s ease; }
+    .vfd-action{ display:inline-flex; align-items:center; justify-content:center; min-width:230px; min-height:46px; padding:18px 22px; border:0; border-radius:14px; color:#fff; background:var(--cyan); box-shadow:0 14px 28px rgba(28,158,231,.22); font-size:1rem; font-weight:900; line-height:1.1; text-align:center; text-decoration:none; transition:transform .18s ease, opacity .18s ease, background .18s ease, box-shadow .18s ease; }
     .vfd-action:hover{ transform:translateY(-1px); }
-    .vfd-action.is-purchase:hover{ background:var(--ceitsa-blue-dark); box-shadow:0 16px 30px rgba(8,126,184,.22); }
+    .vfd-action.is-purchase:hover{ background:var(--ceitsa-blue); box-shadow:0 16px 30px rgba(8,126,184,.22); }
     .vfd-action.is-quote{ background:var(--whatsapp); box-shadow:0 14px 28px rgba(25,135,84,.18); }
     .vfd-action.is-quote:hover{ background:#116c42; box-shadow:0 16px 30px rgba(25,135,84,.22); }
     .vfd-action.is-hidden{ visibility:hidden; opacity:0; pointer-events:none; }
@@ -85,8 +85,7 @@
 
     @media (max-width:720px){
       .vfd-title-row{ align-items:stretch; flex-direction:column; }
-      .vfd-clear{ align-self:flex-start; }
-      .vfd-action-slot{ width:100%; min-width:0; margin-left:0; }
+      .vfd-title-actions{ width:100%; }
       .vfd-action{ width:100%; }
     }
 
@@ -123,7 +122,10 @@
         <div class="vfd-content">
           <div class="vfd-title-row">
             <h1 class="vfd-title">Cómo configurar tu modelo de variador CP2000</h1>
-            <button class="vfd-clear" id="clear-selection" type="button">Limpiar selección</button>
+            <div class="vfd-title-actions">
+              <button class="vfd-clear" id="clear-selection" type="button">Limpiar selección</button>
+              <a class="vfd-action is-hidden" id="model-action" href="#" target="_blank" rel="noopener noreferrer" aria-hidden="true">Comprar en CEITSA</a>
+            </div>
           </div>
 
           <div class="vfd-model" aria-label="Modelo configurado">
@@ -133,10 +135,6 @@
             <span class="vfd-segment is-wide" id="src-voltage" style="--seg-color:var(--cyan)"></span>
             <span class="vfd-segment" id="src-version" style="--seg-color:var(--purple)"></span>
             <span class="vfd-segment is-suffix" id="src-suffix" style="--seg-color:var(--gray)">-21</span>
-
-            <span class="vfd-action-slot">
-              <a class="vfd-action is-hidden" id="model-action" href="#" target="_blank" rel="noopener noreferrer" aria-hidden="true">Comprar en CEITSA</a>
-            </span>
           </div>
 
           <div class="vfd-layout">

@@ -73,6 +73,14 @@
       font-weight:900;
     }
 
+    .vfd-title-actions{
+      display:flex;
+      flex:0 0 auto;
+      flex-direction:column;
+      align-items:stretch;
+      gap:32px;
+    }
+
     .vfd-clear{
       flex:0 0 auto;
       min-height:42px;
@@ -117,14 +125,6 @@
       letter-spacing:.02em;
     }
 
-    .vfd-action-slot{
-      display:flex;
-      align-items:flex-end;
-      min-width:205px;
-      min-height:58px;
-      padding-bottom:2px;
-    }
-
     .vfd-action{
       display:inline-flex;
       align-items:center;
@@ -135,8 +135,8 @@
       border:0;
       border-radius:11px;
       color:#fff;
-      background:var(--ceitsa-blue);
-      box-shadow:0 9px 20px rgba(8,126,184,.20);
+      background:var(--cyan);
+      box-shadow:0 9px 20px rgba(28,158,231,.22);
       font-size:.92rem;
       font-weight:900;
       text-decoration:none;
@@ -144,7 +144,7 @@
     }
 
     .vfd-action:hover{ transform:translateY(-1px); }
-    .vfd-action.is-purchase:hover{ background:var(--ceitsa-blue-dark); }
+    .vfd-action.is-purchase:hover{ background:var(--ceitsa-blue); }
     .vfd-action.is-quote{ background:var(--whatsapp); box-shadow:0 9px 20px rgba(25,135,84,.20); }
     .vfd-action.is-quote:hover{ background:#116c42; }
 
@@ -279,8 +279,7 @@
 
     @media (max-width:720px){
       .vfd-title-row{ align-items:stretch; flex-direction:column; }
-      .vfd-clear{ align-self:flex-start; }
-      .vfd-action-slot{ width:100%; min-width:0; }
+      .vfd-title-actions{ width:100%; }
       .vfd-action{ width:100%; }
     }
 
@@ -317,7 +316,17 @@
         <div class="vfd-content">
           <div class="vfd-title-row">
             <h1 class="vfd-title">Cómo configurar tu modelo de variador VFD-EL</h1>
-            <button class="vfd-clear" id="clear-selection" type="button">Limpiar selección</button>
+            <div class="vfd-title-actions">
+              <button class="vfd-clear" id="clear-selection" type="button">Limpiar selección</button>
+              <a
+                class="vfd-action is-hidden"
+                id="model-action"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-hidden="true"
+              >Comprar en CEITSA</a>
+            </div>
           </div>
 
           <div class="vfd-model" aria-label="Modelo conformado">
@@ -326,17 +335,6 @@
             <span class="vfd-segment" id="src-series" style="--seg-color:var(--magenta)">EL</span>
             <span class="vfd-segment" id="src-voltage" style="--seg-color:var(--cyan)"></span>
             <span class="vfd-segment" id="src-version" style="--seg-color:var(--purple)">A</span>
-
-            <span class="vfd-action-slot">
-              <a
-                class="vfd-action is-hidden"
-                id="model-action"
-                href="#"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-hidden="true"
-              >Comprar</a>
-            </span>
           </div>
 
           <div class="vfd-layout">
@@ -512,7 +510,7 @@
       if(!code || !MODELS[code]){
         action.className = "vfd-action is-hidden";
         action.href = "#";
-        action.textContent = "Comprar";
+        action.textContent = "Comprar en CEITSA";
         action.setAttribute("aria-hidden", "true");
         return;
       }
@@ -524,7 +522,7 @@
       if(model.purchase){
         action.classList.add("is-purchase");
         action.href = `https://ceitsa.com.mx/p/${code}`;
-        action.textContent = "Comprar";
+        action.textContent = "Comprar en CEITSA";
         action.title = `Comprar ${code} en CEITSA`;
       }else{
         action.classList.add("is-quote");

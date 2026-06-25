@@ -144,6 +144,14 @@
       box-shadow:0 8px 18px rgba(25,135,84,.2);
     }
 
+    .vfd-title-actions{
+      display:flex;
+      flex:0 0 auto;
+      flex-direction:column;
+      align-items:stretch;
+      gap:32px;
+    }
+
     .vfd-layout{
       display:grid;
       grid-template-columns:minmax(360px, .9fr) minmax(520px, 1.1fr);
@@ -335,6 +343,7 @@
         flex-direction:column;
         margin-bottom:28px;
       }
+      .vfd-title-actions,
       .vfd-clear-button{ width:100%; }
       .vfd-model{ gap:12px; }
       .vfd-segment{ min-width:54px; font-size:1.9rem; }
@@ -369,14 +378,26 @@
           <div class="vfd-title-row">
             <h1 class="vfd-title">Cómo configurar tu modelo de variador VFD-EL-W</h1>
 
-            <button
-              type="button"
-              class="vfd-clear-button"
-              id="clear-selection"
-              aria-label="Limpiar selección"
-            >
-              Limpiar selección
-            </button>
+            <div class="vfd-title-actions">
+              <button
+                type="button"
+                class="vfd-clear-button"
+                id="clear-selection"
+                aria-label="Limpiar selección"
+              >
+                Limpiar selección
+              </button>
+
+              <a
+                class="vfd-action-button"
+                id="model-action"
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-live="polite"
+                hidden
+              ></a>
+            </div>
           </div>
 
           <div class="vfd-model-row">
@@ -389,15 +410,6 @@
               <span class="vfd-segment vfd-segment--packing" id="src-packing" style="--seg-color:var(--lime)">-1</span>
             </div>
 
-            <a
-              class="vfd-action-button"
-              id="model-action"
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-live="polite"
-              hidden
-            ></a>
           </div>
 
           <div class="vfd-layout">
