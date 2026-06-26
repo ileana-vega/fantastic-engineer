@@ -506,6 +506,66 @@
       .dtb-reference-grid{gap:8px}
       .dtb-reference-chip{flex:1 1 138px;min-height:40px;font-size:12px}
     }
+
+    .dtb-hero,
+    .dtb-matrix-section,
+    .dtb-family-section,
+    .dtb-model-select,
+    .dtb-code-configurator,
+    .dtb-reference-section{
+      font-family:"Roboto",Arial,sans-serif;
+    }
+
+    .dtb-hero__title{
+      max-width:700px;
+      font-size:clamp(36px,4.2vw,56px);
+      line-height:.98;
+      letter-spacing:0;
+      font-weight:900;
+    }
+
+    .dtb-hero__body{
+      max-width:670px;
+      font-size:17px;
+      line-height:1.58;
+    }
+
+    .dtb-family-section__title{
+      max-width:900px;
+      margin:0 auto 8px;
+    }
+
+    .dtb-matrix-title,
+    .dtb-family-section__title,
+    .dtb-model-title,
+    .dtb-code-title,
+    .dtb-config-heading,
+    .dtb-reference-title{
+      font-size:clamp(28px,2.7vw,38px);
+      line-height:1.16;
+      letter-spacing:0;
+      font-weight:900;
+    }
+
+    .dtb-matrix-title,
+    .dtb-model-title,
+    .dtb-code-title,
+    .dtb-config-heading,
+    .dtb-reference-title{
+      max-width:900px;
+      margin:0 0 8px;
+    }
+
+    @media (max-width:760px){
+      .dtb-hero__title{font-size:34px}
+      .dtb-hero__body{font-size:16px}
+      .dtb-matrix-title,
+      .dtb-family-section__title,
+      .dtb-model-title,
+      .dtb-code-title,
+      .dtb-config-heading,
+      .dtb-reference-title{font-size:28px}
+    }
 </style>
 
 <div class="dtb-component">

@@ -120,3 +120,7 @@
   line-height: 1.16;
   letter-spacing: 0;
 }
+
+.vfd-family-selector .vfd-selector-heading h2 {
+  margin: 0 auto 8px;
+}

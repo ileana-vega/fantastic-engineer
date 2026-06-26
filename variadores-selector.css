@@ -6,9 +6,9 @@
 }
 
 .vfd-selector-heading {
-  max-width: 1320px;
+  max-width: 1080px;
   margin: 0 auto 28px;
-  text-align: left;
+  text-align: center;
 }
 
 .vfd-selector-heading .eyebrow {
@@ -24,7 +24,7 @@
 
 .vfd-selector-heading h2 {
   max-width: 900px;
-  margin: 0 0 8px;
+  margin: 0 auto 8px;
   font-size: clamp(28px, 3.2vw, 42px);
   line-height: 1.08;
   letter-spacing: -0.02em;
@@ -32,7 +32,7 @@
 
 .vfd-selector-heading p:not(.eyebrow) {
   max-width: 900px;
-  margin: 0;
+  margin: 0 auto;
   color: #344256;
   font-size: 16px;
   line-height: 1.5;
