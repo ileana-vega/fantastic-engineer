@@ -1191,7 +1191,7 @@ p {
 .vfd-model-code-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px 12px;
 }
 
 .vfd-model-results span,
@@ -1199,31 +1199,61 @@ p {
   display: inline-flex;
   align-items: center;
   min-height: 32px;
-  border: 1px solid rgba(0, 84, 159, 0.14);
-  border-radius: 6px;
   color: var(--ink);
-  background: #ffffff;
   font-size: 13px;
   font-weight: 800;
-  overflow: hidden;
 }
 
 .vfd-model-results span {
   padding: 7px 10px;
+  border: 1px solid rgba(0, 84, 159, 0.14);
+  border-radius: 6px;
+  background: #ffffff;
 }
 
 .vfd-model-code-list a {
   display: inline-flex;
   align-items: center;
-  min-height: 32px;
-  padding: 7px 10px;
+  justify-content: center;
+  min-width: 132px;
+  min-height: 48px;
+  padding: 11px 16px;
+  border: 1px solid rgba(0, 84, 159, 0.2);
+  border-radius: 7px;
   color: inherit;
+  background: #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 84, 159, 0.04);
   text-decoration: none;
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease, box-shadow 0.18s ease;
 }
 
-.vfd-model-code-list li:hover {
+.vfd-model-code-list a[href*="ceitsa.com.mx"] {
   border-color: rgba(0, 84, 159, 0.34);
+  color: var(--ceitsa-blue);
+  background: #f7fbff;
+}
+
+.vfd-model-code-list a[href*="wa.me"] {
+  border-color: rgba(25, 135, 84, 0.28);
+  color: #08733f;
+  background: #f6fff9;
+}
+
+.vfd-model-code-list a:hover {
+  transform: translateY(-1px);
   box-shadow: 0 8px 18px rgba(0, 84, 159, 0.08);
+}
+
+.vfd-model-code-list a[href*="ceitsa.com.mx"]:hover {
+  border-color: var(--ceitsa-blue);
+  background: #edf7ff;
+  box-shadow: 0 10px 22px rgba(0, 84, 159, 0.13);
+}
+
+.vfd-model-code-list a[href*="wa.me"]:hover {
+  border-color: #198754;
+  background: #ecfff3;
+  box-shadow: 0 10px 22px rgba(25, 135, 84, 0.12);
 }
 
 .vfd-model-results p {
