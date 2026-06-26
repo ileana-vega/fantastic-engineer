@@ -33,7 +33,7 @@
       description: "Bombas y ventiladores pequeños, sopladores, bandas transportadoras y equipos de proceso simple.",
       benefits: ["Control V/F con curva ajustable.", "PID integrado para control de proceso.", "Comunicación RS-485 Modbus.", "Filtro EMI integrado en modelos seleccionados.", "Instalación compacta para tableros con espacio limitado."],
       power: "0.25 a 5 HP, según modelo",
-      voltage: "110 / 220 / 440 VCA",
+      voltage: "115 / 230 / 480 VCA",
       application: "Maquinaria compacta"
     },
     elw: {
@@ -44,8 +44,8 @@
       subtitle: "Variador compacto económico para control simple de velocidad y aplicaciones de carga fija.",
       description: "Maquinaria compacta, movimiento horizontal, transportadores, equipos de proceso sencillo y control de presión constante.",
       benefits: ["Control vectorial sensorless.", "Sobrecarga 150% por 60 segundos.", "RS-485 Modbus.", "Diseño compacto.", "Adecuado para aplicaciones de velocidad simple o carga fija."],
-      power: "0.25 a 5.5 HP, según modelo",
-      voltage: "220 / 440 VCA",
+      power: "1/4 a 5.5 HP, según modelo",
+      voltage: "230 / 460 VCA",
       application: "Máquinas pequeñas"
     },
     ms300: {
@@ -57,7 +57,7 @@
       description: "Máquinas herramienta, empaque, textil, bombas, ventiladores, compresores y maquinaria automatizada.",
       benefits: ["Control de motores de inducción y de imán permanente.", "STO integrado.", "PLC integrado de 2K pasos.", "Puerto USB para carga/descarga de parámetros.", "Keypad removible.", "Opción de filtro EMC integrado.", "Instalación compacta y side-by-side."],
       power: "1/4 a 30 HP, según modelo",
-      voltage: "110 / 220 / 440 VAC",
+      voltage: "115 / 230 / 480 VCA",
       application: "Maquinaria automatizada"
     },
     c2000: {
@@ -69,7 +69,7 @@
       description: "Extrusores, grúas, elevación, máquinas de inyección, procesamiento de metales, plásticos, bandas de transporte pesadas y maquinaria de alto torque.",
       benefits: ["Control preciso de velocidad, torque y posición.", "Compatible con motores síncronos y asíncronos.", "Control con y sin sensor.", "PLC integrado de 10K pasos.", "Opciones de comunicación industrial.", "Alta capacidad de sobrecarga para aplicaciones heavy duty."],
       power: "1 a 750 HP, según modelo",
-      voltage: "230 / 460 VCA, según versión.",
+      voltage: "230 / 460 VCA, según modelo.",
       application: "Maquinaria de alto torque"
     },
     cp2000: {
@@ -81,7 +81,7 @@
       description: "HVAC, bombas de enfriamiento, torres de enfriamiento, automatización de edificios, ventiladores y sistemas de bombeo.",
       benefits: ["Control vectorial sensorless para bombas y ventiladores.", "Funciones PID y parámetros HVAC.", "PLC integrado de 10K pasos.", "Comunicación Modbus y BACnet integrada.", "Control multipump con accesorios.", "Funciones para ahorro energético y ambientes de carga variable."],
       power: "1 a 125 HP, según modelo",
-      voltage: "220 / 440 VCA.",
+      voltage: "230 / 460 VCA.",
       application: "Bombas, ventiladores y HVAC"
     }
   };
