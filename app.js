@@ -30,7 +30,7 @@
         lines.push(`${key}: ${value}`);
       });
       const body = encodeURIComponent(lines.join("\n"));
-      window.location.href = `mailto:atencion_ventas@ceitsa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+      window.location.href = `mailto:cotiza@ceitsa.com?subject=${encodeURIComponent(subject)}&body=${body}`;
     });
   });
 
