@@ -2,6 +2,7 @@
   const current = window.location.pathname.split("/").pop() || "index.html";
   const activeByPage = {
     "variadores.html": "variadores.html",
+    "controladores-temperatura.html": "controladores-temperatura.html",
     "index.html": "index.html"
   };
   document.querySelectorAll(".menu a").forEach((link) => {
