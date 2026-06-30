@@ -3,6 +3,7 @@
   const activeByPage = {
     "variadores.html": "variadores.html",
     "controladores-temperatura.html": "controladores-temperatura.html",
+    "dia-del-ingeniero.html": "dia-del-ingeniero.html",
     "index.html": "index.html"
   };
   document.querySelectorAll(".menu a").forEach((link) => {
