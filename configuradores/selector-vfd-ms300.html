@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selector visual de variadores VFD-MS300</title>
+  <link rel="stylesheet" href="../styles.css">
 
   <style>
     :root {
@@ -395,6 +396,14 @@
 </head>
 
 <body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegacion principal">
+      <a class="brand" href="../index.html" aria-label="CEITSA inicio"><img src="../assets/ceitsa-logo-menu.png" alt="CEITSA Electromecatronica"></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+      <div class="menu" id="main-menu"><a href="../index.html">Inicio</a><a href="../variadores.html">Variadores</a><a href="../plc-delta.html">PLC Delta</a><a href="../controladores-temperatura.html">Controladores de Temperatura</a><a class="menu-promo" href="../promociones.html">Promociones del mes <span>Nuevo</span></a><a href="https://ceitsa.com.mx/catalogo" target="_blank" rel="noopener">Catalogo</a><a href="https://ceitsa.com.mx/search" target="_blank" rel="noopener">Tienda</a></div>
+    </nav>
+  </header>
+
   <section class="ms-selector" id="selector-ms300">
     <div class="ms-wrap">
       <div class="ms-panel" id="ms-diagram">
@@ -1111,6 +1120,7 @@
 
     render();
   </script>
+  <script src="../app.js"></script>
 </body>
 </html>
 

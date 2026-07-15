@@ -4,6 +4,7 @@
     "variadores.html": "variadores.html",
     "plc-delta.html": "plc-delta.html",
     "controladores-temperatura.html": "controladores-temperatura.html",
+    "promociones.html": "promociones.html",
     "index.html": "index.html"
   };
   document.querySelectorAll(".menu a").forEach((link) => {
