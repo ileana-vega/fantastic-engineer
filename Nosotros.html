@@ -6,6 +6,8 @@
 <title>CEITSA - Soluciones de Automatización Industrial</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 
 <style>
 /* ==========================================================================
@@ -712,6 +714,14 @@ body {
 </head>
 <body>
 
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="brand" href="index.html" aria-label="CEITSA inicio"><img src="assets/ceitsa-logo-menu.png" alt="CEITSA Electromecatrónica"></a>
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">Menu</button>
+            <div class="menu" id="main-menu"><a href="index.html">Inicio</a><a class="active" href="Nosotros.html">Nosotros</a><a href="variadores.html">Variadores</a><a href="plc-delta.html">PLC Delta</a><a href="controladores-temperatura.html">Controladores de Temperatura</a><a href="promociones.html">Promociones del mes</a><a href="https://ceitsa.com.mx/catalogo" target="_blank" rel="noopener">Catalogo</a><a href="https://ceitsa.com.mx/search" target="_blank" rel="noopener">Tienda</a></div>
+        </nav>
+    </header>
+
     <div class="main-banner">
         <img src="https://i.postimg.cc/fR5fpc42/Proyectos-de-automatizacion-electrica-y-neumatica.png" alt="Proyectos de automatización eléctrica y neumática">
     </div>
@@ -1018,5 +1028,6 @@ body {
         button.classList.add('active');
     }
     </script>
+    <script src="app.js"></script>
 </body>
 </html>
