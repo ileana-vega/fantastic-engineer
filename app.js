@@ -23,21 +23,6 @@
     });
   }
 
-  const interactiveBanner = document.getElementById("interactiveBanner");
-  const flashlightOverlay = document.getElementById("flashlightOverlay");
-  if (interactiveBanner && flashlightOverlay) {
-    interactiveBanner.addEventListener("mousemove", (event) => {
-      const rect = interactiveBanner.getBoundingClientRect();
-      flashlightOverlay.style.setProperty("--x", `${event.clientX - rect.left}px`);
-      flashlightOverlay.style.setProperty("--y", `${event.clientY - rect.top}px`);
-    });
-
-    interactiveBanner.addEventListener("mouseleave", () => {
-      flashlightOverlay.style.setProperty("--x", "50%");
-      flashlightOverlay.style.setProperty("--y", "50%");
-    });
-  }
-
   document.querySelectorAll(".quote-form").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
