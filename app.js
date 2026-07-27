@@ -23,6 +23,21 @@
     });
   }
 
+  const homeBanner = document.querySelector("#home-banner");
+  const bannerOverlay = homeBanner?.querySelector(".ceitsa-banner__overlay");
+  if (homeBanner && bannerOverlay && window.matchMedia("(pointer: fine)").matches) {
+    homeBanner.addEventListener("pointermove", (event) => {
+      const rect = homeBanner.getBoundingClientRect();
+      bannerOverlay.style.setProperty("--banner-pointer-x", `${event.clientX - rect.left}px`);
+      bannerOverlay.style.setProperty("--banner-pointer-y", `${event.clientY - rect.top}px`);
+    });
+
+    homeBanner.addEventListener("pointerleave", () => {
+      bannerOverlay.style.setProperty("--banner-pointer-x", "50%");
+      bannerOverlay.style.setProperty("--banner-pointer-y", "50%");
+    });
+  }
+
   document.querySelectorAll(".quote-form").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
