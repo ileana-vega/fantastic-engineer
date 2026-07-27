@@ -1979,10 +1979,6 @@ p {
 }
 
 @media (max-width: 1180px) {
-  .ceitsa-banner__character {
-    z-index: 2;
-  }
-
   .navbar {
     min-height: 68px;
     flex-wrap: wrap;
