@@ -1,15 +1,9 @@
 (function () {
-  const current = window.location.pathname.split("/").pop() || "index.html";
-  const activeByPage = {
-    "variadores.html": "variadores.html",
-    "plc-delta.html": "plc-delta.html",
-    "controladores-temperatura.html": "controladores-temperatura.html",
-    "promociones.html": "promociones.html",
-    "index.html": "index.html"
-  };
+  const current = window.location.pathname.replace(/\/+$/, "") || "/";
   document.querySelectorAll(".menu a").forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href === activeByPage[current]) {
+    const target = new URL(link.href, window.location.origin);
+    const targetPath = target.pathname.replace(/\/+$/, "") || "/";
+    if (target.origin === window.location.origin && targetPath === current) {
       link.classList.add("active");
     }
   });
