@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEITSA - Soluciones de Automatización Industrial</title>
+<meta name="description" content="Conoce la historia, filosofía, experiencia y soluciones de automatización industrial de CEITSA.">
+<link rel="icon" href="assets/favicon.ico" sizes="any">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+/* ==========================================================================
+   ESTILOS GENERALES Y RESETS
+   ========================================================================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Encabezado principal compartido con el resto del sitio */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e7eb;
+    box-shadow: 0 14px 34px rgba(31,45,58,.05);
+}
+
+.site-header a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.site-header .navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(14px,2vw,32px);
+    min-height: 62px;
+    padding: 0 clamp(18px,2.4vw,44px);
+}
+
+.site-header .brand {
+    display: inline-flex;
+    align-items: center;
+    flex: 0 0 118px;
+    min-width: 118px;
+}
+
+.site-header .brand img {
+    width: 104px;
+    height: auto;
+}
+
+.site-header .menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px,2vw,34px);
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.site-header .navbar::after {
+    flex: 0 0 118px;
+    min-width: 118px;
+    content: "";
+}
+
+.site-header .menu a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    min-height: 62px;
+    color: #565b64;
+    font-size: clamp(14px,.9vw,16px);
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.site-header .menu a:hover,
+.site-header .menu a.active {
+    color: #18252f;
+}
+
+.site-header .menu a.active::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    border-radius: 3px;
+    background: #0b3f91;
+    content: "";
+}
+
+.site-header .menu-toggle {
+    display: none;
+    border: 1px solid #e2e7eb;
+    border-radius: 6px;
+    padding: 10px 14px;
+    background: #ffffff;
+    color: #18252f;
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* Contenedores de secciones genéricas de fondo blanco */
+.section-container {
+    width: 100%;
+    background-color: #ffffff;
+    padding: 60px 20px;
+}
+
+.section-content-inner {
+    max-width: 1223px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* ==========================================================================
+   SECCIÓN 1: BANNER PRINCIPAL
+   ========================================================================== */
+.main-banner {
+    width: 100%;
+    display: block;
+}
+
+.main-banner img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ==========================================================================
+   SECCIÓN 3: ESTILOS DE LA BARRA DE NAVEGACIÓN
+   ========================================================================== */
+.nav-wrapper {
+    max-width: 1223px;
+    margin: 30px auto 0;
+    padding: 0 20px;
+    position: relative;
+    z-index: 20;
+    width: 100%;
+}
+
+.nav-container {
+    position: relative;
+    height: 88px;
+    background: #01257D;
+    border-radius: 54px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    top: 9px;
+    left: 9px;
+    width: calc(25% - 18px);
+    height: 70px;
+    background: #fff;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+    transition: all .45s cubic-bezier(.4,0,.2,1);
+    z-index: 1;
+}
+
+.nav-btn {
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    z-index: 2;
+}
+
+.nav-btn.active {
+    color: #01257D;
+}
+
+.nav-btn img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.dropdown {
+    width: 100%;
+    background: #E7E7E7;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transform: translateY(-15px);
+    transition: max-height .55s ease, opacity .35s ease, transform .35s ease;
+}
+
+.dropdown.active {
+    max-height: 2200px;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.content {
+    max-width: 1223px;
+    margin: auto;
+    padding: 60px 20px;
+}
+
+.simple-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #01257D;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.simple-text.center {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #01257D;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cards-grid {
+    display: grid;
+    gap: 40px 30px;
+}
+
+.valores-grid, .virtudes-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.nav-wrapper .card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #01257D;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.nav-wrapper .card p {
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* ==========================================================================
+   SECCIÓN 4: ACERCA DE NOSOTROS
+   ========================================================================== */
+.about-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #01257D;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.about-text {
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    text-align: left;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    white-space: pre-line;
+}
+
+.about-image {
+    width: 100%;
+    display: block;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+/* ==========================================================================
+   SECCIÓN 5: PRODUCTOS Y SERVICIOS
+   ========================================================================== */
+.prod-serv-section {
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.tabs { display: flex; gap: 20px; margin-bottom: 30px; }
+
+.tab-btn {
+    background: transparent; border: none; cursor: pointer;
+    font-family: 'Open Sans', sans-serif; font-weight: 700; font-size: 20px;
+    color: #01257D; padding: 14px 34px; border-radius: 999px;
+    transition: .35s ease;
+}
+
+.tab-btn.active { background: #01257D; color: #fff; }
+
+.content-panel {
+    width: 100%;
+    height: 509px;
+    background: #01257D;
+    overflow: hidden;
+    position: relative;
+}
+
+.content-inner {
+    max-width: 1285px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.panel { display: none; width: 100%; height: 100%; padding: 55px 0 30px; }
+.panel.active { display: block; }
+
+.horizontal-scroll {
+    display: flex; gap: 35px;
+    overflow-x: auto; overflow-y: hidden;
+    height: 100%; padding-bottom: 25px;
+    scroll-behavior: smooth;
+}
+
+.horizontal-scroll::-webkit-scrollbar { height: 12px; }
+.horizontal-scroll::-webkit-scrollbar-track {
+    background: rgba(255,255,255,.25); border-radius: 30px;
+}
+.horizontal-scroll::-webkit-scrollbar-thumb {
+    background: #fff; border-radius: 30px;
+}
+.horizontal-scroll { scrollbar-color: #fff rgba(255,255,255,.25); }
+
+.prod-serv-section .card {
+    flex: 0 0 340px;
+    min-height: 380px;
+    border: 2px solid #fff;
+    border-radius: 44px;
+    padding: 30px 25px;
+    color: #fff;
+}
+
+.prod-serv-section .card h3 {
+    text-align: center; font-size: 21px; font-weight: 700;
+    color: #fff; margin-bottom: 25px; line-height: 1.3;
+}
+
+.prod-serv-section .card ul { padding-left: 20px; }
+.prod-serv-section .card li {
+    font-size: 16px; font-weight: 400;
+    line-height: 1.8; margin-bottom: 5px;
+}
+
+/* ==========================================================================
+   SECCIÓN 6: FILOSOFÍA CEITSA Y PROPUESTA DE VALOR
+   ========================================================================== */
+.philosophy-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #01257D;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.philosophy-subtitle {
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.philosophy-split {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+}
+
+.philosophy-images-container {
+    flex: 1.3; 
+    display: flex;
+    gap: 15px;
+}
+
+.philosophy-images-container img {
+    width: 33.333%;
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+.philosophy-text-container {
+    flex: 0.7; 
+    background-color: #f9f9f9; 
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.value-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #01257D;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.value-text {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000000;
+    text-align: justify;
+    line-height: 1.8;
+}
+
+/* ==========================================================================
+   SECCIÓN 7: RECONOCIMIENTO
+   ========================================================================== */
+.reconocimiento-section{
+    width: 100%;
+    background: #01257D;
+    padding: 40px 20px;
+}
+
+.reconocimiento-container{
+    max-width: 1223px;
+    margin: 0 auto;
+    width: 100%;
+    min-height: 215px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.reconocimiento-title{
+    font-size: 30px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.1;
+}
+
+.reconocimiento-subtitle{
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.3;
+}
+
+.info-capsule{
+    width: min(1100px, 100%);
+    height: 60px;
+    background: #ffffff;
+    border-radius: 999px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.message-slider{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.message{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 40px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #000000;
+    opacity: 0;
+    transform: translateY(100%);
+    animation: slideLoop 16s infinite;
+}
+
+.message:nth-child(1){ animation-delay: 0s; }
+.message:nth-child(2){ animation-delay: 4s; }
+.message:nth-child(3){ animation-delay: 8s; }
+.message:nth-child(4){ animation-delay: 12s; }
+
+@keyframes slideLoop{
+    0%{ opacity: 0; transform: translateY(100%); }
+    8%{ opacity: 1; transform: translateY(0); }
+    22%{ opacity: 1; transform: translateY(0); }
+    30%{ opacity: 0; transform: translateY(-100%); }
+    100%{ opacity: 0; transform: translateY(-100%); }
+}
+
+/* ==========================================================================
+   SECCIÓN 8: NUESTROS CLIENTES
+   ========================================================================== */
+.clients-title {
+    font-size: 30px;
+    font-weight: 700;
+    color: #01257D;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.clients-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+}
+
+.client-item {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.client-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.client-item img {
+    max-width: 100%;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+/* ==========================================================================
+   SECCIÓN 9: NUESTROS DIFERENCIADORES
+   ========================================================================== */
+.diferenciadores{
+    width: 100%;
+    background: #E7E7E7;
+    padding: 45px 0;
+}
+
+.diferenciadores .contenido{
+    max-width: 1600px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+.diferenciadores h2{
+    text-align: center;
+    color: #01257D;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.cards{
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 5px 15px;
+}
+
+.cards::-webkit-scrollbar{ height: 8px; }
+.cards::-webkit-scrollbar-thumb{
+    background: #01257D;
+    border-radius: 20px;
+}
+
+.diferenciadores .card{
+    width: 250px;
+    height: 330px;
+    background: #01257D;
+    border-radius: 12px; 
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    cursor: pointer;
+    transition: all .45s ease;
+}
+
+.diferenciadores .card:hover{
+    background: #ffffff;
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.15);
+}
+
+.card-title{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.4;
+    transition: all .35s ease;
+}
+
+.diferenciadores .card:hover .card-title{
+    opacity: 0;
+    transform: scale(.9);
+}
+
+.card-content{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 22px;
+    color: #000000;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.55;
+    opacity: 0;
+    transition: all .35s ease;
+}
+
+.diferenciadores .card:hover .card-content{
+    opacity: 1;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (ADAPTABILIDAD MÓVIL CRÍTICA)
+   ========================================================================== */
+@media(max-width: 992px){
+    .valores-grid, .virtudes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .philosophy-split {
+        flex-direction: column;
+        align-items: center;
+    }
+    .philosophy-images-container {
+        width: 100%;
+        flex: none;
+    }
+    .philosophy-text-container {
+        width: 100%;
+        flex: none;
+    }
+    .clients-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media(max-width: 1180px){
+    .site-header .navbar {
+        min-height: 68px;
+        flex-wrap: wrap;
+    }
+    .site-header .menu-toggle {
+        display: inline-flex;
+    }
+    .site-header .menu {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        align-items: stretch;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 18px 18px;
+        background: #ffffff;
+        border-bottom: 1px solid #e2e7eb;
+        box-shadow: 0 16px 30px rgba(31,45,58,.08);
+    }
+    .site-header .menu.open {
+        display: flex;
+    }
+    .site-header .menu a {
+        min-height: 42px;
+        font-size: 16px;
+    }
+    .site-header .menu a.active::after {
+        right: auto;
+        width: 58px;
+    }
+    .site-header .navbar::after {
+        display: none;
+    }
+}
+
+@media(max-width: 768px){
+    /* Ajustes Barra de Navegación Móvil */
+    .nav-container{
+        height: auto;
+        flex-wrap: wrap;
+        padding: 10px;
+        border-radius: 24px;
+    }
+    .slider{
+        display: none; /* Desactivar slider animado en móvil */
+    }
+    .nav-btn{
+        width: 50%;
+        flex: none;
+        height: 65px;
+        font-size: 15px;
+        gap: 8px;
+    }
+    .nav-btn img {
+        width: 32px;
+        height: 32px;
+    }
+    .nav-btn.active{
+        background: #fff;
+        color: #01257D;
+        border-radius: 20px;
+    }
+    .content{
+        padding: 40px 15px;
+    }
+    .simple-text {
+        font-size: 18px;
+    }
+    .section-title {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    /* Adaptación sección Productos */
+    .content-panel{ 
+        height: auto; /* Altura automática en móvil para evitar texto recortado */
+    }
+    .panel {
+        padding: 30px 0;
+    }
+    .prod-serv-section .card{ 
+        flex: 0 0 280px; 
+        min-height: 340px;
+        padding: 20px;
+    }
+    .tab-btn {
+        font-size: 17px;
+        padding: 10px 24px;
+    }
+
+    /* Adaptación sección Filosofía */
+    .philosophy-subtitle { 
+        font-size: 18px; 
+        margin-bottom: 30px; 
+    }
+    .philosophy-images-container {
+        gap: 8px;
+    }
+    .value-text {
+        font-size: 15px;
+    }
+
+    /* Adaptación sección Reconocimiento */
+    .reconocimiento-title{
+        font-size: 24px;
+    }
+    .reconocimiento-subtitle{
+        font-size: 16px;
+    }
+    .info-capsule{
+        height: 85px; /* Más espacio vertical para textos en pantallas angostas */
+        border-radius: 16px;
+    }
+    .message{
+        font-size: 15px;
+        padding: 0 15px;
+        line-height: 1.4;
+    }
+
+    /* Reducción Matriz Clientes */
+    .clients-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    .section-container {
+        padding: 42px 16px;
+    }
+    .main-banner img {
+        min-height: 220px;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+@media(max-width: 480px){
+    .nav-btn{
+        width: 100%; /* Botones de navegación en lista vertical completa si es muy chico */
+    }
+    .valores-grid, .virtudes-grid{
+        grid-template-columns: 1fr;
+    }
+    .clients-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en celulares pequeños */
+    }
+    .philosophy-images-container {
+        flex-direction: column; /* Imágenes verticales en pantallas muy compactas */
+        gap: 15px;
+    }
+    .philosophy-images-container img {
+        width: 100%;
+        height: 200px;
+    }
+    .site-header .brand {
+        flex-basis: 116px;
+        min-width: 116px;
+    }
+    .site-header .brand img {
+        width: 112px;
+    }
+    .about-text,
+    .value-text {
+        text-align: left;
+    }
+}
+
+@media(hover: none){
+    .diferenciadores .card {
+        height: auto;
+        min-height: 300px;
+        background: #ffffff;
+        border: 1px solid #d8dee5;
+    }
+    .diferenciadores .card .card-title {
+        position: relative;
+        inset: auto;
+        min-height: 110px;
+        padding: 24px 20px 10px;
+        color: #01257D;
+        opacity: 1;
+        transform: none;
+    }
+    .diferenciadores .card .card-content {
+        position: relative;
+        inset: auto;
+        align-items: flex-start;
+        padding: 8px 20px 24px;
+        opacity: 1;
+    }
+}
+</style>
+</head>
+<body>
+
+    <header class="site-header">
+        <nav class="navbar" aria-label="Navegación principal">
+            <a class="brand" href="/" aria-label="CEITSA inicio">
+                <img src="assets/ceitsa-logo-menu.png" alt="CEITSA Electromecatrónica">
+            </a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-menu">Menú</button>
+            <div class="menu" id="main-menu">
+                <a href="/">Inicio</a>
+                <a class="active" href="/nosotros" aria-current="page">Nosotros</a>
+                <a href="/variadores">Variadores</a>
+                <a href="/plc-delta">PLC Delta</a>
+                <a href="/controladores-temperatura">Controladores de Temperatura</a>
+                <a href="/promociones">Promociones del mes</a>
+                <a href="https://ceitsa.com.mx/catalogo" target="_blank" rel="noopener">Catálogo</a>
+                <a href="https://ceitsa.com.mx/search" target="_blank" rel="noopener">Tienda</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="main-banner">
+        <img src="https://i.postimg.cc/fR5fpc42/Proyectos-de-automatizacion-electrica-y-neumatica.png" alt="Proyectos de automatización eléctrica y neumática">
+    </div>
+
+    <div class="nav-wrapper">
+        <div class="nav-container">
+            <div class="slider" id="slider"></div>
+            <button class="nav-btn active" data-index="0"
+                data-rest="https://i.postimg.cc/VNLc3Hzj/Mision-1.png"
+                data-active="https://i.postimg.cc/wvn8RqL4/Mision.png">
+                <img src="https://i.postimg.cc/wvn8RqL4/Mision.png" alt="Misión">
+                <span>Misión</span>
+            </button>
+            <button class="nav-btn" data-index="1"
+                data-rest="https://i.postimg.cc/qvpf3ZhF/Vision-1.png"
+                data-active="https://i.postimg.cc/632FXkgz/Vision.png">
+                <img src="https://i.postimg.cc/qvpf3ZhF/Vision-1.png" alt="Visión">
+                <span>Visión</span>
+            </button>
+            <button class="nav-btn" data-index="2"
+                data-rest="https://i.postimg.cc/L5kC42TZ/Valores-2.png"
+                data-active="https://i.postimg.cc/GtRK56C1/Valores.png">
+                <img src="https://i.postimg.cc/L5kC42TZ/Valores-2.png" alt="Valores">
+                <span>Valores</span>
+            </button>
+            <button class="nav-btn" data-index="3"
+                data-rest="https://i.postimg.cc/VNbFLzsc/Virtudes-2.png"
+                data-active="https://i.postimg.cc/BnRxzRTw/Virtudes.png">
+                <img src="https://i.postimg.cc/VNbFLzsc/Virtudes-2.png" alt="Virtudes">
+                <span>Virtudes</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="dropdown active" id="dropdown">
+        <div class="content" id="content"></div>
+    </div>
+
+    <section class="section-container">
+        <div class="section-content-inner">
+            <h2 class="about-title">Acerca de nosotros</h2>
+            <p class="about-text">CEITSA nació en 1989 en Toluca del sueño y la determinación de una mujer fuerte y visionaria, quien supo ver más allá de las necesidades inmediatas del mercado industrial. Con la firme convicción de impulsar el desarrollo tecnológico y humano en la región de Toluca, fundó una empresa comprometida con el suministro de materiales neumáticos y eléctricos de alta calidad para las industrias locales.
+
+            Desde sus inicios, CEITSA no se concibió únicamente como una comercializadora, sino como un proyecto con propósito: ser un puente entre la educación y la industria. Su fundadora entendió que el verdadero crecimiento se alcanza cuando el saber y la práctica se unen, por ello soñó con crear un espacio que sirviera como trampolín para estudiantes de Electrónica, Mecatrónica y Electromecatrónica, brindándoles oportunidades reales de aprendizaje y desarrollo profesional.
+
+            Bajo esa filosofía, CEITSA formó asesores técnicos capaces de diseñar e implementar soluciones de ingeniería, control y automatización en plantas industriales de la región. Más que un proveedor, la empresa se ha consolidado como un aliado estratégico que impulsa la innovación, la eficiencia operativa y el talento joven.
+
+            Hoy, CEITSA es el reflejo del liderazgo, la visión y la pasión de una mujer que transformó un sueño en una empresa con impacto. Ese legado continúa evolucionando en manos de su hija, quien ha transformado el proyecto en algo más que una empresa familiar: una comunidad que aprende, colabora y crece unida. CEITSA es hoy una gran familia comprometida con conectar conocimiento e industria para crear valor duradero.</p>
+            
+            <div class="about-image">
+                <img src="https://i.postimg.cc/Pqn9tG20/Equipo-de-seguridad-frente-a-camara.png" alt="Equipo de seguridad frente a cámara">
+            </div>
+        </div>
+    </section>
+
+    <section class="prod-serv-section">
+        <div class="tabs">
+            <button class="tab-btn active" onclick="showPanel('productos', this)">Productos</button>
+            <button class="tab-btn" onclick="showPanel('servicios', this)">Servicios</button>
+        </div>
+
+        <div class="content-panel">
+            <div class="content-inner">
+                <div id="productos" class="panel active">
+                    <div class="horizontal-scroll">
+                        <div class="card">
+                            <h3>Automatización industrial</h3>
+                            <ul>
+                                <li>PLC</li><li>HMI</li><li>Sensores</li><li>Instrumentación</li>
+                                <li>Sistemas de identificación RFID</li><li>Conectividad</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Arranque Motor</h3>
+                            <ul>
+                                <li>Variadores de velocidad</li><li>Contactores</li><li>Guardamotores</li>
+                                <li>Arrancadores reversibles</li><li>Arrancadores suaves</li>
+                                <li>Centro de control de motores</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Neumática y fluidos</h3>
+                            <ul>
+                                <li>Actuadores neumáticos</li><li>Válvulas</li>
+                                <li>Distribución de aire comprimido</li><li>Tratamiento de aire comprimido</li>
+                                <li>Chillers</li><li>Conexiones y manguera neumática</li>
+                                <li>Productos de vacío</li><li>Control de fluidos</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Control y potencia</h3>
+                            <ul>
+                                <li>Fuentes de alimentación</li>
+                                <li>Botonería: pulsadores, selectores y piloto</li>
+                                <li>Botoneras</li><li>Control de movimiento</li>
+                                <li>Servomotores y servodrives</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Distribución eléctrica</h3>
+                            <ul>
+                                <li>Interruptores termomagnéticos</li>
+                                <li>Tableros de distribución</li>
+                                <li>Centros de carga</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="servicios" class="panel">
+                    <div class="horizontal-scroll">
+                        <div class="card">
+                            <h3>Neumática</h3>
+                            <ul>
+                                <li>Distribución de aire comprimido</li>
+                                <li>Estudios de calidad de aire comprimido</li>
+                                <li>Estudios de fuga de aire comprimido</li>
+                                <li>Tratamiento de aire comprimido</li>
+                                <li>Tableros de control neumático</li>
+                                <li>Control de fluidos</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Formación</h3>
+                            <ul>
+                                <li>Material didáctico para universidades</li>
+                                <li>Material didáctico para la industria</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Control de procesos</h3>
+                            <ul>
+                                <li>Instrumentación industrial</li>
+                                <li>Tableros de control para procesos continuos</li>
+                                <li>Estaciones de ensamble</li>
+                                <li>Sistemas de control y supervisión inalámbrica</li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>Integración</h3>
+                            <ul>
+                                <li>Integración de tableros de control</li>
+                                <li>Programación</li>
+                                <li>Integración de robótica</li>
+                                <li>Dispositivos automatizados a la medida</li>
+                                <li>Proyectos llave en mano</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-content-inner">
+            <h2 class="philosophy-title">Filosofía CEITSA</h2>
+            <h3 class="philosophy-subtitle">"Nuestro trabajo no termina con una venta, sino cuando el cliente logra el resultado que esperaba"</h3>
+            
+            <div class="philosophy-split">
+                <div class="philosophy-images-container">
+                    <img src="https://i.postimg.cc/L4gQ9q3Z/CONTROL.jpg" alt="Control Industrial">
+                    <img src="https://i.postimg.cc/m2xXtbdW/IMG-20210220-134746.jpg" alt="Procesos e Ingeniería">
+                    <img src="https://i.postimg.cc/bwpm9mcZ/Inspeccion-de-construccion-en-progreso.png" alt="Inspección en progreso">
+                </div>
+                <div class="philosophy-text-container">
+                    <h4 class="value-title">Nuestra propuesta de valor</h4>
+                    <p class="value-text">En CEITSA ofrecemos soluciones confiables y personalizadas en neumática, eléctrica y automatización industrial, respaldadas por más de 35 años de experiencia en el mercado.
+                    Contamos con el respaldo de marcas líderes y un equipo técnico altamente capacitado que contribuyen al desarrollo de proyectos integrales como automatización neumática y electroneumática, control industrial, instrumentación de procesos, soluciones de ahorro y monitoreo de energía, entre otros.
+                    Atendemos a integradores y a la industria en general, ofreciendo productos de alta calidad y asesoría experta, garantizando una cobertura que llega a toda la República Mexicana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="reconocimiento-section">
+        <div class="reconocimiento-container">
+            <h2 class="reconocimiento-title">Reconocimiento</h2>
+            <div class="reconocimiento-subtitle">Atención técnica personalizada de inicio a fin</div>
+            <div class="info-capsule">
+                <div class="message-slider">
+                    <div class="message">Somos reconocidos por nuestras asesorías personalizadas</div>
+                    <div class="message">Contamos con asesores capacitados que brindan atención personalizada a cada empresa</div>
+                    <div class="message">Representamos marcas líderes en automatización eléctrica y neumática</div>
+                    <div class="message">Ofrecemos acompañamiento de inicio a fin para garantizar un servicio de calidad</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-container">
+        <div class="section-content-inner">
+            <h2 class="clients-title">Nuestros clientes</h2>
+            <div class="clients-grid">
+                <div class="client-item"><img src="https://i.postimg.cc/sX58FyQt/Mesa-de-trabajo-6.png" alt="Amcor"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/qBXYjJdc/Mesa-de-trabajo-8.png" alt="Bosch"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/SQTLy361/Mesa-de-trabajo-7.png" alt="Janel"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/C5zqBMCg/Mesa-de-trabajo-26.png" alt="Sanofi"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/6pRCfQDk/Mesa-de-trabajo-29.png" alt="Smurfit"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/pLNFrHpz/Mesa-de-trabajo-9.png" alt="Fastenal"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/ZqDjZZ9H/Mesa-de-trabajo-32.png" alt="Valeo"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/wjd1HQG4/Mesa-de-trabajo-19.png" alt="Mane"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/wBwMX8j6/Mesa-de-trabajo-12.png" alt="Gates"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/gJ507VhQ/Mesa-de-trabajo-5.png" alt="Alpla"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/7Yz9YDxM/Mesa-de-trabajo-14.png" alt="Escato"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/JzcQZqHm/Mesa-de-trabajo-25.png" alt="Magneti"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/cJJTV6Jr/Mesa-de-trabajo-33.png" alt="ZF"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/447bBZHz/Mesa-de-trabajo-16.png" alt="Papelera del nevado"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/63WXhYQW/Mesa-de-trabajo-2.png" alt="Hitchiner"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/cJLfYNNF/Mesa-de-trabajo-3.png" alt="Películas plásticas"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/NjgXqwLt/Mesa-de-trabajo-22.png" alt="Plastimac"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/65K2nNr9/Mesa-de-trabajo-4.png" alt="Perfem"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/s2MvsfrN/Mesa-de-trabajo-18.png" alt="Magna"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/SKHjs0Q9/Mesa-de-trabajo-23.png" alt="Bestop"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/J7Nt1df0/Mesa-de-trabajo-27.png" alt="Seg"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/jSFSgV7c/Mesa-de-trabajo-30.png" alt="Texen"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/9fwFsxPj/Mesa-de-trabajo-17.png" alt="Sabritas"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/zv7JT4Ny/Mesa-de-trabajo-21.png" alt="Nissin"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/fTWWMW7v/Mesa-de-trabajo-20.png" alt="Astemo"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/jjftMDTF/Mesa-de-trabajo-1.png" alt="Antolín"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/JnWmvR4j/Mesa-de-trabajo-15.png" alt="Bocar"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/kX5Ck19w/S-C-Johnson-Logo.png" alt="SC Johnson"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/GhSRrFm0/Mesa-de-trabajo-24.png" alt="Tupperware"></div>
+                <div class="client-item"><img src="https://i.postimg.cc/Y9kK88bz/Industrial-ochoa.png" alt="Industrial Ochoa"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="diferenciadores">
+        <div class="contenido">
+            <h2>Nuestros diferenciadores</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-title">Experiencia comprobada</div>
+                    <div class="card-content">Con más de 35 años en el mercado de la industria que respaldan nuestro conocimiento, confiabilidad y permanencia.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Distribuidor autorizado de marcas líderes</div>
+                    <div class="card-content">Comercializar productos de marcas reconocidas como SMC, Delta, Turck, Chint y Schneider; garantizando calidad, soporte técnico y disponibilidad de refacciones.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Cobertura regional y nacional</div>
+                    <div class="card-content">Si bien contamos con sede en Toluca, atendemos tanto a la industria local como a clientes foráneos, ampliando nuestro alcance y capacidad de respuesta inmediata.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Atención especializada a integradores y a la industria</div>
+                    <div class="card-content">En CEITSA entendemos las necesidades tanto de integradores de sistemas como de usuarios finales industriales, lo que nos permite ofrecer soluciones a medida para distintos niveles de la cadena de valor.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Asesores técnicos capacitados por fabricantes</div>
+                    <div class="card-content">Nuestro equipo de asesores está formado directamente por las marcas que representamos, asegurando de esta manera un conocimiento profundo de los productos, lo que se traduce en una asesoría técnica, confiable y eficaz.</div>
+                </div>
+                <div class="card">
+                    <div class="card-title">Especialización en automatización, control de procesos e instrumentación</div>
+                    <div class="card-content">Nuestro enfoque va más allá de la simple venta de productos, ofreciendo soluciones integrales en automatización industrial, lo que le da un valor agregado a los procesos productivos de los clientes.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+    // Lógica para Barra de Navegación
+    const buttons = document.querySelectorAll('.nav-btn');
+    const slider = document.getElementById('slider');
+    const dropdown = document.getElementById('dropdown');
+    const content = document.getElementById('content');
+
+    const sections = {
+        "Misión": `<div class="simple-text center">Brindar las mejores soluciones del Nuevo Mundo Electromecatrónico a la industria.</div>`,
+        "Visión": `<div class="simple-text">Ser la comercializadora líder en el mercado, distinguiéndonos por ofrecer las últimas tecnologías y las mejores soluciones a nuestros clientes.</div>`,
+        "Valores": `<h2 class="section-title">Principios con los que tomamos decisiones y acompañamos a nuestros clientes.</h2><div class="cards-grid valores-grid"><div class="card"><h3>Compromiso con el cliente</h3><p>En CEITSA los clientes son el centro de nuestras decisiones. Escuchamos activamente sus necesidades para ofrecer soluciones a medida que generen valor real a sus procesos productivos.</p></div><div class="card"><h3>Asesoría técnica de calidad</h3><p>Brindamos acompañamiento técnico especializado, respaldado por conocimientos actualizados y experiencia en campo.</p></div><div class="card"><h3>Confiabilidad</h3><p>Nos esforzamos por ser un aliado confiable, cumpliendo con nuestros compromisos en tiempo y forma.</p></div><div class="card"><h3>Innovación práctica</h3><p>Promovemos la mejora continua mediante soluciones prácticas y tecnológicamente actualizadas.</p></div><div class="card"><h3>Ética y transparencia</h3><p>Operamos con honestidad, responsabilidad y claridad en cada interacción.</p></div><div class="card"><h3>Trabajo en equipo</h3><p>Fomentamos la colaboración interna y externa con nuestros clientes.</p></div><div class="card"><h3>Responsabilidad industrial y ambiental</h3><p>Promovemos prácticas responsables que contribuyan al desarrollo sostenible.</p></div></div>`,
+        "Virtudes": `<h2 class="section-title">Rasgos que buscamos vivir en cada proyecto y relación de trabajo.</h2><div class="cards-grid virtudes-grid"><div class="card"><h3>Autodesarrollo</h3><p>Impulsar a ingenieros recién egresados para introducirlos al mundo de las soluciones industriales con capacitación constante.</p></div><div class="card"><h3>Integridad</h3><p>Actuar con transparencia, confidencialidad y entereza moral para acompañar a las empresas.</p></div><div class="card"><h3>Vocación</h3><p>Ser conscientes de nuestro compromiso y reconocer nuestra pasión por implementar soluciones.</p></div><div class="card"><h3>Compromiso en acción</h3><p>Saber que para mejorar los procesos es necesario analizar los requerimientos y proponer soluciones objetivas.</p></div></div>`
+    };
+
+    content.innerHTML = sections["Misión"];
+
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => {
+                b.classList.remove('active');
+                b.querySelector('img').src = b.dataset.rest;
+            });
+
+            btn.classList.add('active');
+            btn.querySelector('img').src = btn.dataset.active;
+
+            if(window.innerWidth > 768) {
+                slider.style.left = `calc(${Number(btn.dataset.index) * 25}% + 9px)`;
+            }
+            dropdown.classList.remove('active');
+
+            setTimeout(() => {
+                content.innerHTML = sections[btn.querySelector('span').textContent];
+                dropdown.classList.add('active');
+            }, 220);
+        });
+    });
+
+    // Lógica para Productos y Servicios
+    function showPanel(panelId, button){
+        document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(panelId).classList.add('active');
+        button.classList.add('active');
+    }
+
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mainMenu = document.getElementById('main-menu');
+    if (menuToggle && mainMenu) {
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mainMenu.classList.toggle('open');
+            menuToggle.setAttribute('aria-expanded', String(isOpen));
+        });
+        mainMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mainMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+    </script>
+</body>
+</html>
