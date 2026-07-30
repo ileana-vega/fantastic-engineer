@@ -2778,8 +2778,7 @@
             <p>Introduce la contraseña de acceso para abrir el panel administrativo de promociones.</p>
             <label class="field-label" for="access-password">
                 Contraseña
-                <span class="password-wrap">
-                    <input id="access-password" class="field-input" type="password" required autocomplete="current-password">
+                <span class="password-wrap" id="access-password-wrap">
                     <button id="password-toggle" class="password-toggle" type="button">Mostrar</button>
                 </span>
             </label>
@@ -3897,12 +3896,37 @@
 
         const accessModal = document.getElementById('access-modal');
         const accessForm = document.getElementById('access-form');
-        const accessPassword = document.getElementById('access-password');
+        const accessPasswordWrap = document.getElementById('access-password-wrap');
         const accessError = document.getElementById('access-error');
         const accessCancel = document.getElementById('access-cancel');
         const passwordToggle = document.getElementById('password-toggle');
         const adminApp = document.getElementById('admin-app');
         const toastRegion = document.getElementById('toast-region');
+        let accessPassword = null;
+
+        /*
+         * El campo de contraseña solo existe mientras el diálogo está abierto.
+         * Los gestores de contraseñas pueden inyectar su botón aun en campos
+         * ocultos y posicionarlo por error sobre el catálogo público.
+         */
+        function mountAccessPassword() {
+            if (accessPassword) return accessPassword;
+            const input = document.createElement('input');
+            input.id = 'access-password';
+            input.className = 'field-input';
+            input.type = 'password';
+            input.required = true;
+            input.autocomplete = 'current-password';
+            accessPasswordWrap.insertBefore(input, passwordToggle);
+            accessPassword = input;
+            return input;
+        }
+
+        function unmountAccessPassword() {
+            accessPassword?.remove();
+            accessPassword = null;
+            passwordToggle.textContent = 'Mostrar';
+        }
 
         function showToast(message, type = '') {
             const toast = document.createElement('div');
@@ -3956,13 +3980,14 @@
 
         function openAccessModal() {
             accessError.textContent = '';
-            accessPassword.value = '';
             accessModal.hidden = false;
             accessModal.setAttribute('aria-hidden', 'false');
-            window.setTimeout(() => accessPassword.focus(), 20);
+            const passwordInput = mountAccessPassword();
+            window.setTimeout(() => passwordInput.focus(), 20);
         }
 
         function closeAccessModal() {
+            unmountAccessPassword();
             accessModal.hidden = true;
             accessModal.setAttribute('aria-hidden', 'true');
             accessError.textContent = '';
@@ -3986,7 +4011,7 @@
                 return;
             }
 
-            const password = accessPassword.value;
+            const password = accessPassword?.value || '';
             if (!password) {
                 accessError.textContent = 'Introduce la contraseña.';
                 return;
@@ -4031,6 +4056,7 @@
         });
 
         passwordToggle.addEventListener('click', () => {
+            if (!accessPassword) return;
             const showing = accessPassword.type === 'text';
             accessPassword.type = showing ? 'password' : 'text';
             passwordToggle.textContent = showing ? 'Mostrar' : 'Ocultar';
