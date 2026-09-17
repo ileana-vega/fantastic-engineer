@@ -3693,9 +3693,11 @@
             return normalizeApplicationState({ products: DEFAULT_PRODUCTS, seasons: [], lastModified: null });
         }
 
-        function enableStaticCatalog() {
+        function enableStaticCatalog({ notify = isAdminMode, reason = '' } = {}) {
             catalogStaticMode = true;
-            showToast('Vista del catálogo incluido: la API /api/catalogo no está disponible. Para guardar cambios, conecta el backend y recarga la página.', 'warning');
+            const message = 'Vista del catálogo incluido: la API /api/catalogo no está disponible. Para guardar cambios, conecta el backend y recarga la página.';
+            if (notify) showToast(message, 'warning');
+            else console.warn(message, reason);
             return embeddedCatalog();
         }
 
@@ -3736,13 +3738,20 @@
 
         async function loadCatalog() {
             if (catalogStaticMode) return embeddedCatalog();
-            const response = await catalogRequest('GET');
-            if (response.staticCatalog) return enableStaticCatalog();
-            const state = response.result;
-            if (!state || !Array.isArray(state.products) || !Array.isArray(state.seasons)) {
-                throw new Error('El catálogo recibido no tiene un formato válido: se requieren products y seasons.');
+            try {
+                const response = await catalogRequest('GET');
+                if (response.staticCatalog) return enableStaticCatalog();
+                const state = response.result;
+                if (!state || !Array.isArray(state.products) || !Array.isArray(state.seasons)) {
+                    throw new Error('El catálogo recibido no tiene un formato válido: se requieren products y seasons.');
+                }
+                return normalizeApplicationState(state);
+            } catch (error) {
+                if (!isAdminMode) {
+                    return enableStaticCatalog({ notify: false, reason: error.message });
+                }
+                throw error;
             }
-            return normalizeApplicationState(state);
         }
 
         async function saveCatalog(state) {
@@ -6150,8 +6159,10 @@
         async function initializeApplication() {
             try {
                 publishedState = await loadCatalog();
-                await processDueSchedules({ silent: true });
-                publishedState = await loadCatalog();
+                if (!catalogStaticMode) {
+                    await processDueSchedules({ silent: true });
+                    publishedState = await loadCatalog();
+                }
             } catch (error) {
                 console.error('No se pudo cargar el catálogo:', error);
                 showToast(`No se pudo cargar el catálogo: ${error.message}`, 'error');
