@@ -1,0 +1,998 @@
+{
+  "products": [
+    {
+      "id": "chint-1",
+      "brand": "chint",
+      "title": "Arrancador Suave 75 HP, 55 kW, 110 Amperes, 3H - Chint Ex9QR51106D - 1720008",
+      "image": "https://i.postimg.cc/7Pgq9G4v/Ex9QR51106D.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/Ex9QR51106D"
+    },
+    {
+      "id": "chint-2",
+      "brand": "chint",
+      "title": "Arrancador Suave 125 HP, 90 kW, 180 Amperes, 3H - Chint Ex9QR5-180-6-D - 1720010",
+      "image": "https://i.postimg.cc/J7d5Tn5c/Ex9QR5-180-6-D.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/Ex9QR5-180-6-D"
+    },
+    {
+      "id": "chint-3",
+      "brand": "chint",
+      "title": "Disparador por mínima tensión (Undervoltage release) para NS2 marco: 25, 32, 25X, 32X, 32H, 80 - Chint NS2-UV220 - 495907",
+      "image": "https://i.postimg.cc/tRKQKXXh/NS2-UV220.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-UV220"
+    },
+    {
+      "id": "chint-4",
+      "brand": "chint",
+      "title": "Guardamotor 30 - 40 A, 3 Polos, Mando Giratorio - Chint NS2-80 30-40A - 279722",
+      "image": "https://i.postimg.cc/YCMWxGsz/NS2-80-30-40A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-80%2030-40A"
+    },
+    {
+      "id": "chint-5",
+      "brand": "chint",
+      "title": "Guardamotor 4 - 6.3 A, 3 Polos, Mando Giratorio - Chint NS2-25X 4-6.3A - 495184",
+      "image": "https://i.postimg.cc/FRyvGRqQ/NS2-25X-4-6-3A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25X%204-6.3A"
+    },
+    {
+      "id": "chint-6",
+      "brand": "chint",
+      "title": "Guardamotor 25 - 40 A, 3 Polos, Mando Botones - Chint NS2-80B 25A-40A - 495087",
+      "image": "https://i.postimg.cc/NGPyHC1W/NS2-80B-25A-40A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-80B%2025A-40A"
+    },
+    {
+      "id": "chint-7",
+      "brand": "chint",
+      "title": "Contacto auxiliar instantáneo (colgante frontal) para NS2 marco: 25, 32, 25X, 32X, 32H - Chint NS2-AU20 - 495951",
+      "image": "https://i.postimg.cc/Dfqv2CxP/NS2-AU20.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-AU20"
+    },
+    {
+      "id": "chint-8",
+      "brand": "chint",
+      "title": "Contacto de señal de falla y contacto auxiliar instantáneo para NS2 marco: 25, 32, 25X, 32X, 32H - Chint NS2-FA0110 - 495956",
+      "image": "https://i.postimg.cc/x8sFfDhN/NS2-FA0110.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-FA0110"
+    },
+    {
+      "id": "chint-9",
+      "brand": "chint",
+      "title": "Chint NS2-AE11",
+      "image": "https://i.postimg.cc/yx5XpV2V/NS2-AE11.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-AE11"
+    },
+    {
+      "id": "chint-10",
+      "brand": "chint",
+      "title": "Contacto auxiliar instantáneo (colgante lateral) para NS2 marco: 80B - Chint NS2-AU11(NS2-80B) - 495972",
+      "image": "https://i.postimg.cc/1RLvKBSG/NS2-AU11(NS2-80B).png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-AU11(NS2-80B)"
+    },
+    {
+      "id": "chint-11",
+      "brand": "chint",
+      "title": "Contacto auxiliar instantáneo (colgante lateral) para NS2 marco: 25, 32, 25X, 32X, 32H - Chint NS2-AU11 - 495996",
+      "image": "https://i.postimg.cc/D0V11CGg/NS2-AU11.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-AU11"
+    },
+    {
+      "id": "chint-12",
+      "brand": "chint",
+      "title": "Caja para Guardamotor a prueba de agua para NS2 marco: 25, 32 - Chint NS2-MC - 495997",
+      "image": "https://i.postimg.cc/mD7PWTcF/NS2-MC.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-MC"
+    },
+    {
+      "id": "chint-13",
+      "brand": "chint",
+      "title": "Contacto auxiliar instantáneo (colgante frontal) para NS2 marco: 80 - Chint NS2-AU20(NS2-80) - 495873",
+      "image": "https://i.postimg.cc/8PJqpsk8/NS2-AU20(NS2-80).png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-AU20(NS2-80)"
+    },
+    {
+      "id": "chint-14",
+      "brand": "chint",
+      "title": "Guardamotor 24 – 32 A, 3 Polos, Mando Giratorio - Chint NS2-32X 24-32A - 139373",
+      "image": "https://i.postimg.cc/R0rHBMXc/NS2-32X-24-32A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-32X%2024-32A"
+    },
+    {
+      "id": "chint-15",
+      "brand": "chint",
+      "title": "Caja para Guardamotor a prueba de agua para NS2 marco: 25, 32 - Chint WPB-1 red-yellow - 495854",
+      "image": "https://i.postimg.cc/PfFNHXqT/WPB-1-red-yellow.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/WPB-1%20red-yellow"
+    },
+    {
+      "id": "chint-16",
+      "brand": "chint",
+      "title": "Guardamotor 37 - 50 A, 3 Polos, Mando Botones - Chint NS2-80 37-50A - 279723",
+      "image": "https://i.postimg.cc/BQT6KxgP/NS2-80-37-50A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-80%2037-50A"
+    },
+    {
+      "id": "chint-17",
+      "brand": "chint",
+      "title": "Guardamotor 24 – 32 A, 3 Polos, Mando Botones - Chint NS2-32 24-32A - 146475",
+      "image": "https://i.postimg.cc/FHzM4v18/NS2-32-24-32A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-32%2024-32A"
+    },
+    {
+      "id": "chint-18",
+      "brand": "chint",
+      "title": "Guardamotor 13 - 18 A, 3 Polos, Mando Giratorio - Chint NS2-25X 13-18A - 495187",
+      "image": "https://i.postimg.cc/Hxd3T0Bw/NS2-25X-13-18A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25X%2013-18A"
+    },
+    {
+      "id": "chint-19",
+      "brand": "chint",
+      "title": "Guardamotor 9 - 14 A, 3 Polos, Mando Giratorio - Chint NS2-25X 9-14A - 495186",
+      "image": "https://i.postimg.cc/W1mkTBKH/NS2-25X-9-14A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25X%209-14A"
+    },
+    {
+      "id": "chint-20",
+      "brand": "chint",
+      "title": "Guardamotor 6 - 10 A, 3 Polos, Mando Botones - Chint NS2-25 6-10A - 495081",
+      "image": "https://i.postimg.cc/mgTQzZ76/NS2-25-6-10A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25%206-10A"
+    },
+    {
+      "id": "chint-21",
+      "brand": "chint",
+      "title": "Guardamotor 20 – 25 A, 3 Polos, Mando Botones - Chint NS2-25 20-25A - 495085",
+      "image": "https://i.postimg.cc/FRXFzzLw/NS2-25-20-25A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25%2020-25A"
+    },
+    {
+      "id": "chint-22",
+      "brand": "chint",
+      "title": "Guardamotor 17 - 23 A, 3 Polos, Mando Botones - Chint NS2-25 17-23A - 495084",
+      "image": "https://i.postimg.cc/1zwPkSjc/NS2-25-17-23A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25%2017-23A"
+    },
+    {
+      "id": "chint-23",
+      "brand": "chint",
+      "title": "Guardamotor 13 - 18 A, 3 Polos, Mando Botones - Chint NS2-25 13-18A - 495083",
+      "image": "https://i.postimg.cc/yNm4fPDD/NS2-25-13-18A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25%2013-18A"
+    },
+    {
+      "id": "chint-24",
+      "brand": "chint",
+      "title": "Guardamotor 1.6 - 2.5 A, 3 Polos, Mando Botones - Chint NS2-25 1.6-2.5A - 495078",
+      "image": "https://i.postimg.cc/tTGrcQKY/NS2-25-1-6-2-5A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25%201.6-2.5A"
+    },
+    {
+      "id": "chint-25",
+      "brand": "chint",
+      "title": "Guardamotor 1 - 1.6 A, 3 Polos, Mando Botones - Chint NS2-25 1-1.6A - 495077",
+      "image": "https://i.postimg.cc/PqSx3TpP/NS2-25-1-1-6A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NS2-25%201-1.6A"
+    },
+    {
+      "id": "chint-26",
+      "brand": "chint",
+      "title": "Arrancador Suave 250 HP, 185 kW, 440 VCA, 370 Amperes, 3H - Chint Ex9QR3-370-440 - 798015NA",
+      "image": "https://i.postimg.cc/sg94w6Ym/Ex9QR3-370-440.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/Ex9QR3-370-440"
+    },
+    {
+      "id": "chint-27",
+      "brand": "chint",
+      "title": "Arrancador Suave 60 HP, 45 kW, 440 VCA 90 Amperes, 3H - Chint Ex9QR3-90-440 - 798007NA",
+      "image": "https://i.postimg.cc/GhvFm75d/Ex9QR3-90-440.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/Ex9QR3-90-440"
+    },
+    {
+      "id": "chint-28",
+      "brand": "chint",
+      "title": "Arrancador Suave 150 HP, 110 kW, 440 VCA, 220 Amperes, 3H - Chint Ex9QR3-220-440 - 798011NA",
+      "image": "https://i.postimg.cc/L41fxQR9/Ex9QR3-220-440.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/Ex9QR3-220-440"
+    },
+    {
+      "id": "chint-29",
+      "brand": "chint",
+      "title": "Arrancador Suave 30 HP, 22 kW, 440 VCA, 44 Amperes, 3H - Chint Ex9QR3-44-440 - 798004NA",
+      "image": "https://i.postimg.cc/PJsLGhhW/Ex9QR3-44-440.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/Ex9QR3-44-440"
+    },
+    {
+      "id": "chint-30",
+      "brand": "chint",
+      "title": "Arrancador Suave 15 HP, 11 kW, 440 VCA, 22 Amperes, 3H - Chint Ex9QR3-22-440 - 798001NA",
+      "image": "https://i.postimg.cc/0Qg5jf4H/Ex9QR3-22-440.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/Ex9QR3-22-440"
+    },
+    {
+      "id": "chint-31",
+      "brand": "chint",
+      "title": "Contactor 3 Polos, 80 Amperes, Bobina 220 VCA - Chint NC1-8011 220V 50/60Hz - 222931",
+      "image": "https://i.postimg.cc/FzW2dFK2/NC1-8011-220V-50-60Hz.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NC1-8011%20220V%2050%2F60Hz"
+    },
+    {
+      "id": "chint-32",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 17 - 25 A, Bobina 220 VCA, Motor 7.5 HP 220 VCA - Chint NQ2-15P/3 220V 17-25A - 493584",
+      "image": "https://i.postimg.cc/FswB2BJH/NQ2-15P-3-220V-17-25A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-15P%2F3%20220V%2017-25A"
+    },
+    {
+      "id": "chint-33",
+      "brand": "chint",
+      "title": "Módulo de retardo de tiempo, T: retardo de conexión On Delay 0.1-30s - Chint F5-T2 - 258022",
+      "image": "https://i.postimg.cc/rwSQ7Fkw/F5-T2.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/F5-T2"
+    },
+    {
+      "id": "chint-34",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 12 - 18 A, Bobina 220 VCA, Motor 5 HP 220 VCA - Chint NQ2-15P/2 220V 12-18A - 493574",
+      "image": "https://i.postimg.cc/FswB2BJH/NQ2-15P-3-220V-17-25A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-15P%2F2%20220V%2012-18A"
+    },
+    {
+      "id": "chint-35",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 48 - 65 A, Bobina 220 VCA, Motor 20 HP 220 VCA Trifásico - Chint NQ2-33P/1 220V 48-65A - 493640",
+      "image": "https://i.postimg.cc/B6LCJqFn/NQ2-33P-1-220V-48-65A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-33P%2F1%20220V%2048-65A"
+    },
+    {
+      "id": "chint-36",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 37 - 50 A, Bobina 220 VCA, Motor 15 HP 220 VCA Trifásico - Chint NQ2-33P/1 220V 37-50A - 493639",
+      "image": "https://i.postimg.cc/B6LCJqFn/NQ2-33P-1-220V-48-65A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-33P%2F1%20220V%2037-50A"
+    },
+    {
+      "id": "chint-37",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 7 - 10 A, Bobina 220 VCA, Motor 3 HP 220 VCA - Chint NQ2-15P/1 220V 7-10A - 493532",
+      "image": "https://i.postimg.cc/FswB2BJH/NQ2-15P-3-220V-17-25A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-15P%2F1%20220V%207-10A"
+    },
+    {
+      "id": "chint-38",
+      "brand": "chint",
+      "title": "Tope para Riel Din - Chint EW35 FIXING - 550033",
+      "image": "https://i.postimg.cc/vHrwQy73/EW35-FIXING.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/EW35%20FIXING"
+    },
+    {
+      "id": "chint-39",
+      "brand": "chint",
+      "title": "Interruptor Termomagnético Riel Din 3 Polos 32 Amperes Curva C 6 kA - Chint NXB-63 3P C32 - 814173",
+      "image": "https://i.postimg.cc/vT5kH7nZ/NXB-63-3P-C32.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NXB-63%203P%20C32"
+    },
+    {
+      "id": "chint-40",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 12 - 18 A, Bobina 440 VCA, Motor 10 HP 440 VCA Trifásico - Chint NQ2-15P/2 440V 12-18A - 493583",
+      "image": "https://i.postimg.cc/FswB2BJH/NQ2-15P-3-220V-17-25A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-15P%2F2%20440V%2012-18A"
+    },
+    {
+      "id": "chint-41",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 23 - 32 A, Bobina 110 VCA, Motor 2 HP 110 VCA Monofásico - Chint NQ2-15P/4 110V 23-32A - 493592",
+      "image": "https://i.postimg.cc/FswB2BJH/NQ2-15P-3-220V-17-25A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-15P%2F4%20110V%2023-32A"
+    },
+    {
+      "id": "chint-42",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 23 - 32 A, Bobina 220 VCA, Motor 10 HP 220 VCA - Chint NQ2-15P/4 220V 23-32A - 493594",
+      "image": "https://i.postimg.cc/FKJZ4r3v/NJDC-17-2Z-DC24V-CZT08A-E.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-15P%2F4%20220V%2023-32A"
+    },
+    {
+      "id": "chint-43",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 63 - 80 A, Bobina 220 VCA, Motor 25 HP 220 VCA Trifásico - Chint NQ2-33P/2 220V 63-80A - 493660",
+      "image": "https://i.postimg.cc/FswB2BJH/NQ2-15P-3-220V-17-25A.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-33P%2F2%20220V%2063-80A"
+    },
+    {
+      "id": "chint-44",
+      "brand": "chint",
+      "title": "Arrancador a Tensión Plena Caja Metálica, Rango de Protección Térmica 80 - 93 A, Bobina 220 VCA, Motor 30 HP 220 VCA Trifásico - Chint NQ2-33P/2 220V 80-93A - 493661",
+      "image": "https://i.postimg.cc/FKJZ4r3v/NJDC-17-2Z-DC24V-CZT08A-E.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NQ2-33P%2F2%20220V%2080-93A"
+    },
+    {
+      "id": "chint-45",
+      "brand": "chint",
+      "title": "Contactor 3 Polos, 185 Amperes, Bobina 110 VCA - Chint NC2-185 110V 50/60Hz - 236580",
+      "image": "https://i.postimg.cc/W4RZ0MqR/NC2-185-110V-50-60Hz.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NC2-185%20110V%2050%2F60Hz"
+    },
+    {
+      "id": "chint-46",
+      "brand": "chint",
+      "title": "Contactor 3 Polos, 400 Amperes, Bobina 220 VCA - Chint NC2-400 220V 50/60Hz - 236154",
+      "image": "https://i.postimg.cc/W4RZ0MqR/NC2-185-110V-50-60Hz.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NC2-400%20220V%2050%2F60Hz"
+    },
+    {
+      "id": "chint-47",
+      "brand": "chint",
+      "title": "Contactor 3 Polos, 265 Amperes, Bobina 220 VCA - Chint NC2-265 220V 50/60Hz - 236732",
+      "image": "https://i.postimg.cc/W4RZ0MqR/NC2-185-110V-50-60Hz.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NC2-265%20220V%2050%2F60Hz"
+    },
+    {
+      "id": "chint-48",
+      "brand": "chint",
+      "title": "Contacto Auxiliar Frontal 4 NA para NC1 - Chint F4-40 - 257026",
+      "image": "https://i.postimg.cc/1XNP0NNr/F4-40.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/F4-40"
+    },
+    {
+      "id": "chint-49",
+      "brand": "chint",
+      "title": "Bobina para Contactor 110 VCA compatible con NC1-09, NC1-12, NC1-18 - Chint LX1D2F7 - SDF709A - CJX2-09-18 coil 110V - 234495",
+      "image": "https://i.postimg.cc/hPXvtfZS/CJX2-09-18-coil-110V.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/CJX2-09-18%20coil%20110V"
+    },
+    {
+      "id": "chint-50",
+      "brand": "chint",
+      "title": "Bobina para Contactor 110 VCA compatible con NC1-25, NC1-32 - Chint LX1D4F7 - SDF725A - CJX2-25-32 coil 110V - 234403",
+      "image": "https://i.postimg.cc/1XQxh7dy/CJX2-25-32-coil-110V.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/CJX2-25-32%20coil%20110V"
+    },
+    {
+      "id": "chint-51",
+      "brand": "chint",
+      "title": "Interruptor Termomagnético Riel Din 4 Polos 40 Amper Curva C 6 kA - Chint NXB-63 4P C40 - 814252",
+      "image": "https://i.postimg.cc/50WK6YSK/NXB-63-4P-C40.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NXB-63%204P%20C40"
+    },
+    {
+      "id": "chint-52",
+      "brand": "chint",
+      "title": "Interruptor Termomagnético Riel Din 2 Polos 50 Amperes Curva C 6 kA - Chint NXB-63 2P C50 - 814097",
+      "image": "https://i.postimg.cc/GhgMvSjF/NXB-63-2P-C50.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NXB-63%202P%20C50"
+    },
+    {
+      "id": "chint-53",
+      "brand": "chint",
+      "title": "Interruptor Termomagnético Riel Din 2 Polos 32 Amperes Curva C 6 kA - Chint NXB-63 2P C32 - 814095",
+      "image": "https://i.postimg.cc/PJ3MzP1r/NXB-63-2P-C32.png",
+      "discount": "https://i.postimg.cc/bwCKRbw5/Chint-descuento.png",
+      "link": "https://ceitsa.com.mx/p/NXB-63%202P%20C32"
+    },
+    {
+      "id": "delta-1",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 12 VCD, 10 Amperes, 120 W, Montaje Riel Din - Delta DRL-12V120W1EN",
+      "image": "https://i.postimg.cc/gkPhyVGw/DRL-12V120W1EN.png",
+      "discount": "https://i.postimg.cc/856FM53T/DELTA-descuento-1.png",
+      "link": "https://ceitsa.com.mx/p/DRL-12V120W1EN"
+    },
+    {
+      "id": "delta-2",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 1 Amper, 24 W, Montaje Riel Din - Delta DVPPS01",
+      "image": "https://i.postimg.cc/gkPhyVGw/DRL-12V120W1EN.png",
+      "discount": "https://i.postimg.cc/856FM53T/DELTA-descuento-1.png",
+      "link": "https://ceitsa.com.mx/p/DVPPS01"
+    },
+    {
+      "id": "delta-3",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 10 Amperes, 240 W, Montaje Riel Din - Delta DRF-24V240W1GBA",
+      "image": "https://i.postimg.cc/nLfNpwxt/DRF-24V240W1GBA.png",
+      "discount": "https://i.postimg.cc/sXsF9HH5/DELTA-descuento-3.png",
+      "link": "https://ceitsa.com.mx/p/DRF-24V240W1GBA"
+    },
+    {
+      "id": "delta-4",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 10 Amperes, 240 W, Montaje Riel Din - Delta DRL-24V240W1EN",
+      "image": "https://i.postimg.cc/KjZ9D6VQ/DRL-12V120W1EN.png",
+      "discount": "https://i.postimg.cc/nLTty997/DELTA-descuento-4.png",
+      "link": "https://ceitsa.com.mx/p/DRL-24V240W1EN"
+    },
+    {
+      "id": "delta-5",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 10 Amperes, 240 W, Montaje Riel Din - Delta DRP024V240W1AA",
+      "image": "https://i.postimg.cc/X7MPwzZG/DRP024V240W1AA.png",
+      "discount": "https://i.postimg.cc/rppZV6b6/DELTA-descuento-2.png",
+      "link": "https://ceitsa.com.mx/p/DRP024V240W1AA"
+    },
+    {
+      "id": "delta-6",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 2 Amperes, 48 W, Montaje Riel Din - Delta DVPPS02",
+      "image": "https://i.postimg.cc/KjQgvWwk/DVPPS02.png",
+      "discount": "https://i.postimg.cc/sXsF9HH5/DELTA-descuento-3.png",
+      "link": "https://ceitsa.com.mx/p/DVPPS02"
+    },
+    {
+      "id": "delta-7",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 20 Amperes, 480 W, Montaje Riel Din - Delta DRP024V480W1AA",
+      "image": "https://i.postimg.cc/26TyVvNg/DRP024V480W1AA.png",
+      "discount": "https://i.postimg.cc/W3Hc3R7C/DELTA-descuento-2.png",
+      "link": "https://ceitsa.com.mx/p/DRP024V480W1AA"
+    },
+    {
+      "id": "delta-8",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 3.1. Amperes, 75 W, Montaje Riel Din - Delta DRL-24V75W1AZ",
+      "image": "https://i.postimg.cc/s2HDzzPX/DRL-24V75W1AZ.png",
+      "discount": "https://i.postimg.cc/0QQqP57C/DELTA-descuento-3.png",
+      "link": "https://ceitsa.com.mx/p/DRL-24V75W1AZ"
+    },
+    {
+      "id": "delta-9",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 5 Amperes, 120 W, Montaje Riel Din - Delta DRF-24V120W1GBA",
+      "image": "https://i.postimg.cc/4dtC0RBj/DRF-24V120W1GBA.png",
+      "discount": "https://i.postimg.cc/0QQqP57C/DELTA-descuento-3.png",
+      "link": "https://ceitsa.com.mx/p/DRF-24V120W1GBA"
+    },
+    {
+      "id": "delta-10",
+      "brand": "delta",
+      "title": "Fuente de Alimentación 24 VCD, 5 Amperes, 120 W, Montaje Riel Din - Delta DVPPS05",
+      "image": "https://i.postimg.cc/3JqBk0KJ/DVPPS05.png",
+      "discount": "https://i.postimg.cc/0QQqP57C/DELTA-descuento-3.png",
+      "link": "https://ceitsa.com.mx/p/DVPPS05"
+    },
+    {
+      "id": "delta-11",
+      "brand": "delta",
+      "title": "Fuente de Alimentación Trifásica 24 VCD, 40 Amperes, 960 W, Montaje Riel Din - Delta DRF-24V960W3GBA",
+      "image": "https://i.postimg.cc/mZX3n1FB/DRF-24V960W3GBA.png",
+      "discount": "https://i.postimg.cc/0QQqP57C/DELTA-descuento-3.png",
+      "link": "https://ceitsa.com.mx/p/DRF-24V960W3GBA"
+    },
+    {
+      "id": "delta-12",
+      "brand": "delta",
+      "title": "Fuente de Alimentación Trifásica 24 VCD, 40 Amperes, 960 W, Montaje Riel Din - Delta DRP024V960W3BN",
+      "image": "https://i.postimg.cc/XqCvxPCy/DRP024V960W3BN.png",
+      "discount": "https://i.postimg.cc/0QQqP57C/DELTA-descuento-3.png",
+      "link": "https://ceitsa.com.mx/p/DRP024V960W3BN"
+    },
+    {
+      "id": "delta-13",
+      "brand": "delta",
+      "title": "HMI Interfaz Hombre Máquina 4.3\" Ethernet - Delta DOP-103WQ",
+      "image": "https://i.postimg.cc/Znx8YjTQ/DOP-103WQ.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DOP-103WQ"
+    },
+    {
+      "id": "delta-14",
+      "brand": "delta",
+      "title": "HMI Interfaz Hombre Máquina 7\" Estándar Ethernet - Delta DOP-107EG",
+      "image": "https://i.postimg.cc/VN0X0zfP/DOP-107EG.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DOP-107EG"
+    },
+    {
+      "id": "delta-15",
+      "brand": "delta",
+      "title": "HMI PLC 4.1\", 16 Entradas Digitales, 16 Salidas a Relevador - Delta TP04P-32TP1R",
+      "image": "https://i.postimg.cc/MTbM1ThJ/TP04P-32TP1R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/TP04P-32TP1R"
+    },
+    {
+      "id": "delta-16",
+      "brand": "delta",
+      "title": "HMI PLC 7\", Núcleo DVP-SS2, 16 Entradas Digitales, 16 Salidas a Relevador - Delta TP70P-32TP1R",
+      "image": "https://i.postimg.cc/7h54wtMr/TP70P-32TP1R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/TP70P-32TP1R"
+    },
+    {
+      "id": "delta-17",
+      "brand": "delta",
+      "title": "HMI PLC 7\", Núcleo DVP-SS2, 8 Entradas Digitales, 8 Salidas a Relevador, 4 Entradas Analógicas, 2 Salidas Analógicas - Delta TP70P-22XA1R",
+      "image": "https://i.postimg.cc/7h54wtMr/TP70P-32TP1R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/TP70P-22XA1R"
+    },
+    {
+      "id": "delta-18",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 14 DI, 12 DO (Relevador), Modbus & Ethernet/IP - Delta DVP26SE11R",
+      "image": "https://i.postimg.cc/Xvv4svG3/DVP26SE11R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP26SE11R"
+    },
+    {
+      "id": "delta-19",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 24 VCD, 14 DI, 12 DO (PNP), Ethernet & RS485 - Delta DVP26SE11S",
+      "image": "https://i.postimg.cc/Xvv4svG3/DVP26SE11R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP26SE11S"
+    },
+    {
+      "id": "delta-20",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 24 VCD, 8 DI, 4 DO (NPN), Ethernet & USB - Delta DVP12SE11T",
+      "image": "https://i.postimg.cc/hPMYp19v/DVP12SE11T.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP12SE11T"
+    },
+    {
+      "id": "delta-21",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 24 VCD, 8 DI, 6 DO (NPN), Modbus & RS232 - Delta DVP14SS211T",
+      "image": "https://i.postimg.cc/xTjxJNWS/DVP14SS211T.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP14SS211T"
+    },
+    {
+      "id": "delta-22",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 24 VCD, 8 DI, 6 DO (Relevador), 4 AI, 2 AO, Modbus & RS232 - Delta DVP20SX211R",
+      "image": "https://i.postimg.cc/cLgcwRTq/DVP20SX211R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP20SX211R"
+    },
+    {
+      "id": "delta-23",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 24 VCD, 8 DI, 6 DO (Relevador), Modbus & RS232 - Delta DVP14SS211R",
+      "image": "https://i.postimg.cc/xTjxJNWS/DVP14SS211T.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP14SS211R"
+    },
+    {
+      "id": "delta-24",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 8 DI, 4 DO (Relevador), Modbus & Ethernet/IP - Delta DVP12SE11R",
+      "image": "https://i.postimg.cc/hPMYp19v/DVP12SE11T.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP12SE11R"
+    },
+    {
+      "id": "delta-25",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 8 DI, 6 DO (NPN), 4 AI, 2 AO, Modbus & RS232 - Delta DVP20SX211T",
+      "image": "https://i.postimg.cc/cLgcwRTq/DVP20SX211R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP20SX211T"
+    },
+    {
+      "id": "delta-26",
+      "brand": "delta",
+      "title": "Controlador Lógico Programable PLC 8 DI, 6 DO (PNP), 4 AI, 2 AO, Modbus & RS232 - Delta DVP20SX211S",
+      "image": "https://i.postimg.cc/cLgcwRTq/DVP20SX211R.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP20SX211S"
+    },
+    {
+      "id": "delta-27",
+      "brand": "delta",
+      "title": "Controlador lógico programable PLC con control de movimiento multi eje, 8 DI de Alta Velocidad, 4 Salidas de Alta velocidad, Comunicación CANopen, DVP - Delta DVP10MC11T",
+      "image": "https://i.postimg.cc/hPgj9crP/DVP10MC11T.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/DVP10MC11T"
+    },
+    {
+      "id": "delta-28",
+      "brand": "delta",
+      "title": "Variador de Velocidad 0.25 HP, 0.2 kW, 220 VCA 1.6 Amperes, 2H - Delta VFD002EL21W-1",
+      "image": "https://i.postimg.cc/bY0YY4hf/VFD002EL21W-1.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD002EL21W-1"
+    },
+    {
+      "id": "delta-29",
+      "brand": "delta",
+      "title": "Variador de Velocidad 0.5 HP, 0.4 kW, 110 VCA 2.5 Amperes, L+N - Delta VFD004EL11A",
+      "image": "https://i.postimg.cc/LXtSXgGZ/VFD004EL11A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD004EL11A"
+    },
+    {
+      "id": "delta-30",
+      "brand": "delta",
+      "title": "Variador de Velocidad 0.5 HP, 0.4 kW, 440 VCA 1.5 Amperes, 3H - Delta VFD1A5MS43ANSAA",
+      "image": "https://i.postimg.cc/NMchWfLH/VFD1A5MS43ANSAA.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD1A5MS43ANSAA"
+    },
+    {
+      "id": "delta-31",
+      "brand": "delta",
+      "title": "Variador de Velocidad 1 HP, 0.75 kW, 220 VCA 4.2 Amperes, 2H - Delta VFD007EL21W-1",
+      "image": "https://i.postimg.cc/bY0YY4hf/VFD002EL21W-1.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD007EL21W-1"
+    },
+    {
+      "id": "delta-32",
+      "brand": "delta",
+      "title": "Variador de Velocidad 1 HP, 0.75 kW, 220 VCA 4.2 Amperes, 3H - Delta VFD007EL23A",
+      "image": "https://i.postimg.cc/bY0YY4hf/VFD002EL21W-1.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD007EL23A"
+    },
+    {
+      "id": "delta-33",
+      "brand": "delta",
+      "title": "Variador de Velocidad 1 HP, 0.75 kW, 220 VCA 4.8 Amperes, 3H - Delta VFD4A8MS23ANSAA",
+      "image": "https://i.postimg.cc/bNjTkDWk/VFD4A8MS23ANSAA.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD4A8MS23ANSAA"
+    },
+    {
+      "id": "delta-34",
+      "brand": "delta",
+      "title": "Variador de Velocidad 1 HP, 0.75 kW, 440 VCA 2.5 Amperes, 3H - Delta VFD007EL43A",
+      "image": "https://i.postimg.cc/mkTP2spc/VFD007EL43A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD007EL43A"
+    },
+    {
+      "id": "delta-35",
+      "brand": "delta",
+      "title": "Variador de Velocidad 1 HP, 0.75 kW, 440 VCA, 2.7 Amperes , 3H - Delta VFD2A7MS43ANSAA",
+      "image": "https://i.postimg.cc/NMchWfLH/VFD1A5MS43ANSAA.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD2A7MS43ANSAA"
+    },
+    {
+      "id": "delta-36",
+      "brand": "delta",
+      "title": "Variador de Velocidad 1 HP, 0.75 kW, 440 VCA, 3 Amperes, 3H - Delta VFD007C43A-21",
+      "image": "https://i.postimg.cc/bJZhxFGR/VFD007C43A-21.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD007C43A-21"
+    },
+    {
+      "id": "delta-37",
+      "brand": "delta",
+      "title": "Variador de Velocidad 10 HP, 7.5 kW, 220 VCA, 33 Amperes, 3H - Delta VFD075C23A-21",
+      "image": "https://i.postimg.cc/HsCqnL2G/VFD075C23A-21.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD075C23A-21"
+    },
+    {
+      "id": "delta-38",
+      "brand": "delta",
+      "title": "Variador de Velocidad 10 HP, 7.5 kW, 440 VCA 17 Amperes, 3H - Delta VFD17AMS43ANSAA",
+      "image": "https://i.postimg.cc/LXtSXgGZ/VFD004EL11A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD17AMS43ANSAA"
+    },
+    {
+      "id": "delta-39",
+      "brand": "delta",
+      "title": "Variador de Velocidad 15 HP, 11 kW, 220 VCA 49 Amperes, 3H - Delta VFD49AMS23ANSAA",
+      "image": "https://i.postimg.cc/LXtSXgGZ/VFD004EL11A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD49AMS23ANSAA"
+    },
+    {
+      "id": "delta-40",
+      "brand": "delta",
+      "title": "Variador de Velocidad 15 HP, 11 kW, 220 VCA, 49 Amperes, 3H - Delta VFD110C23A-21",
+      "image": "https://i.postimg.cc/HsCqnL2G/VFD075C23A-21.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD110C23A-21"
+    },
+    {
+      "id": "delta-41",
+      "brand": "delta",
+      "title": "Variador de Velocidad 15 HP, 11 kW, 440 VCA, 24 Amperes, 3H - Delta VFD110C43A-21",
+      "image": "https://i.postimg.cc/HsCqnL2G/VFD075C23A-21.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD110C43A-21"
+    },
+    {
+      "id": "delta-42",
+      "brand": "delta",
+      "title": "Variador de Velocidad 15 HP, 11 kW, 440 VCA, 28 Amperes, 3H - Delta VFD25AMS43ANSAA",
+      "image": "https://i.postimg.cc/LXtSXgGZ/VFD004EL11A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD25AMS43ANSAA"
+    },
+    {
+      "id": "delta-43",
+      "brand": "delta",
+      "title": "Variador de Velocidad 2 HP, 1.5 kW, 220 VCA 7.5 Amperes, 2H - Delta VFD015EL21A",
+      "image": "https://i.postimg.cc/mkTP2spc/VFD007EL43A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD015EL21A"
+    },
+    {
+      "id": "delta-44",
+      "brand": "delta",
+      "title": "Variador de Velocidad 2 HP, 1.5 kW, 220 VCA 7.5 Amperes, 2H - Delta VFD015EL21W-1",
+      "image": "https://i.postimg.cc/mkTP2spc/VFD007EL43A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD015EL21W-1"
+    },
+    {
+      "id": "delta-45",
+      "brand": "delta",
+      "title": "Variador de Velocidad 2 HP, 1.5 kW, 440 VCA 4.2 Amperes, 3H - Delta VFD015EL43A",
+      "image": "https://i.postimg.cc/bY0YY4hf/VFD002EL21W-1.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD015EL43A"
+    },
+    {
+      "id": "delta-46",
+      "brand": "delta",
+      "title": "Variador de Velocidad 2 HP, 1.5 kW, 440 VCA 4.2 Amperes, 3H - Delta VFD015EL43W-1",
+      "image": "https://i.postimg.cc/bY0YY4hf/VFD002EL21W-1.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD015EL43W-1"
+    },
+    {
+      "id": "delta-47",
+      "brand": "delta",
+      "title": "Variador de Velocidad 20 HP, 15 kW, 440 VCA 32 Amperes, 3H - Delta VFD32AMS43ANSAA",
+      "image": "https://i.postimg.cc/LXtSXgGZ/VFD004EL11A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD32AMS43ANSAA"
+    },
+    {
+      "id": "delta-48",
+      "brand": "delta",
+      "title": "Variador de Velocidad 25 HP, 18.5 kW 440 VCA 38 Amperes, 3H - Delta VFD38AMS43ANSAA",
+      "image": "https://i.postimg.cc/LXtSXgGZ/VFD004EL11A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD38AMS43ANSAA"
+    },
+    {
+      "id": "delta-49",
+      "brand": "delta",
+      "title": "Variador de Velocidad 3 HP, 2.2 kW, 220 VCA 11 Amperes, 2H - Delta VFD022EL21A",
+      "image": "https://i.postimg.cc/bY0YY4hf/VFD002EL21W-1.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD022EL21A"
+    },
+    {
+      "id": "delta-50",
+      "brand": "delta",
+      "title": "Variador de Velocidad 3 HP, 2.2 kW, 440 VCA 5.5 Amperes, 3H - Delta VFD022EL43A",
+      "image": "https://i.postimg.cc/mkTP2spc/VFD007EL43A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD022EL43A"
+    },
+    {
+      "id": "delta-51",
+      "brand": "delta",
+      "title": "Variador de Velocidad 3 HP, 2.2 kW, 440 VCA, 6 Amperes, 3H - Delta VFD022C43A-21",
+      "image": "https://i.postimg.cc/bJZhxFGR/VFD007C43A-21.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD022C43A-21"
+    },
+    {
+      "id": "delta-52",
+      "brand": "delta",
+      "title": "Variador de Velocidad 3 HP, 3.2 kW, 220 VCA 11 Amperes, 2H - Delta VFD022EL21W-1",
+      "image": "https://i.postimg.cc/mkTP2spc/VFD007EL43A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD022EL21W-1"
+    },
+    {
+      "id": "delta-53",
+      "brand": "delta",
+      "title": "Variador de Velocidad 5 HP, 3.7 kW, 220 VCA 17 Amperes, 3H - Delta VFD17AMS23ANSAA",
+      "image": "https://i.postimg.cc/NMchWfLH/VFD1A5MS43ANSAA.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD17AMS23ANSAA"
+    },
+    {
+      "id": "delta-54",
+      "brand": "delta",
+      "title": "Variador de Velocidad 5 HP, 3.7 kW, 440 VCA 8.2 Amperes, 3H - Delta VFD037EL43A",
+      "image": "https://i.postimg.cc/mkTP2spc/VFD007EL43A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD037EL43A"
+    },
+    {
+      "id": "delta-55",
+      "brand": "delta",
+      "title": "Variador de Velocidad 5 HP, 3.7 kW, 440 VCA 9 Amperes, 3H - Delta VFD9A0MS43ANSAA",
+      "image": "https://i.postimg.cc/LXtSXgGZ/VFD004EL11A.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD9A0MS43ANSAA"
+    },
+    {
+      "id": "delta-56",
+      "brand": "delta",
+      "title": "Variador de Velocidad 7.5 HP, 5.5 kW, 440 VCA 13 Amperes, 3H - Delta VFD13AMS43ANSAA",
+      "image": "https://i.postimg.cc/NMchWfLH/VFD1A5MS43ANSAA.png",
+      "discount": "https://i.postimg.cc/BvJ07B6M/DELTA-descuento-5.png",
+      "link": "https://ceitsa.com.mx/p/VFD13AMS43ANSAA"
+    },
+    {
+      "id": "turck-1",
+      "brand": "turck",
+      "title": "Módulo de Proteccion para Fuente de Alimentacion 4 Canales 24 VCD, 4 Amperes, 96 W, Montaje Riel Din - Turck PISA11.401 PROTECTION MODULE, 24V, 4A - PISA11.401",
+      "image": "https://i.postimg.cc/g2x4QyLB/PISA11-401-PROTECTION-MODULE-24V-4A.png",
+      "discount": "https://i.postimg.cc/ZqkPQGSF/TURCK-descuento.png",
+      "link": "https://ceitsa.com.mx/p/PISA11.401%20PROTECTION%20MODULE%2C%2024V%2C%204A"
+    },
+    {
+      "id": "turck-2",
+      "brand": "turck",
+      "title": "Fuente de Alimentación 24 VCD, 10 Amperes, 240 W, Montaje Riel Din - Turck CS10.241 PS, 115/230VAC, 24V, 10A, 1PH - CS10.241",
+      "image": "https://i.postimg.cc/MG8R517X/CS10-241-PS-115-230VAC-24V-10A-1PH.png",
+      "discount": "https://i.postimg.cc/ZqkPQGSF/TURCK-descuento.png",
+      "link": "https://ceitsa.com.mx/p/CS10.241%20PS%2C%20115%2F230VAC%2C%2024V%2C%2010A%2C%201PH"
+    },
+    {
+      "id": "turck-3",
+      "brand": "turck",
+      "title": "Fuente de Alimentación 24 VCD, 0.6 Amperes, 15 W, Montaje Riel Din - Turck ML15.241 PS, 100-240VAC, 24V, 0.63A, 1PH - ML15.241",
+      "image": "https://i.postimg.cc/kGZRbSMQ/ML15-241-PS-100-240VAC-24V-0-63A-1PH.png",
+      "discount": "https://i.postimg.cc/ZqkPQGSF/TURCK-descuento.png",
+      "link": "https://ceitsa.com.mx/p/ML15.241%20PS%2C%20100-240VAC%2C%2024V%2C%200.63A%2C%201PH"
+    },
+    {
+      "id": "turck-4",
+      "brand": "turck",
+      "title": "Fuente de Alimentación 24 VCD, 1.3 Amperes, 30 W, Montaje Riel Din - Turck ML30.241 PS, 100-240VAC, 24V, 1.3A, 1PH - ML30.241",
+      "image": "https://i.postimg.cc/tJL7THDM/NS2-25X-9-14A.png",
+      "discount": "https://i.postimg.cc/ZqkPQGSF/TURCK-descuento.png",
+      "link": "https://ceitsa.com.mx/p/ML30.241%20PS%2C%20100-240VAC%2C%2024V%2C%201.3A%2C%201PH"
+    },
+    {
+      "id": "turck-5",
+      "brand": "turck",
+      "title": "Fuente de Alimentación 12 VCD, 1.3 Amperes, 15 W, Montaje Riel Din - Turck ML15.121 PS, 100-240VAC, 12V, 1.3A, 1PH - ML15.121",
+      "image": "https://i.postimg.cc/05YzbcS0/NS2-25X-9-14A.png",
+      "discount": "https://i.postimg.cc/ZqkPQGSF/TURCK-descuento.png",
+      "link": "https://ceitsa.com.mx/p/ML15.121%20PS%2C%20100-240VAC%2C%2012V%2C%201.3A%2C%201PH"
+    },
+    {
+      "id": "turck-6",
+      "brand": "turck",
+      "title": "Módulo de Redundancia para Fuente de Alimentación 12 - 48 VCD, 20 Amperes, 480 W, Montaje Riel Din - Turck YR2.DIODE REDUNDANCY MODULE, 24V, 20A - YR2.DIODE",
+      "image": "https://i.postimg.cc/rFywzccY/YR2.png",
+      "discount": "https://i.postimg.cc/ZqkPQGSF/TURCK-descuento.png",
+      "link": "https://ceitsa.com.mx/p/YR2.DIODE%20REDUNDANCY%20MODULE%2C%2024V%2C%2020A"
+    },
+    {
+      "id": "turck-7",
+      "brand": "turck",
+      "title": "Fuente de Alimentación 24 VCD, 10 Amperes, 240 W, con revestimiento Montaje Riel Din - Turck CP10.241-C1 - CP10.241C",
+      "image": "https://i.postimg.cc/NG108ZN3/CP10-241-C1-PS-24V-10A-1PH-COATED.png",
+      "discount": "https://i.postimg.cc/ZqkPQGSF/TURCK-descuento.png",
+      "link": "https://ceitsa.com.mx/p/CP10.241-C1%20PS%2C%2024V%2C%2010A%2C%201PH%2C%20COATED"
+    },
+    {
+      "id": "smc-1",
+      "brand": "smc",
+      "title": "Cilindro Neumático Sin Vástago de Arrastre Mecánico ø 32 mm x 700 mm, RC 1/8\", Doble Efecto, Modelo con Patín Deslizante, Amortiguación Neumática - SMC MY1M32-700L - 224461",
+      "image": "https://i.postimg.cc/MKWcM7Vd/MY1M32-700L.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/MY1M32-700L"
+    },
+    {
+      "id": "smc-2",
+      "brand": "smc",
+      "title": "KIT Tren de Filtros Regulador 3 Módulos 5 μm + 0.3 μm + 0.01 μm 1/4\" NPT, Vaso Policarbonato, Purga Automática - SMC AWC-AFMC-AFDC-20-N02",
+      "image": "https://i.postimg.cc/PfMJjC0G/AWC-AFMC-AFDC-20-N02.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/AWC-AFMC-AFDC-20-N02"
+    },
+    {
+      "id": "smc-3",
+      "brand": "smc",
+      "title": "KIT Tren de Filtros Regulador 3 Módulos 5 μm + 0.3 μm + 0.01 μm 1/4\" NPT con Manómetro, Vaso Policarbonato, Purga Automática - SMC AWC-AFMC-AFDC-20-N02G",
+      "image": "https://i.postimg.cc/FzKVx2w3/AWC-AFMC-AFDC-20-N02G.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/AWC-AFMC-AFDC-20-N02G"
+    },
+    {
+      "id": "smc-4",
+      "brand": "smc",
+      "title": "KIT Tren de Filtros 3 Módulos 5 μm + 0.3 μm + 0.01 μm 1/4\" NPT Vaso Policarbonato - SMC AF-AFM-AFD-20-N02",
+      "image": "https://i.postimg.cc/Fzz28CwB/AF-AFM-AFD-20-N02.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/AF-AFM-AFD-20-N02"
+    },
+    {
+      "id": "smc-5",
+      "brand": "smc",
+      "title": "KIT Tren de Filtros 3 Módulos 5 μm + 0.3 μm + 0.01 μm 1/4\" NPT Vaso Policarbonato - SMC AFC-AFMC-AFDC-20-N02",
+      "image": "https://i.postimg.cc/6q4MCkks/AFC-AFMC-AFDC-20-N02.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/AFC-AFMC-AFDC-20-N02"
+    },
+    {
+      "id": "smc-6",
+      "brand": "smc",
+      "title": "KIT Tren de Filtros Regulador 3 Módulos 5 μm + 0.3 μm + 0.01 μm 1/4\" NPT con Manómetro, Vaso Policarbonato, Purga Manual - SMC AW-AFM-AFD-20-N02",
+      "image": "https://i.postimg.cc/3wnyZdhm/AW-AFM-AFD-20-N02.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/AW-AFM-AFD-20-N02"
+    },
+    {
+      "id": "smc-7",
+      "brand": "smc",
+      "title": "KIT Tren de Filtros Regulador 3 Módulos 5 μm + 0.3 μm + 0.01 μm 1/4\" NPT con Manómetro, Vaso Policarbonato, Purga Manual - SMC AW-AFM-AFD-20-N02G",
+      "image": "https://i.postimg.cc/Cx79MgY3/AW-AFM-AFD-20-N02G.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/AW-AFM-AFD-20-N02G"
+    },
+    {
+      "id": "smc-8",
+      "brand": "smc",
+      "title": "KIT Tren de Filtros Regulador 3 Módulos 5 μm + 0.3 μm + 0.01 μm 1/4\" NPT con Manómetro, Vaso Policarbonato, Purga Automática - SMC AWC-AFM-AFD-20-N02G",
+      "image": "https://i.postimg.cc/7Y8ghJZC/AWC-AFM-AFD-20-N02G.png",
+      "discount": "https://i.postimg.cc/TY1Xy1Nh/SMC-descuento.png",
+      "link": "https://ceitsa.com.mx/p/AWC-AFM-AFD-20-N02G"
+    }
+  ],
+  "revision": 0,
+  "lastModified": null
+}

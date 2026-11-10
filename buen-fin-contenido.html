@@ -1092,8 +1092,10 @@
     </section>
   </div>
 
+  <script src="buen-fin-model.js"></script>
+  <script src="buen-fin-access.js"></script>
   <script>
-    (() => {
+    (async () => {
       const brandConfigs = {
         chint: {
           titleEl: document.getElementById('chintTitle'),
@@ -1276,6 +1278,13 @@
         let current = 0;
         let busy = false;
         const count = cfg.products.length;
+        cfg.prevBtn.disabled = cfg.nextBtn.disabled = count < 2;
+        if (!count) {
+          cfg.titleEl.textContent = 'Próximamente más ofertas de esta marca';
+          cfg.discountEl.hidden = true;
+          cfg.move = () => {};
+          return;
+        }
         const mod = n => (n + count) % count;
         const slot = i => i===current ? 0 : i===mod(current-1) ? -1 : i===mod(current+1) ? 1 : 9;
 
@@ -1312,7 +1321,17 @@
         }
 
         function move(direction) {
-          if (busy) return;
+          if (busy || count < 2) return;
+          if (count === 2) {
+            current = mod(current + direction);
+            cards.forEach((el, i) => {
+              el.dataset.position = String(slot(i));
+              el.setAttribute('aria-current', String(i === current));
+              el.tabIndex = i === current ? 0 : -1;
+            });
+            setHeading();
+            return;
+          }
           busy = true;
           const arriving = mod(current + direction * 2);
           const leaving = mod(current - direction);
@@ -1345,6 +1364,22 @@
         setHeading();
       }
 
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 10000);
+      try {
+        const response = await fetch('/api/buen-fin', {
+          cache: 'no-store', headers: { Accept: 'application/json' }, signal: controller.signal
+        });
+        if (!response.ok) throw new Error('HTTP ' + response.status);
+        const catalog = BuenFinModel.validate(await response.json());
+        for (const [brand, cfg] of Object.entries(brandConfigs)) {
+          cfg.products = catalog.products.filter(product => product.brand === brand);
+        }
+      } catch (error) {
+        console.warn('Buen Fin: se muestra el catálogo incluido porque no se pudo cargar el publicado.', error);
+      } finally {
+        clearTimeout(timeout);
+      }
       Object.keys(brandConfigs).forEach(setupCarousel);
 
       const screens = {
